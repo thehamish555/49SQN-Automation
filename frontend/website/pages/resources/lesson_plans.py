@@ -5,7 +5,7 @@ import os
 
 st.page_link('pages/tools/lesson_plan_generator.py', label='Looking for the Lesson Plan Generator? Click here', icon=':material/docs:')
 cols = st.columns([1, 1, 4])
-path = 'resources/lesson_plans'
+path = './frontend/website/resources/lesson_plans'
 
 files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
 files.sort(key=lambda x: (not x.endswith('Template.pdf'), x))

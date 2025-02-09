@@ -5,7 +5,7 @@ if st.experimental_user.is_logged_in and st.experimental_user.email in st.secret
     st.write('This is a Streamlit web application that assists NCOs and Officers within the 49SQN Air Cadet Unit.')
 
 
-    st.image('resources/media/logo.png')
+    st.image('./frontend/website/resources/media/logo.png')
 
     'Some Quick Links:'
     st.page_link('pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:')

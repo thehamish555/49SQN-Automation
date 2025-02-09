@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon=':material/travel:',
     layout='wide',
     menu_items={
-        'Get Help': 'https://discord.gg/SEj5TpJQXt',
+        'Get Help': None,
         'Report a bug': 'mailto:hamishlester555@gmail.com',
         'About': None
     }
