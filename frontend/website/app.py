@@ -11,7 +11,7 @@ st.set_page_config(
     }
 )
 
-if st.experimental_user.is_logged_in and st.experimental_user.email in st.secrets["allowed_users"]:
+if st.experimental_user.is_logged_in and st.experimental_user.email in st.secrets['allowed_users']:
     pages = {
         'Home': [
             st.Page('pages/home.py', title='Home', icon=':material/home:')
@@ -33,16 +33,16 @@ else:
 st.markdown('#### 49SQN NCO App')
 '---'
 if not st.experimental_user.is_logged_in:
-    if st.button("Log in with Google"):
+    if st.button('Log in with Google'):
         st.login()
     pg = st.navigation(pages, position='hidden')
     pg.run()
     st.stop()
 
 
-if st.experimental_user.email not in st.secrets["allowed_users"]:
-    st.error("You do not have permission to access this app.")
-    if st.button("Log out"):
+if st.experimental_user.email not in st.secrets['allowed_users']:
+    st.error('You do not have permission to access this app.')
+    if st.button('Log out'):
         st.logout()
     pg = st.navigation(pages, position='hidden')
     pg.run()
