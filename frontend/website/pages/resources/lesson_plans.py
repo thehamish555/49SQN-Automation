@@ -4,7 +4,7 @@ import platform
 
 import os
 
-st.page_link('pages/tools/lesson_plan_generator.py', label='Looking for the Lesson Plan Generator? Click here', icon=':material/docs:')
+# st.page_link('pages/tools/lesson_plan_generator.py', label='Looking for the Lesson Plan Generator? Click here', icon=':material/docs:')
 cols = st.columns([1, 1, 4])
 if st.session_state.is_local:
     path = 'resources/lesson_plans'
@@ -46,7 +46,7 @@ with cols[0]:
         except (KeyError, IndexError):
             icon = icons['Default']
         with st.expander(file.removesuffix('.pdf'), icon=icon):
-            pdf_viewer.pdf_viewer(f'{path}/{file}', width=300, pages_to_render=[1], on_annotation_click=view_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file, 'last_file': st.session_state['last_file']}])
+            pdf_viewer.pdf_viewer(f'{path}/{file}', width=350, pages_to_render=[1], on_annotation_click=view_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file, 'last_file': st.session_state['last_file']}])
             st.download_button('Download as PDF', data=load_file(file), file_name=file, mime='application/octet-stream', icon=':material/download:')
 
 with cols[2]:

@@ -25,10 +25,10 @@ if st.experimental_user.is_logged_in and st.experimental_user.email in st.secret
         'Resources': [
             st.Page('pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
         ],
-        'Tools': [
-            st.Page('pages/tools/lesson_plan_generator.py', title='Lesson Plan Generator', icon=':material/docs:'),
-            st.Page('pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
-        ],
+        # 'Tools': [
+        #     st.Page('pages/tools/lesson_plan_generator.py', title='Lesson Plan Generator', icon=':material/docs:'),
+        #     st.Page('pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
+        # ],
         'Your Account': [
             st.Page('pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:'),
         ]
