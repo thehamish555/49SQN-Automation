@@ -61,12 +61,12 @@ st.markdown('''
 <style>
     .back_to_top {
         position: fixed;
-        bottom: 25px;
+        bottom: 50px;
         right: 25px;
         z-index: 900;
     }
 </style>
-<a target="_self" href="#49sqn-portal">
+<a target="_self" href="#49sqn-nco-app">
     <button class="back_to_top">
         Back to Top
     </button>
@@ -95,7 +95,7 @@ footer='''
         color: gray;
         text-align: right;
         padding-right: 25px;
-        padding-bottom: 40px;
+        padding-bottom: 65px;
     }
 </style>
 
