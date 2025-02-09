@@ -1,4 +1,10 @@
 import streamlit as st
+import platform
+
+if not platform.processor():
+    st.session_state.is_local = False
+else:
+    st.session_state.is_local = True
 
 st.set_page_config(
     page_title='49SQN NCO App',

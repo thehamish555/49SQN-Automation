@@ -4,8 +4,10 @@ if st.experimental_user.is_logged_in and st.experimental_user.email in st.secret
     st.title('Welcome to the 49SQN Air Cadet Unit NCO Portal')
     st.write('This is a Streamlit web application that assists NCOs and Officers within the 49SQN Air Cadet Unit.')
 
-
-    st.image('./frontend/website/resources/media/logo.png')
+    if st.session_state.is_local:
+        st.image('resources/media/logo.png')
+    else:
+        st.image('./frontend/website/resources/media/logo.png')
 
     'Some Quick Links:'
     st.page_link('pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:')

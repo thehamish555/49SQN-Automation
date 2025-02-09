@@ -1,11 +1,16 @@
 import streamlit as st
 import streamlit_pdf_viewer as pdf_viewer
+import platform
 
 import os
 
 st.page_link('pages/tools/lesson_plan_generator.py', label='Looking for the Lesson Plan Generator? Click here', icon=':material/docs:')
 cols = st.columns([1, 1, 4])
-path = './frontend/website/resources/lesson_plans'
+if st.session_state.is_local:
+    path = 'resources/lesson_plans'
+else:
+    path = './frontend/website/resources/lesson_plans'
+platform.processor()
 
 files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
 files.sort(key=lambda x: (not x.endswith('Template.pdf'), x))
