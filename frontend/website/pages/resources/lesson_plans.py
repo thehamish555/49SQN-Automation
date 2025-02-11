@@ -92,7 +92,7 @@ with cols[1]:
     try:
         pdf_bytes = io.BytesIO()
         pdf.save(pdf_bytes)
-        st.download_button('Download as PDF', data=pdf_bytes.getvalue(), file_name=f'{selected_file}.pdf', mime='application/octet-stream', icon=':material/download:')
+        st.download_button('Download as PDF', data=pdf_bytes.getvalue(), file_name=f'{selected_file} - {date.strftime("%d-%m-%Y")}.pdf', mime='application/octet-stream', icon=':material/download:')
         pdf_viewer.pdf_viewer(pdf_bytes.getvalue(), width=1000, render_text=True)
         pdf_bytes.seek(0)
         pdf.close()
