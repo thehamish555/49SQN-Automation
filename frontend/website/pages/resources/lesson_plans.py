@@ -18,6 +18,8 @@ if 'file' not in st.session_state:
     st.session_state['file'] = None
 if 'last_file' not in st.session_state:
     st.session_state['last_file'] = None
+if 'pdf' not in st.session_state:
+    st.session_state['pdf'] = None
 
 icons = {'Default': ':material/docs:', 'Template': ':material/docs:', 'Bush Craft': ':material/forest:',}
 
@@ -70,15 +72,14 @@ with cols[1]:
         date = st.date_input('Date', format="DD/MM/YYYY", value='today', min_value='today')
         instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.experimental_user.name, max_chars=50)
 
-        if st.form_submit_button('Create Lesson Plan'):
-            unload_file()
+        if st.form_submit_button('Create Lesson Plan', on_click=unload_file):
             replacements = {
                 '[DATE]': date.strftime('%d/%m/%Y'),
                 '[INSTRUCTOR]': instructor
             }
 
-            pdf = pymupdf.open(f'{path}/{selected_file}.pdf')
-            for page in pdf:
+            st.session_state['pdf'] = pymupdf.open(f'{path}/{selected_file}.pdf')
+            for page in st.session_state['pdf']:
                 for key, value in replacements.items():
                     text_instances = page.search_for(key)
                     for inst in text_instances:
@@ -91,12 +92,12 @@ with cols[1]:
             
     try:
         pdf_bytes = io.BytesIO()
-        pdf.save(pdf_bytes)
+        st.session_state['pdf'].save(pdf_bytes)
         st.download_button('Download as PDF', data=pdf_bytes.getvalue(), file_name=f'{selected_file} - {date.strftime("%d-%m-%Y")}.pdf', mime='application/octet-stream', icon=':material/download:')
-        pdf_viewer.pdf_viewer(pdf_bytes.getvalue(), width=1000, render_text=True)
+        with st.expander('Preview', icon=':material/visibility:'):
+            pdf_viewer.pdf_viewer(pdf_bytes.getvalue(), width=1000, render_text=True)
         pdf_bytes.seek(0)
-        pdf.close()
-    except NameError:
+    except AttributeError:
         pass
 
 with cols[2]:
