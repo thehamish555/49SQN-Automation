@@ -17,7 +17,7 @@ st.set_page_config(
     }
 )
 
-if st.experimental_user.is_logged_in and st.experimental_user.email in st.secrets['allowed_users']:
+if st.experimental_user.is_logged_in and st.experimental_user.email.lower() in st.secrets['allowed_users']:
     pages = {
         'Home': [
             st.Page('pages/home.py', title='Home', icon=':material/home:')
