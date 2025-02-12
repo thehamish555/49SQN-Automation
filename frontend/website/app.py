@@ -1,10 +1,6 @@
 import streamlit as st
+from st_supabase_connection import SupabaseConnection, execute_query
 import platform
-
-if not platform.processor():
-    st.session_state.is_local = False
-else:
-    st.session_state.is_local = True
 
 st.set_page_config(
     page_title='49SQN NCO App',
@@ -17,7 +13,20 @@ st.set_page_config(
     }
 )
 
-if st.experimental_user.is_logged_in and st.experimental_user.email.lower() in st.secrets['allowed_users']:
+if not platform.processor():
+    st.session_state.is_local = False
+else:
+    st.session_state.is_local = True
+st.session_state.user = None
+
+conn = st.connection('supabase', type=SupabaseConnection, ttl='60s')
+users = execute_query(conn.table('users').select('*'), ttl='60s')
+for user in users.data:
+    if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
+        st.session_state.user = user
+        break
+
+if st.session_state.user:
     pages = {
         'Home': [
             st.Page('pages/home.py', title='Home', icon=':material/home:')
@@ -33,11 +42,16 @@ if st.experimental_user.is_logged_in and st.experimental_user.email.lower() in s
             st.Page('pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:'),
         ]
     }
+    if st.session_state.user['role'] == 'admin':
+        pages['Admin'] = [
+            st.Page('pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
+        ]
 else:
     pages = {'Home': [st.Page('pages/home.py', title='Home', icon=':material/home:')]}
 
 st.markdown('#### 49SQN NCO App')
 '---'
+
 if not st.experimental_user.is_logged_in:
     if st.button('Log in with Google'):
         st.login()
@@ -45,8 +59,7 @@ if not st.experimental_user.is_logged_in:
     pg.run()
     st.stop()
 
-
-if st.experimental_user.email not in st.secrets['allowed_users']:
+if st.session_state.user is None:
     st.error('You do not have permission to access this app.')
     if st.button('Log out'):
         st.logout()

@@ -1,6 +1,6 @@
 import streamlit as st
 
-if st.experimental_user.is_logged_in and st.experimental_user.email in st.secrets['allowed_users']:
+if st.session_state.user:
     st.title('Welcome to the 49SQN Air Cadet Unit NCO Portal')
     st.write('This is a Streamlit web application that assists NCOs and Officers within the 49SQN Air Cadet Unit.')
 
