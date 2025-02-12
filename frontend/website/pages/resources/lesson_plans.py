@@ -2,10 +2,8 @@ import streamlit as st
 import streamlit_pdf_viewer as pdf_viewer
 import pymupdf
 import io
-
 import os
 
-# st.page_link('pages/tools/lesson_plan_generator.py', label='Looking for the Lesson Plan Generator? Click here', icon=':material/docs:')
 cols = st.columns([1, 3, 2], border=True)
 if st.session_state.is_local:
     path = 'resources/lesson_plans'

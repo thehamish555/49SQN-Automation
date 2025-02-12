@@ -13,18 +13,23 @@ st.set_page_config(
     }
 )
 
-if not platform.processor():
-    st.session_state.is_local = False
-else:
-    st.session_state.is_local = True
-st.session_state.user = None
+st.session_state.conn = st.connection('supabase', type=SupabaseConnection, ttl='60s')
 
-conn = st.connection('supabase', type=SupabaseConnection, ttl='60s')
-users = execute_query(conn.table('users').select('*'), ttl='60s')
-for user in users.data:
-    if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
-        st.session_state.user = user
-        break
+if 'is_local' not in st.session_state:
+    if not platform.processor():
+        st.session_state.is_local = False
+    else:
+        st.session_state.is_local = True
+if 'users' not in st.session_state:
+    st.session_state.users = execute_query(st.session_state.conn.table('users').select('*'), ttl='60s')
+    st.session_state.users.data.sort(key=lambda x: x['role'])
+if 'user' not in st.session_state:
+    for user in st.session_state.users.data:
+        if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
+            st.session_state.user = user
+            break
+    if 'user' not in st.session_state:
+        st.session_state.user = None
 
 if st.session_state.user:
     pages = {
@@ -35,7 +40,6 @@ if st.session_state.user:
             st.Page('pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
         ],
         # 'Tools': [
-        #     st.Page('pages/tools/lesson_plan_generator.py', title='Lesson Plan Generator', icon=':material/docs:'),
         #     st.Page('pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
         # ],
         'Your Account': [
@@ -117,3 +121,8 @@ footer='''
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
+
+if st.session_state.is_local:
+    '---'
+    st.write('### Debugging')
+    st.json(dict(sorted(st.session_state.items())))

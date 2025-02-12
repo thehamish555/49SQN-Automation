@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.error('THIS PAGE IS STILL IN DEVELOPMENT, DO NOT USE')
+st.error('THIS PAGE HAS BEEN DISCONTINUED, DO NOT USE')
 st.page_link('pages/resources/lesson_plans.py', label='Have you checked if a Lesson Plan already exists? Click here to check', icon=':material/docs:')
 cols = st.columns(2)
 
