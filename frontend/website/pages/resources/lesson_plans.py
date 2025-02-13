@@ -1,4 +1,3 @@
-import urllib.parse
 import streamlit as st
 import streamlit_pdf_viewer as pdf_viewer
 import pymupdf
@@ -73,13 +72,13 @@ with cols[0]:
             icon = icons[file['path'].split(' - ')[1].removesuffix('.pdf')]
         except (KeyError, IndexError):
             icon = icons['Default']
-        with st.expander(file['path'].removesuffix('.pdf'), icon=icon):
-            if st.session_state.preview_pdfs:
+        if st.session_state.preview_pdfs:
+            with st.expander(file['path'].removesuffix('.pdf'), icon=icon):
                 file_data = get_data(file)
                 pdf_viewer.pdf_viewer(file_data, width=350, pages_to_render=[1], on_annotation_click=set_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']}])
                 st.download_button('Download as PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
-            else:
-                st.write(f'[View PDF]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
+        else:
+            st.write(f'{icon} [{file['path'].removesuffix('.pdf')}]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
 
 with cols[1]:
     st.markdown('#### Auto fill Lesson Plan')
