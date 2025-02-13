@@ -1,8 +1,10 @@
+import urllib.parse
 import streamlit as st
 import streamlit_pdf_viewer as pdf_viewer
 import pymupdf
 import io
 import requests
+import urllib
 
 cols = st.columns([1, 3, 2], border=True)
 
@@ -58,6 +60,11 @@ except AttributeError:
 
 with cols[0]:
     st.markdown('#### View Lesson Plans')
+    st.toggle('Preview PDFs', key='preview_pdfs', value=False)
+    if st.session_state.preview_pdfs:
+        st.warning('Preview PDFs is enabled, this may slow down the page')
+    else:
+        unload_file()
     search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...')
     files = [f for f in st.session_state.files if search.lower() in f['path'].lower().removesuffix('.pdf')]
     st.caption(f'*Found {len(files)} files*')
@@ -67,9 +74,12 @@ with cols[0]:
         except (KeyError, IndexError):
             icon = icons['Default']
         with st.expander(file['path'].removesuffix('.pdf'), icon=icon):
-            file_data = get_data(file)
-            pdf_viewer.pdf_viewer(file_data, width=350, pages_to_render=[1], on_annotation_click=set_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']}])
-            st.download_button('Download as PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
+            if st.session_state.preview_pdfs:
+                file_data = get_data(file)
+                pdf_viewer.pdf_viewer(file_data, width=350, pages_to_render=[1], on_annotation_click=set_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']}])
+                st.download_button('Download as PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
+            else:
+                st.write(f'[View PDF]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
 
 with cols[1]:
     st.markdown('#### Auto fill Lesson Plan')
