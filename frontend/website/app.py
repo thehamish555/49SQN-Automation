@@ -34,24 +34,24 @@ if 'user' not in st.session_state:
 if st.session_state.user:
     pages = {
         'Home': [
-            st.Page('pages/home.py', title='Home', icon=':material/home:')
+            st.Page('sub_pages/home.py', title='Home', icon=':material/home:')
         ],
         'Resources': [
-            st.Page('pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
+            st.Page('sub_pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
         ],
         # 'Tools': [
         #     st.Page('pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
         # ],
         'Your Account': [
-            st.Page('pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:'),
+            st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:'),
         ]
     }
     if st.session_state.user['role'] == 'admin':
         pages['Admin'] = [
-            st.Page('pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
+            st.Page('sub_pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
         ]
 else:
-    pages = {'Home': [st.Page('pages/home.py', title='Home', icon=':material/home:')]}
+    pages = {'Home': [st.Page('sub_pages/home.py', title='Home', icon=':material/home:')]}
 
 st.markdown('#### 49SQN NCO App')
 '---'
