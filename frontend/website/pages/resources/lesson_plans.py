@@ -4,12 +4,12 @@ import pymupdf
 import io
 import requests
 import urllib
+from st_supabase_connection import SupabaseConnection
 
 cols = st.columns([1, 3, 2], border=True)
 
-
 if 'files' not in st.session_state:
-    st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans')], expires_in=3600)
+    st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
 if 'file' not in st.session_state:
     st.session_state['file'] = None
 if 'file_name' not in st.session_state:
@@ -56,6 +56,34 @@ try:
 except AttributeError:
     pass
 
+
+if st.session_state.user['role'] == 'admin':
+    st.sidebar.title('Admin Panel')
+    st.sidebar.subheader('Manage Lesson Plans')
+    with st.sidebar.form(key='submit_lesson_plan'):
+        uploaded_pdf = st.file_uploader('Upload Lesson Plan', type=['pdf'])
+        pdf_name = st.text_input('Lesson Plan Name', placeholder='Enter the Lesson Plan Name...', max_chars=50)
+        lesson_type = st.selectbox('Lesson Plan Type', [key for key in icons.keys() if key != 'Default'])
+        if st.form_submit_button('Upload Lesson Plan'):
+            if not uploaded_pdf:
+                st.error('Please upload a PDF file')
+            elif pdf_name.strip() == '':
+                st.error('Please enter a name for the Lesson Plan')
+            else:
+                try:
+                    st.session_state.conn.upload('lesson_plans', source='local', file=uploaded_pdf, destination_path=f'/{pdf_name} - {lesson_type}.pdf')
+                    st.session_state.pop('files')
+                    st.session_state.conn = None
+                    st.rerun()
+                except Exception as e:
+                    st.error('File already exists, try another name')
+    with st.sidebar.form(key='remove_lesson_plan'):
+        selected_file = st.selectbox('Select a Lesson Plan to Remove', [f['path'].removesuffix('.pdf') for f in st.session_state.files])
+        if st.form_submit_button('Remove Lesson Plan'):
+            st.session_state.conn.remove('lesson_plans', [f'{selected_file}.pdf'])
+            st.session_state.pop('files')
+            st.session_state.conn = None
+            st.rerun()
 
 with cols[0]:
     st.markdown('#### View Lesson Plans')
