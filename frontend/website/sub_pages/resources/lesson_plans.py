@@ -25,11 +25,11 @@ icons = {'Default': ':material/docs:',
          'Aviation': 'material/flight',
          'Bushcraft': ':material/forest:',
          'CFK': ':material/school:',
-         'Drill': ':material/flag:',
+         'Drill': ':material/directions_walk:',
          'Ethics': ':material/docs:',
          'Firearms': ':material/docs:',
          'First Aid': ':material/medical_services:',
-         'Leadership': ':material/docs:',
+         'Leadership': ':material/groups:',
          'Navigation': ':material/explore:',
          'Other': ':material/docs:'}
 
