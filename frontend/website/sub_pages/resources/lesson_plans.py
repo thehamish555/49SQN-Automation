@@ -20,7 +20,18 @@ if 'pdf' not in st.session_state:
     st.session_state['pdf'] = None
 
 st.session_state.files.sort(key=lambda x: (not x['path'].endswith('Template.pdf'), x['path']))
-icons = {'Default': ':material/docs:', 'Template': ':material/docs:', 'Bush Craft': ':material/forest:',}
+icons = {'Default': ':material/docs:',
+         'Template': ':material/docs:',
+         'Aviation': 'material/flight',
+         'Bushcraft': ':material/forest:',
+         'CFK': ':material/school:',
+         'Drill': ':material/flag:',
+         'Ethics': ':material/docs:',
+         'Firearms': ':material/docs:',
+         'First Aid': ':material/medical_services:',
+         'Leadership': ':material/docs:',
+         'Navigation': ':material/explore:',
+         'Other': ':material/docs:'}
 
 @st.cache_data
 def get_data(file):
