@@ -116,7 +116,7 @@ with cols[1]:
                 st.download_button('Download as PDF', data=pdf_bytes.getvalue(), file_name=f'{selected_file} - {date.strftime("%d-%m-%Y")}.pdf', mime='application/octet-stream', icon=':material/download:', use_container_width=True, help='Download')
             with sub_cols[1]:
                 if st.button('Preview', icon=':material/visibility:', use_container_width=True, help='Preview the lesson plan'):
-                    view_large_pdf(pdf_bytes.getvalue(), selected_file)
+                    view_large_pdf(pdf_bytes.getvalue(), selected_file+'.pdf')
             pdf_bytes.seek(0)
         except AttributeError:
             pass
