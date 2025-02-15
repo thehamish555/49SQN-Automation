@@ -125,9 +125,13 @@ with cols[0]:
             icon = icons['Default']
         if st.session_state.preview_pdfs:
             with st.expander(file['path'].removesuffix('.pdf'), icon=icon):
-                file_data = get_data(file)
-                pdf_viewer.pdf_viewer(file_data, width=350, pages_to_render=[1], on_annotation_click=set_large_pdf, annotation_outline_size=0, annotations=[{'page': 1, 'x': 0, 'y': 0, 'width': 600, 'height': 845, 'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']}])
-                st.download_button('Download as PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
+                if st.button('Preview PDF', key=f'{file['path']}-preview'):
+                    file_data = get_data(file)
+                    set_large_pdf({'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']})
+                if st.button('Download PDF', key=f'{file['path']}-download'):
+                    st.session_state.conn.download('lesson_plans', file['path'])
+                    st.success(f'Downloaded "{file["path"]}"')
+                # st.download_button('Download PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
         else:
             st.write(f'{icon} [{file['path'].removesuffix('.pdf')}]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
 
