@@ -57,6 +57,21 @@ except AttributeError:
     pass
 
 
+@st.dialog('Confirm Deletion', width='small')
+def confirmation(file):
+    st.write(f'Are you sure you want to delete "*{file}*"?')
+    cols = st.columns(2)
+    with cols[0]:
+        if st.button('Cancel', use_container_width=True):
+            st.rerun()
+    with cols[1]:
+        if st.button('**:red[Delete]**', use_container_width=True):
+            st.session_state.conn.remove('lesson_plans', [f'{file}.pdf'])
+            st.session_state.pop('files')
+            st.session_state.conn = None
+            st.rerun()
+
+
 if st.session_state.user['role'] == 'admin':
     st.sidebar.title('Admin Panel')
     st.sidebar.subheader('Manage Lesson Plans')
@@ -80,10 +95,7 @@ if st.session_state.user['role'] == 'admin':
     with st.sidebar.form(key='remove_lesson_plan'):
         selected_file = st.selectbox('Select a Lesson Plan to Remove', [f['path'].removesuffix('.pdf') for f in st.session_state.files])
         if st.form_submit_button('Remove Lesson Plan'):
-            st.session_state.conn.remove('lesson_plans', [f'{selected_file}.pdf'])
-            st.session_state.pop('files')
-            st.session_state.conn = None
-            st.rerun()
+            confirmation(selected_file)
 
 with cols[0]:
     st.markdown('#### View Lesson Plans')
