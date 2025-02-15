@@ -63,6 +63,7 @@ def unload_file():
 try:
     @st.dialog(st.session_state['file_name'].removesuffix('.pdf'), width="large")
     def view_large_pdf():
+        st.download_button('Download PDF', data=st.session_state['file'], file_name=st.session_state['file_name'], mime='application/octet-stream', icon=':material/download:')
         pdf_viewer.pdf_viewer(st.session_state['file'], width=1000, render_text=True)
 except AttributeError:
     pass
@@ -110,10 +111,8 @@ if st.session_state.user['role'] == 'admin':
 
 with cols[0]:
     st.markdown('#### View Lesson Plans')
-    st.toggle('Preview PDFs', key='preview_pdfs', value=False)
-    if st.session_state.preview_pdfs:
-        st.warning('Preview PDFs is enabled, this may slow down the page')
-    else:
+    st.toggle('Display as links', key='display_as_links', value=False)
+    if st.session_state.display_as_links:
         unload_file()
     search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...')
     files = [f for f in st.session_state.files if search.lower() in f['path'].lower().removesuffix('.pdf')]
@@ -123,17 +122,12 @@ with cols[0]:
             icon = icons[file['path'].split(' - ')[1].removesuffix('.pdf')]
         except (KeyError, IndexError):
             icon = icons['Default']
-        if st.session_state.preview_pdfs:
-            with st.expander(file['path'].removesuffix('.pdf'), icon=icon):
-                if st.button('Preview PDF', key=f'{file['path']}-preview'):
-                    file_data = get_data(file)
-                    set_large_pdf({'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']})
-                if st.button('Download PDF', key=f'{file['path']}-download'):
-                    st.session_state.conn.download('lesson_plans', file['path'])
-                    st.success(f'Downloaded "{file["path"]}"')
-                # st.download_button('Download PDF', data=file_data, file_name=file['path'], mime='application/octet-stream', icon=':material/download:')
-        else:
+        if st.session_state.display_as_links:
             st.write(f'{icon} [{file['path'].removesuffix('.pdf')}]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
+        else:
+            if st.button(file['path'].removesuffix('.pdf'), icon=icon, type='tertiary'):
+                file_data = get_data(file)
+                set_large_pdf({'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']})
 
 with cols[1]:
     st.markdown('#### Auto fill Lesson Plan')
