@@ -10,12 +10,6 @@ cols = st.columns([1, 3, 2], border=True)
 
 if 'files' not in st.session_state:
     st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
-if 'file' not in st.session_state:
-    st.session_state['file'] = None
-if 'file_name' not in st.session_state:
-    st.session_state['file_name'] = None
-if 'last_file' not in st.session_state:
-    st.session_state['last_file'] = None
 if 'pdf' not in st.session_state:
     st.session_state['pdf'] = None
 
@@ -45,26 +39,12 @@ def get_data(file):
             return io.BytesIO(response.content).getvalue()
 
 
-def set_large_pdf(annotation):
-    if st.session_state['last_file'] != annotation['file']:
-        st.session_state['last_file'] = annotation['file']
-    else :
-        st.session_state['last_file'] = None
-    st.session_state['file'] = get_data(annotation['file'])
-    st.session_state['file_name'] = annotation['name']
-    st.rerun()
-
-
-def unload_file():
-    st.session_state['file'] = None
-    st.session_state['last_file'] = None
-
-
 try:
-    @st.dialog(st.session_state['file_name'].removesuffix('.pdf'), width="large")
-    def view_large_pdf():
-        st.download_button('Download PDF', data=st.session_state['file'], file_name=st.session_state['file_name'], mime='application/octet-stream', icon=':material/download:')
-        pdf_viewer.pdf_viewer(st.session_state['file'], width=1000, render_text=True)
+    @st.dialog('File Preview', width="large")
+    def view_large_pdf(file_data, file_name):
+        st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
+        st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
+        pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
 except AttributeError:
     pass
 
@@ -112,8 +92,6 @@ if st.session_state.user['role'] == 'admin':
 with cols[0]:
     st.markdown('#### View Lesson Plans')
     st.toggle('Display as links', key='display_as_links', value=False)
-    if st.session_state.display_as_links:
-        unload_file()
     search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...')
     files = [f for f in st.session_state.files if search.lower() in f['path'].lower().removesuffix('.pdf')]
     st.caption(f'*Found {len(files)} files*')
@@ -126,8 +104,7 @@ with cols[0]:
             st.write(f'{icon} [{file['path'].removesuffix('.pdf')}]({urllib.parse.quote(file['signedURL'], safe=":/?=&")})')
         else:
             if st.button(file['path'].removesuffix('.pdf'), icon=icon, type='tertiary'):
-                file_data = get_data(file)
-                set_large_pdf({'file': file['signedURL'], 'name': file['path'], 'last_file': st.session_state['last_file']})
+                view_large_pdf(get_data(file), file['path'])
 
 with cols[1]:
     st.markdown('#### Auto fill Lesson Plan')
@@ -136,7 +113,7 @@ with cols[1]:
         date = st.date_input('Date', format="DD/MM/YYYY", value='today', min_value='today')
         instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.experimental_user.name, max_chars=50)
 
-        if st.form_submit_button('Create Lesson Plan', on_click=unload_file):
+        if st.form_submit_button('Create Lesson Plan'):
             replacements = {
                 '[DATE]': date.strftime('%d/%m/%Y'),
                 '[INSTRUCTOR]': instructor
@@ -168,6 +145,3 @@ with cols[2]:
     st.markdown('- [Cadet Net Lesson Plans](https://www.cadetnet.org.nz/7-training/lesson-plans/)')
     st.markdown('- [Cadet Net Training Manuals](https://www.cadetnet.org.nz/7-training/training-manuals/)')
     st.markdown('- [Cadet Net Training Resources](https://www.cadetnet.org.nz/7-training/training-resources/)')
-
-if st.session_state['file']:
-    view_large_pdf()
