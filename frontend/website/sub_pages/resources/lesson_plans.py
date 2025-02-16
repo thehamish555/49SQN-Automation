@@ -11,6 +11,8 @@ if 'files' not in st.session_state:
     st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
 if 'pdf' not in st.session_state:
     st.session_state['pdf'] = None
+if 'file_count' not in st.session_state:
+    st.session_state.file_count = 0
 
 st.session_state.files.sort(key=lambda x: (not x['path'].endswith('Template.pdf'), x['path']))
 icons = {'Default': ':material/docs:',
@@ -70,8 +72,8 @@ with cols[0]:
     st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying lesson plans as links or buttons')
     search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...', help='Search for a specific lesson plan')
     files = [f for f in st.session_state.files if search.lower() in f['path'].lower().removesuffix('.pdf')]
-    st.caption(f'*Showing {len(files[:10])}/{len(st.session_state.files)} files*')
-    for file in files[:10]:
+    st.caption(f'*Showing {len(files[st.session_state.file_count:st.session_state.file_count + 10])}/{len(st.session_state.files)} files*')
+    for file in files[st.session_state.file_count:st.session_state.file_count + 10]:
         try:
             icon = icons[file['path'].split(' - ')[1].removesuffix('.pdf')]
         except (KeyError, IndexError):
@@ -81,6 +83,17 @@ with cols[0]:
         else:
             if st.button(file['path'].removesuffix('.pdf'), icon=icon, type='tertiary', help='View this lesson plan'):
                 view_large_pdf(get_data(file), file['path'])
+    sub_cols = st.columns(2)
+    with sub_cols[0]:
+        if st.session_state.file_count > 0:
+            if st.button('Previous', icon=':material/arrow_back:', use_container_width=True, help='View the previous 10 lesson plans'):
+                st.session_state.file_count -= 10
+                st.rerun()
+    with sub_cols[1]:
+        if st.session_state.file_count + 10 < len(files):
+            if st.button('Next', icon=':material/arrow_forward:', use_container_width=True, help='View the next 10 lesson plans'):
+                st.session_state.file_count += 10
+                st.rerun()
 
 with cols[1]:
     tabs = st.tabs(['Autofill Lesson Plans', 'Lesson Plan Manager'])
