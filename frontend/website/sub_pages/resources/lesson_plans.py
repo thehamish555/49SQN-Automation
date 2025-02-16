@@ -5,7 +5,7 @@ import io
 import requests
 import urllib
 
-cols = st.columns([1, 2, 3], gap='large')
+cols = st.columns([3, 5, 1], gap='large')
 
 if 'files' not in st.session_state:
     st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
@@ -66,7 +66,6 @@ def confirmation(file):
             st.rerun()
 
 
-
 with cols[0]:
     st.write('#### Lesson Plan Viewer')
     st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying lesson plans as links or buttons')
@@ -118,8 +117,7 @@ with cols[1]:
                             rect.y1 += 10
                             rect.x1 += 300
                             page.add_redact_annot(rect, value, fontsize=12)
-                    page.apply_redactions()
-                
+                    page.apply_redactions()                
         try:
             pdf_bytes = io.BytesIO()
             st.session_state['pdf'].save(pdf_bytes)
@@ -133,7 +131,6 @@ with cols[1]:
             pdf_bytes.seek(0)
         except AttributeError:
             pass
-
     with tabs[1]:
         if st.session_state.user['role'] == 'admin':
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
@@ -159,6 +156,7 @@ with cols[1]:
                     confirmation(selected_file)
         else:
             st.warning('You do not have permission to access this tab')
+
 '---'
 
 st.write('#### Quick Links')
