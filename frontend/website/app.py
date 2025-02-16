@@ -40,10 +40,10 @@ if st.session_state.user:
             st.Page('sub_pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
         ],
         # 'Tools': [
-        #     st.Page('pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
+        #     st.Page('sub_pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
         # ],
         'Your Account': [
-            st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:'),
+            st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:')
         ]
     }
     if st.session_state.user['role'] == 'admin':
@@ -117,7 +117,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.1.0</p>
+    <p>V1.0.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
