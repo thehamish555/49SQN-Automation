@@ -24,6 +24,7 @@ icons = {'Default': ':material/docs:',
          'Ethics': ':material/docs:',
          'Firearms': ':material/docs:',
          'First Aid': ':material/medical_services:',
+         'Instructional Techniques': ':material/school:',
          'Leadership': ':material/groups:',
          'Navigation': ':material/explore:',
          'Other': ':material/docs:'}
