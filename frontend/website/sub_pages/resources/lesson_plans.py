@@ -106,7 +106,8 @@ with cols[1]:
             if st.form_submit_button('Create Lesson Plan', use_container_width=True, help='Create a lesson plan with the selected template'):
                 replacements = {
                     '[DATE]': date.strftime('%d/%m/%Y'),
-                    '[INSTRUCTOR]': instructor
+                    '[INSTRUCTOR]': instructor,
+                    '[NAME]': instructor
                 }
                 st.session_state['pdf'] = pymupdf.open(stream=get_data(st.session_state.files[[f['path'] for f in st.session_state.files].index(selected_file + '.pdf')]))
                 for page in st.session_state['pdf']:
