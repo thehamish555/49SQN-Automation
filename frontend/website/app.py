@@ -22,7 +22,7 @@ if 'is_local' not in st.session_state:
         st.session_state.is_local = True
 if 'users' not in st.session_state:
     st.session_state.users = execute_query(st.session_state.conn.table('users').select('*'), ttl='60s')
-    st.session_state.users.data.sort(key=lambda x: x['role'])
+    st.session_state.users.data.sort(key=lambda x: x['permissions'][0] if len(x['permissions']) > 0 else 'user')
 if 'user' not in st.session_state:
     for user in st.session_state.users.data:
         if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
@@ -30,7 +30,6 @@ if 'user' not in st.session_state:
             break
     if 'user' not in st.session_state:
         st.session_state.user = None
-
 if st.session_state.user:
     pages = {
         'Home': [
@@ -46,7 +45,7 @@ if st.session_state.user:
             st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:')
         ]
     }
-    if st.session_state.user['role'] == 'admin':
+    if any(map(lambda x: x in st.session_state.user['permissions'], ('admin', 'manage_users'))):
         pages['Admin'] = [
             st.Page('sub_pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
         ]
