@@ -35,6 +35,6 @@ This website is part of the **49SQN Automation Project**, licensed under **GPL-3
 Contributions are welcome! Please submit issues or pull requests to improve the website functionality.
 
 ## Version Meanings
-- _xx_.xx.xx - Full Release
-- xx._xx_.xx - Major Version (New Features etc)
-- xx.xx._xx_  - Minor Version (Bug Fixes etc)
+- <ins>xx</ins>.xx.xx - Full Release
+- xx.<ins>xx</ins>.xx - Major Version (New Features etc)
+- xx.xx.<ins>xx</ins>  - Minor Version (Bug Fixes etc)
