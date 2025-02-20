@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from st_supabase_connection import execute_query
 
-
 df = pd.DataFrame(st.session_state.users.data)
 cols = st.columns([3, 5, 1], gap='large')
 
@@ -45,9 +44,9 @@ with cols[1]:
     tabs = st.tabs(['Add Users', 'Delete Users', 'Edit Users'])
     with tabs[0]:
         with st.form(key='create_user', border=False, enter_to_submit=False):
-            name = st.text_input('Name', placeholder='Name', help='Enter the name of the new user')
-            email = st.text_input('Email', placeholder='Email', help='Enter the email address of the new user')
-            permissions = st.multiselect('Permissions', options=['manage_lesson_plans', 'manage_users', 'admin'], placeholder='Select Permissions', help='Select the permissions for the new user')
+            name = st.text_input('Name', placeholder='Name', max_chars=50, help='Enter the name of the new user')
+            email = st.text_input('Email', placeholder='Email', max_chars=50, help='Enter the email address of the new user')
+            permissions = st.multiselect('Permissions', options=st.session_state.permissions, placeholder='Select Permissions', help='Select the permissions for the new user')
             if st.form_submit_button('Create User', help='Create a new user with the provided details'):
                 email = email.lower()
                 if email:
@@ -73,8 +72,8 @@ with cols[1]:
             confirmation(selected_email)
     with tabs[2]:
         selected_email = st.selectbox('Select a User to Edit', [row['email'] for row in st.session_state.users.data])
-        name = st.text_input('Name', value=[row['name'] for row in st.session_state.users.data if row['email'] == selected_email][0], help='Enter the name of the selected user')
-        selected_permissions = st.multiselect('Permissions', options=['manage_lesson_plans', 'manage_users', 'admin'], default=[row['permissions'] for row in st.session_state.users.data if row['email'] == selected_email][0], help='Select the permissions for the selected user')
+        name = st.text_input('Name', value=[row['name'] for row in st.session_state.users.data if row['email'] == selected_email][0], max_chars=50, help='Enter the name of the selected user')
+        selected_permissions = st.multiselect('Permissions', options=st.session_state.permissions, default=[row['permissions'] for row in st.session_state.users.data if row['email'] == selected_email][0], help='Select the permissions for the selected user')
         if st.button('Edit User', help='Edit the selected user with the provided details'):
             execute_query(
                 st.session_state.conn.table('users')

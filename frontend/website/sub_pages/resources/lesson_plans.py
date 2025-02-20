@@ -101,7 +101,7 @@ with cols[1]:
         with st.form(key='create_lesson', border=False, enter_to_submit=False):
             selected_file = st.selectbox('Select a Lesson Plan', [f['path'].removesuffix('.pdf') for f in st.session_state.files if not f['path'].endswith('Template.pdf')], help='Select a lesson plan to autofill')
             date = st.date_input('Date', format="DD/MM/YYYY", value='today', min_value='today', help='Select the date for the lesson plan')
-            instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.experimental_user.name, max_chars=50, help='Enter the name of the instructor for the lesson plan')
+            instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.session_state.user['name'], max_chars=50, help='Enter the name of the instructor for the lesson plan')
 
             if st.form_submit_button('Create Lesson Plan', use_container_width=True, help='Create a lesson plan with the selected template'):
                 replacements = {
@@ -134,7 +134,7 @@ with cols[1]:
         except AttributeError:
             pass
     with tabs[1]:
-        if any(map(lambda x: x in st.session_state.user['permissions'], ('admin', 'manage_lesson_plans'))):
+        if any(map(lambda x: x in st.session_state.user['permissions'], ('Admin', 'Manage Lesson Plans'))):
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
                 uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type=['pdf'], help='Select a lesson plan to upload')
                 pdf_name = st.text_input('Lesson Plan Name', placeholder='Enter the Lesson Plan Name...', max_chars=50, help='Enter a name for the lesson plan')

@@ -30,6 +30,12 @@ if 'user' not in st.session_state:
             break
     if 'user' not in st.session_state:
         st.session_state.user = None
+
+st.session_state.permissions = [
+    'Manage Lesson Plans',
+    'Manage Users',
+    'Admin'
+]
 if st.session_state.user:
     pages = {
         'Home': [
@@ -45,7 +51,7 @@ if st.session_state.user:
             st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:')
         ]
     }
-    if any(map(lambda x: x in st.session_state.user['permissions'], ('admin', 'manage_users'))):
+    if any(map(lambda x: x in st.session_state.user['permissions'], ('Admin', 'Manage Users'))):
         pages['Admin'] = [
             st.Page('sub_pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
         ]
@@ -116,7 +122,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.2.0</p>
+    <p>V0.3.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
