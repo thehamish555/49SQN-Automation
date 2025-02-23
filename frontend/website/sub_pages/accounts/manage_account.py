@@ -36,6 +36,5 @@ with cols[1]:
                 st.session_state.pop('users')
                 st.session_state.pop('user')
                 st.rerun()
-
     with tabs[1]:
         st.info('User settings are not yet implemented.')

@@ -134,7 +134,7 @@ with cols[1]:
         except AttributeError:
             pass
     with tabs[1]:
-        if any(map(lambda x: x in st.session_state.user['permissions'], ('Admin', 'Manage Lesson Plans'))):
+        if 'manage_lesson_plans' in st.session_state.user['permissions_expanded']:
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
                 uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type=['pdf'], help='Select a lesson plan to upload')
                 pdf_name = st.text_input('Lesson Plan Name', placeholder='Enter the Lesson Plan Name...', max_chars=50, help='Enter a name for the lesson plan')

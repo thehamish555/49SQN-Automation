@@ -1,0 +1,17 @@
+{
+    "Admin": [
+        "manage_users",
+        "view_users",
+        "manage_lesson_plans"
+    ],
+    "Manage Users": [
+        "manage_users",
+        "view_users"
+    ],
+    "View Users": [
+        "view_users"
+    ],
+    "Manage Lesson Plans": [
+        "manage_lesson_plans"
+    ]
+}

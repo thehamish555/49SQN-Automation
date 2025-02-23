@@ -1,6 +1,7 @@
 import streamlit as st
 from st_supabase_connection import SupabaseConnection, execute_query
 import platform
+import json
 
 st.set_page_config(
     page_title='49SQN NCO App',
@@ -27,15 +28,17 @@ if 'user' not in st.session_state:
     for user in st.session_state.users.data:
         if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
             st.session_state.user = user
+            if st.session_state.is_local:
+                file = open('resources/configurations/permission_structure.json', 'r')
+            else:
+                file = open('./frontend/website/resources/configurations/permission_structure.json', 'r')
+            st.session_state.permissions = json.load(file)
+            file.close()
+            st.session_state.user['permissions_expanded'] = [perm for perms in st.session_state.user['permissions'] for perm in st.session_state.permissions[perms]]
             break
     if 'user' not in st.session_state:
         st.session_state.user = None
 
-st.session_state.permissions = [
-    'Manage Lesson Plans',
-    'Manage Users',
-    'Admin'
-]
 if st.session_state.user:
     pages = {
         'Home': [
@@ -44,14 +47,14 @@ if st.session_state.user:
         'Resources': [
             st.Page('sub_pages/resources/lesson_plans.py', title='Lesson Plans', icon=':material/docs:')
         ],
-        # 'Tools': [
-        #     st.Page('sub_pages/tools/training_program_generator.py', title='Training Program Generator', icon=':material/csv:'),
-        # ],
+        'Tools': [
+            st.Page('sub_pages/tools/training_program_editor.py', title='Training Program Editor', icon=':material/csv:'),
+        ],
         'Your Account': [
             st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:')
         ]
     }
-    if any(map(lambda x: x in st.session_state.user['permissions'], ('Admin', 'Manage Users'))):
+    if 'view_users' in st.session_state.user['permissions_expanded']:
         pages['Admin'] = [
             st.Page('sub_pages/accounts/manage_users.py', title='Manage Users', icon=':material/manage_accounts:')
         ]
@@ -122,7 +125,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.3.0</p>
+    <p>V0.4.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
