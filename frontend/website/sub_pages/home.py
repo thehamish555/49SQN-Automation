@@ -11,6 +11,7 @@ if st.session_state.user:
 
     'Some Quick Links:'
     st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:')
+    st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:')
     # st.page_link('pages/tools/training_program_generator.py', label='Training Program Generator', icon=':material/csv:')
     
     st.warning('Some pages are still in development')
