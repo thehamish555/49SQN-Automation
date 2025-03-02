@@ -4,17 +4,17 @@ import os
 
 if 'manuals' not in st.session_state:
     if st.session_state.is_local:
-        st.session_state.path = './resources/manuals'
+        st.session_state.manuals_path = './resources/manuals'
     else:
-        st.session_state.path = './frontend/website/resources/manuals'
-    st.session_state.manuals = os.listdir(st.session_state.path)
+        st.session_state.manuals_path = './frontend/website/resources/manuals'
+    st.session_state.manuals = os.listdir(st.session_state.manuals_path)
 
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
 
 @st.cache_data
 def get_data(file_name):
-        with open(f'{st.session_state.path}/{file_name}', 'rb') as file:
+        with open(f'{st.session_state.manuals_path}/{file_name}', 'rb') as file:
             return file.read()
 
 
