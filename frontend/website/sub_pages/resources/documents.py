@@ -4,15 +4,24 @@ import os
 
 if 'manuals' not in st.session_state:
     if st.session_state.is_local:
-        st.session_state.manuals = os.listdir('./resources/manuals')
+        st.session_state.path = './resources/manuals'
     else:
-        st.session_state.manuals = os.listdir('./frontend/website/resources/manuals')
+        st.session_state.path = './frontend/website/resources/manuals'
+    st.session_state.manuals = os.listdir(st.session_state.path)
+
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
 
+@st.cache_data
+def get_data(file_name):
+        with open(f'{st.session_state.path}/{file_name}', 'rb') as file:
+            return file.read()
+
+
 try:
     @st.dialog('File Preview', width="large")
-    def view_large_pdf(file_data, file_name):
+    def view_large_pdf(file_name):
+        file_data = get_data(file_name)
         st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
         st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
         pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
@@ -33,8 +42,7 @@ with cols[0]:
             st.write(f'[{manual.removesuffix(".pdf")}]({manual})')
         else:
             if st.button(manual.removesuffix('.pdf'), type='tertiary', help='View this manual'):
-                with open(f'./resources/manuals/{manual}', 'rb') as file:
-                    view_large_pdf(file.read(), manual)
+                view_large_pdf(manual)
     sub_cols = st.columns(2)
     with sub_cols[0]:
         if st.session_state.manual_count > 0:
