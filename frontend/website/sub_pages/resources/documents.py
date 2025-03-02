@@ -8,7 +8,7 @@ if 'manuals' not in st.session_state:
     else:
         st.session_state.manuals_path = './frontend/website/resources/manuals'
     st.session_state.manuals = os.listdir(st.session_state.manuals_path)
-
+    st.session_state.manuals.sort()
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
 
