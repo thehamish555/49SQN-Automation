@@ -27,6 +27,7 @@ icons = {'Default': ':material/docs:',
          'Instructional Techniques': ':material/school:',
          'Leadership': ':material/groups:',
          'Navigation': ':material/explore:',
+         'RAMs': ':material/docs:',
          'Other': ':material/docs:'}
 
 @st.cache_data
