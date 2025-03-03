@@ -12,7 +12,7 @@ if 'manuals' not in st.session_state:
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def get_data(file_name):
         with open(f'{st.session_state.manuals_path}/{file_name}', 'rb') as file:
             return file.read()

@@ -1,18 +1,359 @@
 {
-    "year1": {
-        "Drill": {},
-        "Ethics": {},
-        "Firearms": {},
-        "Leadership": {},
-        "First Aid": {},
-        "Navigation": {},
-        "CFK": {},
-        "Physical Training": {},
-        "Bushcraft": {},
-        "RATEL": {},
-        "Aviation": {}
+    "Year 1": {
+        "Drill": {
+            "Introduction to Drill and Compliments": {
+                "file": "DRL-1.1_Introduction_to_Drill_and_Compliments.pdf",
+                "periods": 1
+            },
+
+            "Demonstrate Forming Up": {
+                "file": "DRL-1.2_Demonstrate_Forming_Up.pdf",
+                "periods": 1
+            },
+            "Demonstrate Dressing, Open and Close Order March": {
+                "file": "DRL-1.3_Demonstrate_Dressing_Open_and_Close_Order_March.pdf",
+                "periods": 1
+            },
+            "Demonstrate Marching, Halting, and Wheeling": {
+                "file": "DRL-1.4_Demonstrate_Marching_Halting_and_Wheeling.pdf",
+                "periods": 2
+            },
+            "Demonstrate Saluting to the Front at the Halt": {
+                "file": "DRL-1.5_Demonstrate_Saluting_to_the_Front_at_the_Halt.pdf",
+                "periods": 1
+            },
+            "Demonstrate Corps Specific Parade Format": {
+                "file": "DRL-1.6_Demonstrate_Corps_Specific_Parade_Format.pdf",
+                "periods": 2
+            },
+            "Conduct Turning, Inclining, Dismissing, and Falling Out": {
+                "file": "DRL-1.7_Conduct_Turning_Inclining_Dismissing_and_Falling_Out.pdf",
+                "periods": 1
+            },
+            "Carry out Numbering, Proving, and Sizing": {
+                "file": "DRL-1.8_Carry_out_Numbering_Proving_and_Sizing.pdf",
+                "periods": 1
+            }, 
+            "Demonstrate Saluting to the Flank, Reporting to an Officer, Eyes Right and Left": {
+                "file": "DRL-1.9_Demonstrate_Saluting_to_the_Flank_Reporting_to_an_Officer_Eyes_Right_and_Left.pdf",
+                "periods": 1
+            },
+            "Demonstrate Positions with the Rifle at the Halt and on the March": {
+                "file": "DRL-1.10_Demonstrate_Positions_with_the_Rifle_at_the_Halt_and_on_the_March.pdf",
+                "periods": 1
+            },
+            "Conduct Saluting with the Rifle at the Halt": {
+                "file": "DRL-1.11_Conduct_Saluting_with_the_Rifle_at_the_Halt.pdf",
+                "periods": 1
+            },
+            "Get on Parade with and without the Rifles": {
+                "file": "DRL-1.12_Get_on_Parade_with_and_without_the_Rifles.pdf",
+                "periods": 2
+            },
+            "Change Step in Quick Time" : {
+                "file": "DRL-1.13_Change_Step_in_Quick_Time.pdf",
+                "periods": 1
+            },
+            "Mark Time in Quick Time": {
+                "file": "DRL-1.14_Mark_Time_in_Quick_Time.pdf",
+                "periods": 1
+            },
+            "Conduct Open Order and Close Order": {
+                "file": "DRL-1.15_Conduct_Open_Order_and_Close_Order.pdf",
+                "periods": 1
+            }
+
+        },
+        "Ethics": {
+            "Recall NZCF Vision, Mission, Values" : {
+                "file": "ETH-1.1_Recall_NZCF_Vision_Mission_Values.pdf",
+                "periods": 1
+            },
+            "Explain NZCF Code of Conduct": {
+                "file": "ETH-1.2_Explain_NZCF_Code_of_Conduct.pdf",
+                "periods": 1
+            },
+            "Describe Duty of Care": {
+                "file": "ETH-1.3_Describe_Duty_of_Care.pdf",
+                "periods": 1
+            },
+            "Identify NZCF Key Legislation": {
+                "file": "ETH-1.4_Identify_NZCF_Key_Legislation.pdf",
+                "periods": 1
+            },
+            "Demonstrate Diversity & Anti–Harassment": {
+                "file": "ETH-1.5_Demonstrate_Diversity_and_Anti-Harassment.pdf",
+                "periods": 1
+            }
+        },
+        "Firearms": {
+            "Recall the Seven Basic Rules": {
+                "file": "FAS-1.1_Recall_the_Seven_Basic_Rules.pdf",
+                "periods": 1
+            },
+            "Comply with Safe Handling": {
+                "file": "FAS-1.2_Comply_with_Safe_Handling.pdf",
+                "periods": 1
+            },
+            "List Characteristics and Technical Description – In-Service Firearm": {
+                "file": "FAS-1.3_List_Characteristics_and_Technical_Description_In-Service_Firearm.pdf",
+                "periods": 1
+            },
+            "Carry out Safety Precautions – In-Service Firearm": {
+                "file": "FAS-1.4_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
+                "periods": 1
+            },
+            "Pass DFTTs – In-Service Firearm": {
+                "file": "FAS-1.5_Pass_DFTTs_In-Service_Firearm.pdf",
+                "periods": 3
+            },
+            "Strip, Clean, and Assemble – In-Service Firearm": {
+                "file": "FAS-1.6_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+                "periods": 2.5
+            }
+        },
+        "Leadership": {
+            "Introduction to Formal Orders": {
+                "file": "LDR-1.1_Introduction_to_Formal_Orders.pdf",
+                "periods": 1
+            },
+            "Introduction to Lead Self": {
+                "file": "LDR-1.2_Introduction_to_Lead_Self.pdf",
+                "periods": 1
+            }
+        },
+        "First Aid": {
+            "Carry out Personal Wellness – Management in the Field(E)": {
+                "file": "MED-1.1_Carry_out_Personal_Wellness_Management_in_the_Field(E).pdf",
+                "periods": 1
+            },
+            "Identify Environmental Related Illness": {
+                "file": "MED-1.2_Identify_Environmental_Related_Illness.pdf",
+                "periods": 1
+            }
+        },
+        "Navigation": {
+            "Aim and Purpose of Map/Chart Reading and Definitions": {
+                "file": "NAV-1.1_Aim_and_Purpose_of_Map_Chart_Reading_and_Definitions.pdf",
+                "periods": 1
+            },
+            "Explain the Care of Maps/Charts and Marginal Information": {
+                "file": "NAV-1.2_Explain_the_Care_of_Maps_Charts_and_Marginal_Information.pdf",
+                "periods": 1
+            },
+            "Explain the Map/Chart Reference System": {
+                "file": "NAV-1.3_Explain_the_Map_Chart_Reference_System.pdf",
+                "periods": 1
+            },
+            "Plot and Read Grid References using the Service Protractor": {
+                "file": "NAV-1.4_Plot_and_Read_Grid_References_using_the_Service_Protractor.pdf",
+                "periods": 1
+            },
+            "Measure Distance on a Map": {
+                "file": "NAV-1.5_Measure_Distance_on_a_Map.pdf",
+                "periods": 1
+            },
+            "Plot and Measure Grid Bearings": {
+                "file": "NAV-1.6_Plot_and_Measure_Grid_Bearings.pdf",
+                "periods": 1
+            },
+            "Interpret Relief and Contours (SCC Symbols and Datum)": {
+                "file": "NAV-1.7_Interpret_Relief_and_Contours_SCC_Symbols_and_Datum.pdf",
+                "periods": 1
+            },
+            "Explain Direction and North Points": {
+                "file": "NAV-1.8_Explain_Direction_and_North_Points.pdf",
+                "periods": 1
+            },
+            "Use a Compass": {
+                "file": "NAV-1.9_Use_a_Compass.pdf",
+                "periods": 1
+            }
+        },
+        "CFK": {
+            "Describe Basic Administration and Unit Processes (CadetNet)": {
+                "file": "OPS-1.1_Describe_Basic_Administration_and_Unit_Processes_CadetNet.pdf",
+                "periods": 1
+            },
+            "Identify NZCF Terms and Conditions of Membership": {
+                "file": "OPS-1.2_Identify_NZCF_Terms_and_Conditions_of_Membership.pdf",
+                "periods": 1
+            },
+            "Describe Unit Structure": {
+                "file": "OPS-1.3_Describe_Unit_Structure.pdf",
+                "periods": 1
+            },
+            "Identify Uniform Names and Numbers": {
+                "file": "OPS-1.4_Identify_Uniform_Names_and_Numbers.pdf",
+                "periods": 1
+            },
+            "Describe and Demonstrate Uniform Wear, Care & Maintenance": {
+                "file": "OPS-1.5_Describe_and_Demonstrate_Uniform_Wear_Care_and_Maintenance.pdf",
+                "periods": 2
+            },
+            "Describe Uniform Grooming Standards": {
+                "file": "OPS-1.6_Describe_Uniform_Grooming_Standards.pdf",
+                "periods": 1
+            },
+            "Identify Corps Specific Ranks": {
+                "file": "OPS-1.7_Identify_Corps_Specific_Ranks.pdf",
+                "periods": 1
+            },
+            "Describe Corps of the NZCF": {
+                "file": "OPS-1.8_Describe_Corps_of_the_NZCF.pdf",
+                "periods": 1
+            },
+            "Describe Unit Emergency Procedures": {
+                "file": "OPS-1.9_Describe_Unit_Emergency_Procedures.pdf",
+                "periods": 1
+            },
+            "Identify Key Dates and Events – Unit": {
+                "file": "OPS-1.10_Identify_Key_Dates_and_Events_Unit.pdf",
+                "periods": 1
+            },
+            "List Cadet Awards and Badges": {
+                "file": "OPS-1.11_List_Cadet_Awards_and_Badges.pdf",
+                "periods": 2
+            },
+            "Recall Key Dates, Conflicts and Deployments – Parent Corps Specific": {
+                "file": "OPS-1.12_Recall_Key_Dates_Conflicts_and_Deployments_Parent_Corps_Specific.pdf",
+                "periods": 1
+            },
+            "Recall Parent Service Vision, Mission, Ethos and Values": {
+                "file": "OPS-1.13_Recall_Parent_Service_Vision_Mission_Ethos_and_Values.pdf",
+                "periods": 1
+            },
+            "Understand Camp and Base Operations": {
+                "file": "OPS-1.14_Understand_Camp_and_Base_Operations.pdf",
+                "periods": 1
+            }
+        },
+        "Physical Training": {
+            "Introduction to Warm Up / Down and Stretches": {
+                "file": "PHY-1.1_Introduction_to_Warm_Up_Down_and_Stretches.pdf",
+                "periods": 1
+            },
+            "Introduction to Basic PT Techniques": {
+                "file": "PHY-1.2_Introduction_to_Basic_PT_Techniques.pdf",
+                "periods": 1
+            },
+            "Conduct a Beep Test": {
+                "file": "PHY-1.3_Conduct_a_Beep_Test.pdf",
+                "periods": 1
+            },
+            "Conduct Parent Service Fitness Test": {
+                "file": "PHY-1.4_Conduct_Parent_Service_Fitness_Test.pdf",
+                "periods": 1
+            },
+            "Conduct the NZCF Fitness Assessment": {
+                "file": "PHY-1.5_Conduct_the_NZCF_Fitness_Assessment.pdf",
+                "periods": 1
+            },
+            "Employ Safe Handling and Lifting Techniques": {
+                "file": "PHY-1.6_Employ_Safe_Handling_and_Lifting_Techniques.pdf",
+                "periods": 1
+            },
+            "Conduct a Tug-of-War": {
+                "file": "PHY-1.7_Conduct_a_Tug-of-War.pdf",
+                "periods": 1
+            },
+            "Conduct a Swim Test / Assessment": {
+                "file": "PHY-1.8_Conduct_a_Swim_Test_Assessment.pdf",
+                "periods": 1
+            }
+        },
+        "Bushcraft": {
+            "Define Environmental Care": {
+                "file": "PMT-1.1_Define_Environmental_Care.pdf",
+                "periods": 1
+            },
+            "Apply Clothing and Layering": {
+                "file": "PMT-1.2_Apply_Clothing_and_Layering.pdf",
+                "periods": 1
+            },
+            "Identify Personal Equipment": {
+                "file": "PMT-1.3_Identify_Personal_Equipment.pdf",
+                "periods": 1
+            },
+            "Identify First Aid and Survival Kits": {
+                "file": "PMT-1.4_Identify_First_Aid_and_Survival_Kits.pdf",
+                "periods": 2
+            },
+            "Identify Group Equipment": {
+                "file": "PMT-1.5_Identify_Group_Equipment.pdf",
+                "periods": 1
+            },
+            "Use Food, Ration Packs, and Cooking": {
+                "file": "PMT-1.6_Use_Food_Ration_Packs_and_Cooking.pdf",
+                "periods": 2
+            },
+            "Practise Packing a Pack": {
+                "file": "PMT-1.7_Practise_Packing_a_Pack.pdf",
+                "periods": 1
+            },
+            "Erect Tentage": {
+                "file": "PMT-1.8_Erect_Tentage.pdf",
+                "periods": 1
+            },
+            "Carry out Lost Procedures": {
+                "file": "PMT-1.9_Carry_out_Lost_Procedures.pdf",
+                "periods": 1
+            },
+            "Identify Knots and Lashings": {
+                "file": "PMT-1.10_Identify_Knots_and_Lashings.pdf",
+                "periods": 2
+            }
+        },
+        "RATEL": {
+            "Familiarisation of Equipment": {
+                "file": "RCD-1.1_Familiarisation_of_Equipment.pdf",
+                "periods": 1
+            },
+            "Conduct Operations – SAD": {
+                "file": "RCD-1.2_Conduct_Operations_SAD.pdf",
+                "periods": 1
+            },
+            "State Figures, Phonetics, and Pro-Words": {
+                "file": "RCD-1.3_State_Figures_Phonetics_and_Pro-Words.pdf",
+                "periods": 2
+            },
+            "Conduct Radio Checks": {
+                "file": "RCD-1.4_Conduct_Radio_Checks.pdf",
+                "periods": 1
+            },
+            "Use the 24-Hour Clock": {
+                "file": "RCD-1.5_Use_the_24-Hour_Clock.pdf",
+                "periods": 1
+            }
+        },
+        "Aviation": {
+            "Research History of Aviation": {
+                "file": "AVS-1.1_Research_History_of_Aviation.pdf",
+                "periods": 1
+            },
+            "Identify Principles of Flight": {
+                "file": "AVS-1.2_Identify_Principles_of_Flight.pdf",
+                "periods": 1
+            },
+            "Identify Flight Controls": {
+                "file": "AVS-1.3_Identify_Flight_Controls.pdf",
+                "periods": 1
+            },
+            "Define Effects of Controls": {
+                "file": "AVS-1.4_Define_Effects_of_Controls.pdf",
+                "periods": 1
+            },
+            "Describe Airfield Layout/Safety": {
+                "file": "AVS-1.5_Describe_Airfield_Layout_Safety.pdf",
+                "periods": 1
+            },
+            "Describe Cockpit Layout": {
+                "file": "AVS-1.6_Describe_Cockpit_Layout.pdf",
+                "periods": 2
+            }
+        }
     },
-    "year2": {
+    "Year 2": {
         "Drill": {},
         "Ethics": {},
         "Firearms": {},
@@ -26,7 +367,7 @@
         "Instructional Techniques": {},
         "Aviation": {}
     },
-    "year3": {
+    "Year 3": {
         "Drill": {},
         "Ethics": {},
         "Firearms": {},
@@ -40,7 +381,7 @@
         "Instructional Techniques": {},
         "Aviation": {}
     },
-    "year4": {
+    "Year 4": {
         "Drill": {},
         "Ethics": {},
         "RAMs": {},
@@ -52,5 +393,9 @@
         "Physical Training": {},
         "Instructional Techniques": {},
         "Aviation": {}
+    },
+    "Year 5": {
+        "Drill": {},
+        "Leadership": {}
     }
 }

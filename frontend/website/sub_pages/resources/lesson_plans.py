@@ -30,7 +30,7 @@ icons = {'Default': ':material/docs:',
          'RAMs': ':material/docs:',
          'Other': ':material/docs:'}
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def get_data(file):
     try:
         response = requests.get(file['signedURL'])

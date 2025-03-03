@@ -11,7 +11,7 @@ if not st.session_state.is_local:
 if 'training_programs' not in st.session_state:
         st.session_state.training_programs = st.session_state.conn.create_signed_urls('training_programs', [file['name'] for file in st.session_state.conn.list_objects('training_programs', ttl='0s')], expires_in=3600)
     
-@st.cache_data
+@st.cache_data(ttl=3600)
 def get_data(file):
     try:
         response = requests.get(file['signedURL'])
@@ -23,7 +23,7 @@ def get_data(file):
             return io.BytesIO(response.content)
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def extend_rows(df, var_string, var, count):
     if len(var) > 0:
         selected_indices = df.index[df[var_string].isin(var)].tolist()
@@ -34,7 +34,7 @@ def extend_rows(df, var_string, var, count):
     return df
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def color_column(val):
     return 'background-color: #FFA500'
 
