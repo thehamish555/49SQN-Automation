@@ -82,7 +82,7 @@ for week in df.columns:
 column_config['Year Group'] = st.column_config.TextColumn('Year Group', width=100)
 column_config['Period'] = st.column_config.TextColumn('Period', width=100)
 try:
-    st.dataframe(df.style.applymap(color_column, subset=[column]).applymap(color_users),
+    st.dataframe(df.style.map(color_column, subset=[column]).map(color_users),
                 hide_index=True,
                 column_config=column_config,
                 use_container_width=True,
