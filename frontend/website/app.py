@@ -49,7 +49,7 @@ if st.session_state.user:
             st.Page('sub_pages/resources/documents.py', title='Documents', icon=':material/folder:')
         ],
         'Tools': [
-            st.Page('sub_pages/tools/training_program_editor.py', title='Training Program Editor', icon=':material/csv:'),
+            st.Page('sub_pages/tools/training_program.py', title='Training Program', icon=':material/csv:'),
         ],
         'Your Account': [
             st.Page('sub_pages/accounts/manage_account.py', title='Manage Account', icon=':material/manage_accounts:')
@@ -126,7 +126,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.5.5</p>
+    <p>V0.6.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)

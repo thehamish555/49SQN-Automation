@@ -10,8 +10,8 @@ if st.session_state.user:
         st.image('./frontend/website/resources/media/logo.png')
 
     'Some Quick Links:'
-    st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:')
-    st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:')
-    # st.page_link('pages/tools/training_program_generator.py', label='Training Program Generator', icon=':material/csv:')
+    st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
+    st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
+    st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
     
     st.warning('Some pages are still in development')
