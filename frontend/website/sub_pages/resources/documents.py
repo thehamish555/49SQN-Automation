@@ -43,7 +43,7 @@ with cols[0]:
     st.caption(f'*Showing {len(manuals[st.session_state.manual_count:st.session_state.manual_count + 10])}/{len(st.session_state.manuals)} manuals*')
     for manual in manuals[st.session_state.manual_count:st.session_state.manual_count + 10]:
         if st.session_state.display_as_links:
-            st.write(f'[{manual}]({st.session_state.manuals[manual]})')
+            st.write(f':material/docs: [{manual}]({st.session_state.manuals[manual]})')
         else:
             if st.button(manual.removesuffix('.pdf'), type='tertiary', help='View this manual', icon=':material/docs:'):
                 view_large_pdf(manual)
