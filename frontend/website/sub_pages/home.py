@@ -61,6 +61,5 @@ if st.session_state.user:
                     num += 3
         for text_ in text:
             st.write(text_)
-        if st.button('Copy to Clipboard', icon=':material/content_copy:'):
-            st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
+        st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
     st.warning('Some pages are still in development')

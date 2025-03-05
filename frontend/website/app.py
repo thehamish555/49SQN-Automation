@@ -128,7 +128,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.7.2</p>
+    <p>V0.7.3</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
