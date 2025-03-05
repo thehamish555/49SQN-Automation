@@ -1,17 +1,65 @@
 import streamlit as st
+import pandas as pd
+import requests
+import io
+import datetime
+import pyperclip
 
 if st.session_state.user:
-    st.title('Welcome to the 49SQN Air Cadet Unit NCO Portal')
-    st.write('This is a Streamlit web application that assists NCOs and Officers within the 49SQN Air Cadet Unit.')
+    @st.cache_data(ttl=3600)
+    def get_data(file):
+        try:
+            response = requests.get(file['signedURL'])
+            if response.status_code == 200:
+                return io.BytesIO(response.content)
+        except TypeError:
+            response = requests.get(file)
+            if response.status_code == 200:
+                return io.BytesIO(response.content)
 
-    if st.session_state.is_local:
-        st.image('resources/media/logo.png')
-    else:
-        st.image('./frontend/website/resources/media/logo.png')
-
-    'Some Quick Links:'
-    st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
-    st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
-    st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
+    cols = st.columns([1, 13])
+    with cols[0]:
+        if st.session_state.is_local:
+            st.image('resources/media/logo.png')
+        else:
+            st.image('./frontend/website/resources/media/logo.png')
+    with cols[1]:
+        st.title('49SQN NCO Portal')
+        st.write('This portal is used to assist NCOs and Officers within the 49SQN Air Cadet Unit.')
     
+    '---'
+    cols = st.columns([3, 5, 1], gap='large')
+    with cols[0]:
+        '### Quick Links'
+        st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
+        st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
+        st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
+    with cols[1]:
+        '### Weekly Report'
+        df = pd.read_csv(get_data(st.session_state.training_programs[0]))
+        next_date = None
+        for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
+            if datetime.datetime.strptime(date, '%d/%m/%Y') >= datetime.datetime.strptime(datetime.datetime.now().strftime('%d/%m/%Y'), '%d/%m/%Y'):
+                next_date = date
+                break
+        for column in df.columns:
+            if df[column][0] == next_date:
+                break
+        text = [f'###### {column} - {df[column][0]}']
+        if isinstance(df[column][1], str):
+            text.append(f'###### Dress: {df[column][1]}')
+        else:
+            text.append('###### Dress: Not Specified')
+        num = 2
+        for year in df['Year Group'].unique():
+            if isinstance(year, str):
+                text.append(' ')
+                text.append(f'#### {year}')
+                for i in range(len(df['Period'].unique())-1):
+                    text.append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}')
+                    num += 3
+        for text_ in text:
+            st.write(text_)
+        if st.button('Copy to Clipboard', icon=':material/content_copy:'):
+            pyperclip.copy('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
     st.warning('Some pages are still in development')

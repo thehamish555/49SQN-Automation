@@ -3,9 +3,6 @@ import requests
 import io
 import pandas as pd
 import datetime
-
-if 'training_programs' not in st.session_state:
-        st.session_state.training_programs = st.session_state.conn.create_signed_urls('training_programs', [file['name'] for file in st.session_state.conn.list_objects('training_programs', ttl='0s')], expires_in=3600)
     
 @st.cache_data(ttl=3600)
 def get_data(file):

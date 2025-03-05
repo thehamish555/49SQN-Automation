@@ -38,6 +38,8 @@ if 'user' not in st.session_state:
             break
     if 'user' not in st.session_state:
         st.session_state.user = None
+if 'training_programs' not in st.session_state:
+        st.session_state.training_programs = st.session_state.conn.create_signed_urls('training_programs', [file['name'] for file in st.session_state.conn.list_objects('training_programs', ttl='0s')], expires_in=3600)
 
 if st.session_state.user:
     pages = {
@@ -126,7 +128,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.6.4</p>
+    <p>V0.7.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
