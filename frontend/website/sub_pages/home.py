@@ -61,5 +61,5 @@ if st.session_state.user:
                     num += 3
         for text_ in text:
             st.write(text_)
-        st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
+        st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy to Clipboard', after_copy_label='Copied!')
     st.warning('Some pages are still in development')

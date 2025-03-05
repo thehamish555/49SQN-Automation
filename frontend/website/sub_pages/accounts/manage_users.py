@@ -32,7 +32,7 @@ with cols[0]:
                             column_config={
                                 'name': st.column_config.TextColumn('Name', help='The name of the user'),
                                 'email': st.column_config.TextColumn('Email', help='The email address of the user'),
-                                'permissions': st.column_config.ListColumn('Permissions', help='The permissions of the user')
+                                'permissions': st.column_config.ListColumn('Permissions', help='The permissions of the user', width=300)
                                 },
                             column_order=['name', 'email', 'permissions'],
                             hide_index=True,
