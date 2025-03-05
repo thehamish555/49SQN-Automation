@@ -79,8 +79,8 @@ for indices in year_group_indices:
 column_config = {}
 for week in df.columns:
     column_config[week] = st.column_config.TextColumn(week, width=200)
-column_config['Year Group'] = st.column_config.TextColumn('Year Group', width=100)
-column_config['Period'] = st.column_config.TextColumn('Period', width=100)
+column_config['Year Group'] = st.column_config.TextColumn('Year Group', width=100, pinned=True)
+column_config['Period'] = st.column_config.TextColumn('Period', width=100, pinned=True)
 try:
     st.dataframe(df.style.map(color_column, subset=[column]).map(color_users),
                 hide_index=True,
