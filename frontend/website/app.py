@@ -117,9 +117,8 @@ footer='''
 <style>
     .footer {
         position: fixed;
-        left: 0;
+        right: 0;
         bottom: 0;
-        width: 100%;
         color: gray;
         text-align: right;
         padding-right: 25px;
@@ -128,7 +127,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.7.4</p>
+    <p>V0.7.5</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)

@@ -1,21 +1,25 @@
 import streamlit as st
 import streamlit_pdf_viewer as pdf_viewer
-import os
+import json
+import requests
+import io
 
 if 'manuals' not in st.session_state:
     if st.session_state.is_local:
-        st.session_state.manuals_path = './resources/manuals'
+        st.session_state.manuals_path = './resources/configurations/manuals.json'
     else:
-        st.session_state.manuals_path = './frontend/website/resources/manuals'
-    st.session_state.manuals = os.listdir(st.session_state.manuals_path)
-    st.session_state.manuals.sort()
+        st.session_state.manuals_path = './frontend/website/resources/configurations/manuals.json'
+    with open(st.session_state.manuals_path, 'r') as file:
+        st.session_state.manuals = json.load(file)
+    st.session_state.manuals = dict(sorted(st.session_state.manuals.items()))
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
 
 @st.cache_data(ttl=3600)
-def get_data(file_name):
-        with open(f'{st.session_state.manuals_path}/{file_name}', 'rb') as file:
-            return file.read()
+def get_data(file):
+    response = requests.get(st.session_state.manuals[file])
+    if response.status_code == 200:
+        return io.BytesIO(response.content).getvalue()
 
 
 try:
@@ -29,7 +33,7 @@ except AttributeError:
     pass
 
 
-st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying documents as links or buttons', disabled=True)
+st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying documents as links or buttons')
 cols = st.columns(3)
 
 with cols[0]:
@@ -39,9 +43,9 @@ with cols[0]:
     st.caption(f'*Showing {len(manuals[st.session_state.manual_count:st.session_state.manual_count + 10])}/{len(st.session_state.manuals)} manuals*')
     for manual in manuals[st.session_state.manual_count:st.session_state.manual_count + 10]:
         if st.session_state.display_as_links:
-            st.write(f'[{manual.removesuffix(".pdf")}]({manual})')
+            st.write(f'[{manual}]({st.session_state.manuals[manual]})')
         else:
-            if st.button(manual.removesuffix('.pdf'), type='tertiary', help='View this manual'):
+            if st.button(manual.removesuffix('.pdf'), type='tertiary', help='View this manual', icon=':material/docs:'):
                 view_large_pdf(manual)
     sub_cols = st.columns(2)
     with sub_cols[0]:

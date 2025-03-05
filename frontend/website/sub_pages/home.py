@@ -9,14 +9,9 @@ from st_copy_to_clipboard import st_copy_to_clipboard
 if st.session_state.user:
     @st.cache_data(ttl=3600)
     def get_data(file):
-        try:
-            response = requests.get(file['signedURL'])
-            if response.status_code == 200:
-                return io.BytesIO(response.content)
-        except TypeError:
-            response = requests.get(file)
-            if response.status_code == 200:
-                return io.BytesIO(response.content)
+        response = requests.get(file['signedURL'])
+        if response.status_code == 200:
+            return io.BytesIO(response.content)
 
     cols = st.columns([1, 13])
     with cols[0]:
@@ -29,14 +24,10 @@ if st.session_state.user:
         st.write('This portal is used to assist NCOs and Officers within the 49SQN Air Cadet Unit.')
     
     '---'
-    cols = st.columns([3, 5, 1], gap='large')
+    
+    cols = st.columns(3, gap='large')
     with cols[0]:
-        '### Quick Links'
-        st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
-        st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
-        st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
-    with cols[1]:
-        '### Weekly Report'
+        st.markdown('### Weekly Report', help='View the weekly report based on the training program')
         df = pd.read_csv(get_data(st.session_state.training_programs[0]))
         next_date = None
         for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
@@ -54,7 +45,7 @@ if st.session_state.user:
         num = 2
         for year in df['Year Group'].unique():
             if isinstance(year, str):
-                text.append(' ')
+                text.append('')
                 text.append(f'#### {year}')
                 for i in range(len(df['Period'].unique())-1):
                     text.append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}')
@@ -62,4 +53,9 @@ if st.session_state.user:
         for text_ in text:
             st.write(text_)
         st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy to Clipboard', after_copy_label='Copied!')
+    with cols[1]:
+        '### Quick Links'
+        st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
+        st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
+        st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
     st.warning('Some pages are still in development')

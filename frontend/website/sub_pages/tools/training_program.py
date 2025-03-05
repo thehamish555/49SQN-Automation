@@ -6,15 +6,9 @@ import datetime
     
 @st.cache_data(ttl=3600)
 def get_data(file):
-    try:
-        response = requests.get(file['signedURL'])
-        if response.status_code == 200:
-            return io.BytesIO(response.content)
-    except TypeError:
-        response = requests.get(file)
-        if response.status_code == 200:
-            return io.BytesIO(response.content)
-
+    response = requests.get(file['signedURL'])
+    if response.status_code == 200:
+        return io.BytesIO(response.content)
 
 @st.cache_data(ttl=3600)
 def extend_rows(df, var_string, var, count):
