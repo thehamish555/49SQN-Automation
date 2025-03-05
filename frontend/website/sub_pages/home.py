@@ -3,7 +3,8 @@ import pandas as pd
 import requests
 import io
 import datetime
-import pyperclip
+from st_copy_to_clipboard import st_copy_to_clipboard
+
 
 if st.session_state.user:
     @st.cache_data(ttl=3600)
@@ -61,5 +62,5 @@ if st.session_state.user:
         for text_ in text:
             st.write(text_)
         if st.button('Copy to Clipboard', icon=':material/content_copy:'):
-            pyperclip.copy('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
+            st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''))
     st.warning('Some pages are still in development')
