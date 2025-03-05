@@ -85,10 +85,8 @@ try:
     st.dataframe(df.style.map(color_column, subset=[column]).map(color_users),
                 hide_index=True,
                 column_config=column_config,
-                use_container_width=True,
                 height=947)
 except KeyError:
     st.dataframe(df,
                  hide_index=True,
-                 use_container_width=True,
                  height=947)
