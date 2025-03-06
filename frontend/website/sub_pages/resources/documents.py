@@ -48,7 +48,7 @@ try:
     def view_large_pdf(file_name):
         file_data = get_data(file_name)
         st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
-        st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
+        st.download_button('Download PDF', data=file_data, file_name=file_name+'.pdf', mime='application/octet-stream', icon=':material/download:')
         pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
 except AttributeError:
     pass
