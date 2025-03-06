@@ -92,9 +92,9 @@ with cols[1]:
     st.caption(f'*Showing {len(syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10])}/{len(st.session_state.syllabus)} lessons*')
     for syllabus_item in syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10]:
         if st.session_state.display_as_links:
-            st.write(f':material/folder: [{syllabus_item}]({st.session_state.syllabus[syllabus_item]['url']})')
+            st.write(f':material/docs: [{syllabus_item}]({st.session_state.syllabus[syllabus_item]['url']})')
         else:
-            if st.button(syllabus_item, type='tertiary', help='View this lesson', icon=':material/folder:'):
+            if st.button(syllabus_item, type='tertiary', help='View this lesson', icon=':material/docs:'):
                 view_large_pdf(syllabus_item)
     sub_cols = st.columns(2)
     with sub_cols[0]:
