@@ -52,6 +52,11 @@ except AttributeError:
     pass
 
 
+def update_search():
+    st.session_state.file_count = 0
+
+
+
 @st.dialog('Confirm Deletion', width='small')
 def confirmation(file):
     st.error(f'**Are you sure you want to delete "*{file}*"?**')
@@ -71,9 +76,9 @@ def confirmation(file):
 with cols[0]:
     st.write('#### Lesson Plan Viewer')
     st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying lesson plans as links or buttons')
-    search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...', help='Search for a specific lesson plan')
+    search = st.text_input('Search', key='search', placeholder='Search for Lesson Plans...', help='Search for a specific lesson plan', on_change=update_search)
     files = [f for f in st.session_state.files if search.lower() in f['path'].lower().removesuffix('.pdf')]
-    st.caption(f'*Showing {len(files[st.session_state.file_count:st.session_state.file_count + 10])}/{len(st.session_state.files)} files*')
+    st.caption(f'*Showing {len(files[st.session_state.file_count:st.session_state.file_count + 10])}/{len(st.session_state.files)} lesson plans*')
     for file in files[st.session_state.file_count:st.session_state.file_count + 10]:
         try:
             icon = icons[file['path'].split(' - ')[1].removesuffix('.pdf')]
