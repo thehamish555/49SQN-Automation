@@ -60,7 +60,7 @@ def update_search(search):
 
 
 st.toggle('Display as links', key='display_as_links', value=False, help='Toggle between displaying documents as links or buttons')
-cols = st.columns(3)
+cols = st.columns(3, border=True)
 
 with cols[0]:
     st.write('### Manuals')
@@ -108,6 +108,8 @@ with cols[1]:
                 st.session_state.syllabus_count += 10
                 st.rerun()
 
+with cols[2]:
+    st.info("Left intentionally blank for now...")
 '---'
 
 st.write('#### Quick Links')

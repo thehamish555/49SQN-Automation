@@ -29,6 +29,7 @@ def color_users(val):
     if users.__contains__(val):
         return 'background-color: #4b8cc9'
 
+st.warning('Only supports dark mode currently')
 
 df = pd.read_csv(get_data(st.session_state.training_programs[0]))
 
