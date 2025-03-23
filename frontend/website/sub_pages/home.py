@@ -52,7 +52,11 @@ if st.session_state.user:
                     num += 3
         for text_ in text:
             st.write(text_)
-        st_copy_to_clipboard('\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy to Clipboard', after_copy_label='Copied!')
+        sub_cols = st.columns(2)
+        with sub_cols[0]:
+            st_copy_to_clipboard('Weekly Report\n'+'\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy Raw Text to Clipboard', after_copy_label='Copied!')
+        with sub_cols[1]:
+            st_copy_to_clipboard('# Weekly Report\n'+'\n'.join(text).replace('### ', ' ').replace('###### ', '## '), before_copy_label='Copy With Styling to Clipboard', after_copy_label='Copied!')
     with cols[1]:
         '### Quick Links'
         st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
