@@ -22,14 +22,13 @@ def extend_rows(df, var_string, var, count):
 
 
 def color_column(val):
-    return 'background-color: #25282e'
+    return f'background-color: {st.get_option('theme.borderColor')}'
 
 
 def color_users(val):
     if users.__contains__(val):
-        return 'background-color: #4b8cc9'
+        return f'background-color: {st.get_option('theme.primaryColor')}'
 
-st.warning('Only supports dark mode currently')
 
 df = pd.read_csv(get_data(st.session_state.training_programs[0]))
 

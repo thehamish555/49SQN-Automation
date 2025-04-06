@@ -14,7 +14,10 @@ with cols[0]:
     st.write('### User Information')
     st.write(f'**Full Name:** {st.experimental_user['name']}')
     st.write(f'**Email:** {st.session_state.user['email']}')
-    st.pills('Permissions', options=st.session_state.user['permissions'], disabled=True)
+    permissions_string = ":green-badge[___]"
+    for permission in st.session_state.user['permissions']:
+        permissions_string = permissions_string.replace('___', f'{permission}')+":green-badge[___]"
+    st.markdown(f'**Permissions:** {permissions_string.removesuffix("[___]")}')
 
     if st.button('Log out'):
         st.logout()
