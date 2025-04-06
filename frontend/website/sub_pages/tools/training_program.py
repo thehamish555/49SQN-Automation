@@ -9,6 +9,10 @@ def get_data(file):
     response = requests.get(file['signedURL'])
     if response.status_code == 200:
         return io.BytesIO(response.content)
+    st.session_state.pop('training_programs')
+    st.session_state.conn = None
+    st.rerun()
+
 
 @st.cache_data(ttl=3600)
 def extend_rows(df, var_string, var, count):

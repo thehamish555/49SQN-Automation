@@ -12,6 +12,9 @@ if st.session_state.user:
         response = requests.get(file['signedURL'])
         if response.status_code == 200:
             return io.BytesIO(response.content)
+        st.session_state.pop('training_programs')
+        st.session_state.conn = None
+        st.rerun()
 
     cols = st.columns([1, 13])
     with cols[0]:

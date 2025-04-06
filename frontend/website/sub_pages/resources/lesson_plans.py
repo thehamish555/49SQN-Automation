@@ -36,10 +36,16 @@ def get_data(file):
         response = requests.get(file['signedURL'])
         if response.status_code == 200:
             return io.BytesIO(response.content).getvalue()
+        st.session_state.pop('files')
+        st.session_state.conn = None
+        st.rerun()
     except TypeError:
         response = requests.get(file)
         if response.status_code == 200:
             return io.BytesIO(response.content).getvalue()
+        st.session_state.pop('files')
+        st.session_state.conn = None
+        st.rerun()
 
 
 try:
