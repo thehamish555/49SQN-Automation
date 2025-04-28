@@ -33,8 +33,18 @@ def color_users(val):
     if users.__contains__(val):
         return f'background-color: {st.get_option('theme.primaryColor')}'
 
+training_program_files = {}
+for file in st.session_state.training_programs:
+    file_name = file['path']
+    file_name = file_name.removesuffix('.csv')
+    split_file_name = file_name.split('_')
+    year = split_file_name[0]
+    term = split_file_name[1]
+    training_program_files[f'{year}: Term {term}'] = file
 
-df = pd.read_csv(get_data(st.session_state.training_programs[0]))
+training_program = st.selectbox('Select Training Program', options=training_program_files, index=len(training_program_files)-1, help='Select the training program to display.')
+
+df = pd.read_csv(get_data(training_program_files[training_program]))
 
 cols = st.columns(4)
 with cols[0]:

@@ -40,7 +40,7 @@ if st.session_state.user:
         for column in df.columns:
             if df[column][0] == next_date:
                 break
-        text = [f'###### {column} - {df[column][0]}']
+        text = [f'###### {column.split('.')[0]} - {df[column][0]}']
         if isinstance(df[column][1], str):
             text.append(f'###### Dress: {df[column][1]}')
         else:
@@ -51,7 +51,11 @@ if st.session_state.user:
                 text.append('')
                 text.append(f'#### {year}')
                 for i in range(len(df['Period'].unique())-1):
-                    text.append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}')
+                    if isinstance(df[column][num], str) or isinstance(df[column][num + 1], str) or isinstance(df[column][num + 2], str):
+                        text.append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}'.replace('nan', 'Not Specified'))
+                    else:
+                        if text[-1] != 'No Periods Specified':
+                            text.append('No Periods Specified')
                     num += 3
         for text_ in text:
             st.write(text_)
