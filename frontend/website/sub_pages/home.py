@@ -31,7 +31,7 @@ if st.session_state.user:
     cols = st.columns(3, gap='large')
     with cols[0]:
         st.markdown('### Weekly Report', help='View the weekly report based on the training program')
-        df = pd.read_csv(get_data(st.session_state.training_programs[0]))
+        df = pd.read_csv(get_data(st.session_state.training_programs[-1]))
         next_date = None
         for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
             if datetime.datetime.strptime(date, '%d/%m/%Y') >= datetime.datetime.strptime(datetime.datetime.now().strftime('%d/%m/%Y'), '%d/%m/%Y'):
