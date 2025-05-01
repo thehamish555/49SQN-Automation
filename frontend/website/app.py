@@ -85,7 +85,7 @@ if st.session_state.user is None:
 if st.session_state.is_local:
     st.logo(image='resources/media/cadets_header.png', size='large', icon_image='resources/media/logo.png')
 else:
-    st.logo(image='./frontend/website/resources/media/cadets_header.png', size='large', icon_image='./resources/media/logo.png')
+    st.logo(image='./frontend/website/resources/media/cadets_header.png', size='large', icon_image='./frontend/website/resources/media/logo.png')
 pg = st.navigation(pages)
 pg.run()
 
@@ -131,7 +131,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.9.6</p>
+    <p>V0.9.7</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
