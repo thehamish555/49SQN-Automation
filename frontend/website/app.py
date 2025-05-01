@@ -26,7 +26,7 @@ if 'users' not in st.session_state:
     st.session_state.users.data.sort(key=lambda x: x['permissions'][0] if len(x['permissions']) > 0 else 'user')
 if 'user' not in st.session_state:
     for user in st.session_state.users.data:
-        if st.experimental_user.is_logged_in and st.experimental_user.email.lower() == user['email']:
+        if st.user.is_logged_in and st.user.email.lower() == user['email']:
             st.session_state.user = user
             if st.session_state.is_local:
                 file = open('resources/configurations/permission_structure.json', 'r')
@@ -67,7 +67,7 @@ else:
 st.markdown('#### 49SQN NCO App')
 '---'
 
-if not st.experimental_user.is_logged_in:
+if not st.user.is_logged_in:
     if st.button('Log in with Google'):
         st.login()
     pg = st.navigation(pages, position='hidden')
@@ -82,6 +82,10 @@ if st.session_state.user is None:
     pg.run()
     st.stop()
 
+if st.session_state.is_local:
+    st.logo(image='resources/media/cadets_header.png', size='large', icon_image='resources/media/logo.png')
+else:
+    st.logo(image='./frontend/website/resources/media/cadets_header.png', size='large', icon_image='./resources/media/logo.png')
 pg = st.navigation(pages)
 pg.run()
 
@@ -127,7 +131,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.9.5</p>
+    <p>V0.9.6</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)

@@ -3,7 +3,7 @@ from st_supabase_connection import execute_query
 
 cols = st.columns([1, 20], vertical_alignment='bottom')
 with cols[0]:
-    st.image(st.experimental_user['picture'])
+    st.image(st.user['picture'])
 with cols[1]:
     st.write(f'### Welcome *{st.session_state.user['name']}*')
 
@@ -12,7 +12,7 @@ with cols[1]:
 cols = st.columns([3, 5, 1], gap='large')
 with cols[0]:
     st.write('### User Information')
-    st.write(f'**Full Name:** {st.experimental_user['name']}')
+    st.write(f'**Full Name:** {st.user['name']}')
     st.write(f'**Email:** {st.session_state.user['email']}')
     permissions_string = ":green-badge[___]"
     for permission in st.session_state.user['permissions']:
