@@ -3,24 +3,37 @@ from st_supabase_connection import SupabaseConnection, execute_query
 import platform
 import json
 
-st.set_page_config(
-    page_title='49SQN NCO App',
-    page_icon=':material/travel:',
-    layout='wide',
-    menu_items={
-        'Get Help': None,
-        'Report a bug': 'mailto:hamishlester555@gmail.com',
-        'About': None
-    }
-)
-
-st.session_state.conn = st.connection('supabase', type=SupabaseConnection, ttl='60s')
-
 if 'is_local' not in st.session_state:
     if not platform.processor():
         st.session_state.is_local = False
     else:
         st.session_state.is_local = True
+
+if st.session_state.is_local:
+    st.set_page_config(
+        page_title='49SQN NCO App',
+        page_icon='resources/media/icon.png',
+        layout='wide',
+        menu_items={
+            'Get Help': None,
+            'Report a bug': 'mailto:hamishlester555@gmail.com',
+            'About': None
+        }
+    )
+else: 
+    st.set_page_config(
+        page_title='49SQN NCO App',
+        page_icon='./frontend/website/resources/media/icon.png',
+        layout='wide',
+        menu_items={
+            'Get Help': None,
+            'Report a bug': 'mailto:hamishlester555@gmail.com',
+            'About': None
+        }
+    )
+
+st.session_state.conn = st.connection('supabase', type=SupabaseConnection, ttl='60s')
+
 if 'users' not in st.session_state:
     st.session_state.users = execute_query(st.session_state.conn.table('users').select('*'), ttl='60s')
     st.session_state.users.data.sort(key=lambda x: x['permissions'][0] if len(x['permissions']) > 0 else 'user')
@@ -131,7 +144,7 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.9.7</p>
+    <p>V0.9.8</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)

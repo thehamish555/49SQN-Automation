@@ -2,7 +2,8 @@
     "Admin": [
         "manage_users",
         "view_users",
-        "manage_lesson_plans"
+        "manage_lesson_plans",
+        "manage_training_program"
     ],
     "Manage Users": [
         "manage_users",
@@ -13,5 +14,8 @@
     ],
     "Manage Lesson Plans": [
         "manage_lesson_plans"
+    ],
+    "Manage Training Program": [
+        "manage_training_program"
     ]
 }

@@ -6,6 +6,25 @@ import datetime
 from st_copy_to_clipboard import st_copy_to_clipboard
 
 
+def get_training_program_names():        
+    training_program_files = []
+    for file in st.session_state.training_programs:
+        if file['path'] == 'active_training_programs.csv':
+            active_training_programs = pd.read_csv(get_data(file))
+    for file in st.session_state.training_programs:
+        if file['path'] != 'active_training_programs.csv':
+            file_name = file['path']
+            file_name = file_name.removesuffix('.csv')
+            split_file_name = file_name.split('_')
+            year = split_file_name[0]
+            term = split_file_name[1]
+            file_renamed = f'{year}: Term {term}'
+            for name, is_active in zip(active_training_programs['name'], active_training_programs['active']):
+                if name == file_renamed and is_active == True:
+                    training_program_files.append(file)
+    return training_program_files
+
+
 if st.session_state.user:
     @st.cache_data(ttl=3600)
     def get_data(file):
@@ -30,8 +49,9 @@ if st.session_state.user:
     
     cols = st.columns(3, gap='large')
     with cols[0]:
+        training_program_files = get_training_program_names()
+        df = pd.read_csv(get_data(training_program_files[-1]))
         st.markdown('### Weekly Report', help='View the weekly report based on the training program')
-        df = pd.read_csv(get_data(st.session_state.training_programs[-1]))
         next_date = None
         for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
             if datetime.datetime.strptime(date, '%d/%m/%Y') >= datetime.datetime.strptime(datetime.datetime.now().strftime('%d/%m/%Y'), '%d/%m/%Y'):
