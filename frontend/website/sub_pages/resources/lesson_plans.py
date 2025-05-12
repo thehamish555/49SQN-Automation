@@ -18,16 +18,18 @@ st.session_state.files.sort(key=lambda x: (not x['path'].endswith('Template.pdf'
 icons = {'Default': ':material/docs:',
          'Template': ':material/docs:',
          'Aviation': 'material/flight',
-         'Bushcraft': ':material/forest:',
-         'CFK': ':material/school:',
          'Drill': ':material/directions_walk:',
          'Ethics': ':material/docs:',
+         'Exercise Planning': ':material/school:',
          'Firearms': ':material/docs:',
-         'First Aid': ':material/medical_services:',
-         'Instructional Techniques': ':material/school:',
          'Leadership': ':material/groups:',
+         'Medical': ':material/medical_services:',
          'Navigation': ':material/explore:',
-         'RAMs': ':material/docs:',
+         'Operations': ':material/school:',
+         'Physical Training': ':material/fitness_center:',
+         'Protection': ':material/forest:',
+         'Radio': ':material/radio:',
+         'Systems App Learning': ':material/school:',
          'Other': ':material/docs:'}
 
 @st.cache_data(ttl=3600)

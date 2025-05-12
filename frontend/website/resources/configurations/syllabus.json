@@ -120,7 +120,7 @@
                 "periods": 1
             }
         },
-        "First Aid": {
+        "Medical": {
             "Carry out Personal Wellness - Management in the Field(E)": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.1_Carry_out_Personal_Wellness%E2%80%93Management_in_the_Field(E).pdf",
                 "periods": 1
@@ -168,7 +168,7 @@
                 "periods": 1
             }
         },
-        "CFK": {
+        "Operations": {
             "Describe Basic Administration and Unit Processes (CadetNet)": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.1_Describe_Basic_Administration_and_Unit_Processes-CadetNet.pdf",
                 "periods": 1
@@ -260,7 +260,7 @@
                 "periods": 1
             }
         },
-        "Bushcraft": {
+        "Protection": {
             "Define Environmental Care": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.1_Define_Environmental_Care.pdf",
                 "periods": 1
@@ -302,7 +302,7 @@
                 "periods": 2
             }
         },
-        "RATEL": {
+        "Radio": {
             "Familiarisation of Equipment": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.1_Familiarisation_of_Equipment.pdf",
                 "periods": 1
@@ -448,7 +448,7 @@
                 "periods": 10
             }
         },
-        "First Aid": {
+        "Medical": {
             "Apply Buddy Aid": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.1_Apply_Buddy_Aid.pdf",
                 "periods": 2
@@ -496,7 +496,7 @@
                 "periods": 2
             }
         },
-        "CFK": {
+        "Operations": {
             "Identify Structure of Region and Area": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.1_Identify_Structure_of_Region_and_Area.pdf",
                 "periods": 1
@@ -564,7 +564,7 @@
                 "periods": 1
             }
         },
-        "Bushcraft": {
+        "Protection": {
             "Construct Emergency Shelter(s)": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.1_Construct_Emergency_Shelters.pdf",
                 "periods": 2
@@ -578,7 +578,7 @@
                 "periods": 2
             }
         },
-        "RATEL": {
+        "Radio": {
             "Refresher of SAD, Equipment, Figures, Phonetics, and Pro-Words": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.1_Refresher_Equipment_Figures_Phonetics_and_Pro_Words.pdf",
                 "periods": 1
@@ -588,7 +588,7 @@
                 "periods": 1
             }
         },
-        "Instructional Techniques": {
+        "Systems App Learning": {
             "Introduction to the Systems Approach to Learning (SAL) Model": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-2.1_Introduction_to_the_SAL_Model.pdf",
                 "periods": 1
@@ -682,7 +682,7 @@
                 "periods": 3
             }
         },
-        "First Aid": {
+        "Medical": {
             "Conduct Primary Survey": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.1_Conduct_Primary_Survey.pdf",
                 "periods": 2
@@ -706,7 +706,7 @@
                 "periods": 1
             }
         },
-        "CFK": {
+        "Operations": {
             "Introduction to Parent Service Trades": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.1_Introduction_to_Parent_Service_Trades.pdf",
                 "periods": 1
@@ -754,7 +754,7 @@
                 "periods": 1
             }
         },
-        "Bushcraft": {
+        "Protection": {
             "Identify Survival Skills": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-3.1_Identify_Survival_Skills.pdf",
                 "periods": 1
@@ -764,7 +764,7 @@
                 "periods": 1
             }
         },
-        "RATEL": {
+        "Radio": {
             "Identify the Radio Net, Call Signs, Calling Answering, Call Types": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-3.1_Identify_Radio_Net_Call_Signs_Calling_Answering_and_Call_Types.pdf",
                 "periods": 1
@@ -774,7 +774,7 @@
                 "periods": 1
             }
         },
-        "Instructional Techniques": {
+        "System App Learning": {
             "Identify Instructor Roles and Responsibilities": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.1_Identify_Instructor_Roles_And_Responsibilities.pdf",
                 "periods": 1
@@ -868,7 +868,7 @@
                 "periods": 1
             }
         },
-        "RAMs": {
+        "Exercise Planning": {
             "Develop Exercise Objectives": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.1_Develop_Exercise_Objectives.pdf",
                 "periods": 1
@@ -974,7 +974,7 @@
                 "periods": 1
             }
         },
-        "First Aid": {
+        "Medical": {
             "Conduct a CASEVAC": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.1_Conduct_a_CASEVAC.pdf",
                 "periods": 1
@@ -994,7 +994,7 @@
                 "periods": 1
             }
         },
-        "CFK": {
+        "Operations": {
             "Identify HQ NZCF Staff Officer, Area, ASO Structure": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.1_Identify_HQ_NZCF_Staff_Officer_Area_ASO_Structures.pdf",
                 "periods": 1
@@ -1042,7 +1042,7 @@
                 "periods": 1
             }
         },
-        "Instructional Techniques": {
+        "Systems App Learning": {
             "Identify Learning Styles": {
                 "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.1_Identify_Learning_Styles.pdf",
                 "periods": 1
