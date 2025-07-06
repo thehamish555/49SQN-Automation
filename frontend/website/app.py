@@ -40,6 +40,10 @@ if 'users' not in st.session_state:
 if 'user' not in st.session_state:
     for user in st.session_state.users.data:
         if st.user.is_logged_in and st.user.email.lower() == user['email']:
+            if 'beta_features' in user['settings']:
+                st.session_state.beta_features = True
+            else:
+                st.session_state.beta_features = False
             st.session_state.user = user
             if st.session_state.is_local:
                 file = open('resources/configurations/permission_structure.json', 'r')
@@ -53,6 +57,20 @@ if 'user' not in st.session_state:
         st.session_state.user = None
 if 'training_programs' not in st.session_state:
         st.session_state.training_programs = st.session_state.conn.create_signed_urls('training_programs', [file['name'] for file in st.session_state.conn.list_objects('training_programs', ttl='0s')], expires_in=3600)
+if 'syllabus' not in st.session_state:
+    if st.session_state.is_local:
+        st.session_state.syllabus_path = './resources/configurations/syllabus.json'
+    else:
+        st.session_state.syllabus_path = './frontend/website/resources/configurations/syllabus.json'
+    with open(st.session_state.syllabus_path, 'r') as file:
+        st.session_state.syllabus = json.load(file)
+        temp_syllabus = {}
+        for year in st.session_state.syllabus:
+            for type in st.session_state.syllabus[year]:
+                for lesson in st.session_state.syllabus[year][type]:
+                    temp_syllabus[f'{year} {type} - {lesson}'] = st.session_state.syllabus[year][type][lesson]
+        st.session_state.syllabus = temp_syllabus
+    st.session_state.syllabus = dict(sorted(st.session_state.syllabus.items()))
 
 if st.session_state.user:
     pages = {
@@ -144,10 +162,27 @@ footer='''
 </style>
 
 <div class="footer">
-    <p>V0.9.9</p>
+    <p>V1.0.0</p>
 </div>
 '''
 st.markdown(footer, unsafe_allow_html=True)
+
+if st.session_state.beta_features:
+    st.markdown('''
+    <style>
+        .beta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: #f0f0f0;
+            color: black;
+            padding: 5px 10px;
+            font-weight: bold;
+            z-index: 1000000;
+        }
+    </style>
+    <div class="beta">Beta Features Enabled</div>
+    ''', unsafe_allow_html=True)
 
 if st.session_state.is_local:
     '---'

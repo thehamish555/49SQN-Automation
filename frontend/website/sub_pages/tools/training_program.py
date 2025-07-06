@@ -25,6 +25,23 @@ def extend_rows(df, var_string, var, count):
     return df
 
 
+@st.dialog('Confirm Deletion', width='small')
+def confirmation(file):
+    st.error(f'**Are you sure you want to delete "*{file}*"?**')
+    st.write('This action cannot be undone.')
+    cols = st.columns(2)
+    with cols[0]:
+        if st.button('Cancel', use_container_width=True, help='Cancel the deletion'):
+            st.rerun()
+    with cols[1]:
+        if st.button('**:red[Delete]**', use_container_width=True, help='Delete the training program'):
+            file = file.replace(': ', '_').replace('Term ', '')
+            st.session_state.conn.remove('training_programs', [f'{file}.pdf'])
+            st.session_state.pop('training_programs')
+            st.session_state.conn = None
+            st.rerun()
+
+
 def color_column(val):
     return f'background-color: {st.get_option('theme.borderColor')}'
 
@@ -54,7 +71,7 @@ def get_training_program_names():
 
 
 training_program_files = get_training_program_names()
-tabs = st.tabs(['Training Program', 'Editor'])
+tabs = st.tabs(['Training Program', 'Manager'])
 with tabs[0]:
     training_program = st.selectbox('Select Training Program', options=training_program_files, index=len(training_program_files)-1, help='Select the training program to display.')
 
@@ -115,24 +132,25 @@ with tabs[0]:
 
 with tabs[1]:
     if 'manage_training_program' in st.session_state.user['permissions_expanded']:
-        columns = st.columns(2)
+        columns = st.columns([2, 6, 1], gap='large')
         with columns[0]:
             for file in st.session_state.training_programs:
                 if file['path'] == 'active_training_programs.csv':
                     active_TPs_df = pd.read_csv(get_data(file))
                     break
-            st.write("### Active Training Programs")
+            st.write('##### Active Training Programs')
             edited_data = st.data_editor(active_TPs_df,
                                          column_config={
-                                             "name": st.column_config.TextColumn("Name", width=125, disabled=True),
-                                             "active": st.column_config.CheckboxColumn("Active", width=100)
+                                             'name': st.column_config.TextColumn('Name', width=125, disabled=True),
+                                             'active': st.column_config.CheckboxColumn('Active', width=100)
                                          },
                                          hide_index=True,
-                                         use_container_width=False)
-            if (edited_data.to_dict(orient="records") != active_TPs_df.to_dict(orient="records")):
+                                         use_container_width=False,
+                                         height=384)
+            if (edited_data.to_dict(orient='records') != active_TPs_df.to_dict(orient='records')):
                 csv_bytes = io.BytesIO(edited_data.to_csv(index=False).encode('utf-8'))
-                csv_bytes.name = "active_training_programs.csv"
-                csv_bytes.type = "text/csv"
+                csv_bytes.name = 'active_training_programs.csv'
+                csv_bytes.type = 'text/csv'
                 st.session_state.conn.upload(bucket_id='training_programs',
                                             source='local',
                                             file=csv_bytes,
@@ -141,5 +159,49 @@ with tabs[1]:
                 st.session_state.pop('training_programs')
                 st.session_state.conn = None
                 st.rerun()
+        with columns[1]:
+            st.write('##### Editor')
+            all_training_programs = {}
+            for file in st.session_state.training_programs:
+                if file['path'] != 'active_training_programs.csv':
+                    file_name = file['path']
+                    file_name = file_name.removesuffix('.csv')
+                    split_file_name = file_name.split('_')
+                    year = split_file_name[0]
+                    term = split_file_name[1]
+                    file_renamed = f'{year}: Term {term}'
+                    all_training_programs[file_renamed] = file
+            selected_file = st.selectbox('Select Training Program', options=all_training_programs, help='Select the training program to edit.')
+            if selected_file:
+                df = pd.read_csv(get_data(all_training_programs[selected_file]))
+                column_config = {}
+                for week in df.columns:
+                    column_config[week] = st.column_config.TextColumn(week, width=200)
+                column_config['Year Group'] = st.column_config.TextColumn('Year Group', width=100, pinned=True)
+                column_config['Period'] = st.column_config.TextColumn('Period', width=100, pinned=True)
+                edited_data = st.data_editor(df,
+                                column_config=column_config,
+                                hide_index=True,
+                                use_container_width=False,
+                                height=300)
+                sub_cols = st.columns([1, 1])
+                with sub_cols[0]:
+                    if st.button('**:green[Save Changes]**', help='Save changes to the training program', use_container_width=True):
+                        csv_bytes = io.BytesIO(edited_data.to_csv(index=False).encode('utf-8'))
+                        selected_file = selected_file.replace(': ', '_').replace('Term ', '')
+                        csv_bytes.name = f'{selected_file}.csv'
+                        csv_bytes.type = 'text/csv'
+                        st.session_state.conn.upload(bucket_id='training_programs',
+                                                    source='local',
+                                                    file=csv_bytes,
+                                                    destination_path=f'/{csv_bytes.name}',
+                                                    overwrite='true')
+                        st.session_state.pop('training_programs')
+                        st.session_state.conn = None
+                        st.rerun()
+                with sub_cols[1]:
+                    if st.button('**:red[Remove Training Program]**', help='Remove the selected training program', use_container_width=True):
+                        confirmation(selected_file)
+            
     else:
         st.warning('You do not have permission to access this tab')

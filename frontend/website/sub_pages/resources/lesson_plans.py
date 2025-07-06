@@ -89,7 +89,7 @@ with cols[0]:
     st.caption(f'*Showing {len(files[st.session_state.file_count:st.session_state.file_count + 10])}/{len(st.session_state.files)} lesson plans*')
     for file in files[st.session_state.file_count:st.session_state.file_count + 10]:
         try:
-            icon = icons[file['path'].split(' - ')[1].removesuffix('.pdf')]
+            icon = icons[file['path'].split(' - ')[0].split(' ')[-1]]
         except (KeyError, IndexError):
             icon = icons['Default']
         if st.session_state.display_as_links:
@@ -151,24 +151,21 @@ with cols[1]:
         if 'manage_lesson_plans' in st.session_state.user['permissions_expanded']:
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
                 uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type=['pdf'], help='Select a lesson plan to upload')
-                pdf_name = st.text_input('Lesson Plan Name', placeholder='Enter the Lesson Plan Name...', max_chars=50, help='Enter a name for the lesson plan')
-                lesson_type = st.selectbox('Lesson Plan Type', [key for key in icons.keys() if key != 'Default'], help='Select the type of lesson plan')
+                pdf_name = st.selectbox('Lesson Plan For:', st.session_state.syllabus, help='Select a name for the lesson plan', accept_new_options=True)
                 if st.form_submit_button('Upload Lesson Plan', help='Upload the lesson plan to the database'):
                     if not uploaded_pdf:
                         st.error('Please upload a PDF file', icon=':material/error:')
-                    elif pdf_name.strip() == '':
-                        st.error('Please enter a name for the Lesson Plan', icon=':material/error:')
                     else:
                         try:
-                            st.session_state.conn.upload('lesson_plans', source='local', file=uploaded_pdf, destination_path=f'/{pdf_name} - {lesson_type}.pdf')
+                            st.session_state.conn.upload('lesson_plans', source='local', file=uploaded_pdf, destination_path=f'/{pdf_name}.pdf', overwrite='true')
                             st.session_state.pop('files')
                             st.session_state.conn = None
                             st.rerun()
                         except Exception as e:
                             st.error('File already exists, try another name', icon=':material/error:')
             with st.form(key='remove_lesson_plan'):
-                selected_file = st.selectbox('Select a Lesson Plan to Remove', [f['path'].removesuffix('.pdf') for f in st.session_state.files], help='Select a lesson plan to remove')
-                if st.form_submit_button('**:red[Remove Lesson Plan]**', help='Remove the selected lesson plan'):
+                selected_file = st.selectbox('Select a Lesson Plan to Delete', [f['path'].removesuffix('.pdf') for f in st.session_state.files], help='Select a lesson plan to remove')
+                if st.form_submit_button('**:red[Delete Lesson Plan]**', help='Delete the selected lesson plan'):
                     confirmation(selected_file)
         else:
             st.warning('You do not have permission to access this tab')

@@ -14,20 +14,6 @@ if 'manuals' not in st.session_state:
     st.session_state.manuals = dict(sorted(st.session_state.manuals.items()))
 if 'manual_count' not in st.session_state:
     st.session_state.manual_count = 0
-if 'syllabus' not in st.session_state:
-    if st.session_state.is_local:
-        st.session_state.syllabus_path = './resources/configurations/syllabus.json'
-    else:
-        st.session_state.syllabus_path = './frontend/website/resources/configurations/syllabus.json'
-    with open(st.session_state.syllabus_path, 'r') as file:
-        st.session_state.syllabus = json.load(file)
-        temp_syllabus = {}
-        for year in st.session_state.syllabus:
-            for type in st.session_state.syllabus[year]:
-                for lesson in st.session_state.syllabus[year][type]:
-                    temp_syllabus[f'{year} {type} - {lesson}'] = st.session_state.syllabus[year][type][lesson]
-        st.session_state.syllabus = temp_syllabus
-    st.session_state.syllabus = dict(sorted(st.session_state.syllabus.items()))
 if 'syllabus_count' not in st.session_state:
     st.session_state.syllabus_count = 0
 

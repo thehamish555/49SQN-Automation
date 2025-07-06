@@ -40,4 +40,21 @@ with cols[1]:
                 st.session_state.pop('user')
                 st.rerun()
     with tabs[1]:
-        st.info('User settings are not yet implemented.')
+        with st.form(key='app_settings', border=False, enter_to_submit=False):
+            st.write('### Application Settings')
+            beta_features = st.toggle('Enable Beta Features', value=st.session_state.beta_features, help='Enable beta features for testing purposes')
+            if st.form_submit_button('Save Settings'):
+                st.session_state.beta_features = beta_features
+                settings = []
+                if beta_features:
+                    settings.append('beta_features')
+                execute_query(
+                    st.session_state.conn.table('users')
+                    .update({'settings': settings})
+                    .eq('email', st.session_state.user['email']),
+                    ttl=0,
+                )
+                st.session_state.conn = None
+                st.session_state.pop('users')
+                st.session_state.pop('user')
+                st.rerun()
