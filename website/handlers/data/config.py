@@ -3,11 +3,6 @@ import streamlit as st
 class PageConfig:
     def __init__(self, version: str = 'Development Release'):
         self.version = version
-        with open(f'{st.session_state.BASE_PATH}/resources/style.css', 'r') as f:
-            st.write(
-                f'<style>{f.read()}</style>',
-                unsafe_allow_html=True
-            )
 
     def get_pages(self):
         return {
@@ -27,13 +22,22 @@ class PageConfig:
         }
     
     def load_ui_components(self):
+        with open(f'{st.session_state.BASE_PATH}/resources/style.css', 'r') as f:
+            st.write(
+                f'<style>{f.read()}</style>',
+                unsafe_allow_html=True
+            )
+
+        # Version footer
         st.write(
             f'<div class="footer">{self.version}</div>',
             unsafe_allow_html=True
         )
+
+        # Back to top button
         st.write(
             '''
-                <a target="_self" href="#49sqn-nco-app">
+                <a target="_self" href="#49-sqn-nco-app">
                     <button class="back_to_top">
                         ↑ Back to Top
                     </button>
@@ -41,6 +45,8 @@ class PageConfig:
             ''',
             unsafe_allow_html=True
         )
+
+        # Beta features warning
         if st.session_state.beta_features:
             st.write(
                 '<div class="beta">Beta Features Enabled</div>',

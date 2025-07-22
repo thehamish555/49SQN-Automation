@@ -19,7 +19,7 @@ if 'beta_features' in st.session_state and st.session_state.beta_features:
 
     st.session_state.BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-    page_config = config.PageConfig(version='V1.0.1')
+    page_config = config.PageConfig(version='V1.0.2')
 
     lang = loaders.LanguageLoader(st.context.locale)
     _ = lang.install()
@@ -200,7 +200,7 @@ else:
     }
 </style>
 
-<a target="_self" href="#49sqn-nco-app">
+<a target="_self" href="#49-sqn-nco-app">
     <button class="back_to_top">
         ↑ Back to Top
     </button>
@@ -243,7 +243,7 @@ else:
 </style>
 
 <div class="footer">
-    <p>V1.0.1</p>
+    <p>V1.0.2</p>
 </div>
     '''
     st.markdown(footer, unsafe_allow_html=True)
