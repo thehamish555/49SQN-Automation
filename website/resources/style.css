@@ -1,0 +1,80 @@
+/* theme.css */
+
+/* Bubbly Pastel Beta Banner */
+.beta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #DDEBFF;
+    color: #1F2D40;
+    padding: 6px 14px;
+    font-weight: 600;
+    border-top-right-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000000;
+    opacity: 0.95;
+    transition: all 0.3s ease;
+}
+
+.beta:hover {
+    opacity: 1;
+    background-color: #C8E0FF;
+}
+
+/* Bubbly Back to Top Button */
+.back_to_top {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 900;
+    background-color: #A3D5FF;
+    color: #101B26;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back_to_top:hover {
+    background-color: #FFD6A5;
+    color: #101B26;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+}
+
+.back_to_top:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back_to_top:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(163, 213, 255, 0.6);
+}
+
+/* Footer Version Label */
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    padding-right: 45px;
+    padding-bottom: 105px;
+    font-size: 0.9rem;
+    color: #7B8A99;
+    font-weight: 500;
+    opacity: 0.8;
+    font-family: 'Segoe UI', sans-serif;
+    z-index: 800;
+    transition: opacity 0.3s ease;
+}
+
+.footer:hover {
+    opacity: 1;
+}

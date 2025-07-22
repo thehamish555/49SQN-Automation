@@ -1,0 +1,65 @@
+[client]
+# toolbarMode = "minimal"
+
+[server]
+headless = true
+runOnSave = true
+maxUploadSize = 2
+
+[theme]
+base = "dark"
+primaryColor = "#A3D5FF"                    # Pastel blue (sky with softness)
+backgroundColor = "#101B26"                 # Navy base
+secondaryBackgroundColor = "#1A2A38"        # Card backgrounds
+textColor = "#F5F9FA"                       # Soft white
+linkColor = "#FFDD94"                       # Pastel yellow for links
+linkUnderline = true
+codeBackgroundColor = "#0D1A24"             # Navy black for code
+font = "sans-serif"
+baseFontSize = 17
+baseFontWeight = 400
+headingFont = "sans-serif"
+headingFontSizes = ["2.75rem", "2.25rem", "2rem", "1.75rem", "1.5rem", "1.25rem"]
+headingFontWeights = [700, 600, 600, 500, 500, 500]
+codeFont = "monospace"
+codeFontSize = "1rem"
+codeFontWeight = 400
+baseRadius = "1rem"
+buttonRadius = "2rem"
+borderColor = "#2F3E4F"
+dataframeBorderColor = "#2F3E4F"
+dataframeHeaderBackgroundColor = "#223344"
+showWidgetBorder = false
+showSidebarBorder = false
+chartCategoricalColors = [
+  "#A3D5FF", # pastel blue
+  "#FFD6A5", # pastel peach
+  "#B5EAD7", # pastel mint
+  "#FFDAC1", # pastel cream
+  "#FF9AA2"  # pastel pink-red
+]
+chartSequentialColors = [
+  "#0C1B2B", "#153249", "#215273", "#3589A4", "#6CBED6", "#A3D5FF",
+  "#D0E9FF", "#EAF6FF", "#F7FBFF", "#FFFFFF"
+]
+
+[theme.sidebar]
+primaryColor = "#A3D5FF"
+backgroundColor = "#0D1A24"
+secondaryBackgroundColor = "#1B2B3B"
+textColor = "#F5F9FA"
+linkColor = "#FFDD94"
+linkUnderline = true
+codeBackgroundColor = "#0D1A24"
+font = "sans-serif"
+headingFont = "sans-serif"
+headingFontSizes = ["1.75rem", "1.5rem", "1.25rem", "1.125rem", "1rem", "0.875rem"]
+headingFontWeights = [700, 600, 600, 500, 500, 500]
+codeFont = "monospace"
+codeFontSize = "1rem"
+baseRadius = "1rem"
+buttonRadius = "2rem"
+borderColor = "#2F3E4F"
+dataframeBorderColor = "#2F3E4F"
+dataframeHeaderBackgroundColor = "#223344"
+showWidgetBorder = false

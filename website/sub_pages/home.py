@@ -40,7 +40,7 @@ if st.session_state.user:
         if st.session_state.is_local:
             st.image('resources/media/logo.png')
         else:
-            st.image('./frontend/website/resources/media/logo.png')
+            st.image('./website/resources/media/logo.png')
     with cols[1]:
         st.title('49SQN NCO Portal')
         st.write('This portal is used to assist NCOs and Officers within the 49SQN Air Cadet Unit.')
