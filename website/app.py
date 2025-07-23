@@ -12,22 +12,18 @@ if 'beta_features' in st.session_state and st.session_state.beta_features:
 
     from handlers.data import loaders, config
 
-    st.warning('You are currently viewing the new Layout. Not all features are available. To return to the old layout, please disable beta features in your account settings.', icon=':material/info:')
-    st.info('This current redesign works on integrating the website with a larger database, allowing for more general use of the app.', icon=':material/info:')
-
-    st.markdown('#### 49SQN NCO App')
-
     st.session_state.BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-
-    page_config = config.PageConfig(version='V1.0.2')
 
     lang = loaders.LanguageLoader(st.context.locale)
     _ = lang.install()
     st.session_state._ = _
+    
+    page_config = config.PageConfig(version='V1.0.3')
+
 
     st.set_page_config(
         page_title=_('page.title'),
-        page_icon=(st.session_state.BASE_PATH + '/' + 'resources/media/icon.png'),
+        page_icon=(st.session_state.BASE_PATH + '/resources/media/icon.png'),
         layout='wide',
         menu_items={
             'Get Help': None,
@@ -40,7 +36,7 @@ if 'beta_features' in st.session_state and st.session_state.beta_features:
         pg = st.navigation(page_config.get_pages())
         pg.run()
     except AttributeError as e:
-        st.warning('An error occurred, please try again later.', icon=':material/error:')
+        st.warning(_('errors.general'), icon=':material/error:')
 
     page_config.load_ui_components()
 
@@ -243,7 +239,7 @@ else:
 </style>
 
 <div class="footer">
-    <p>V1.0.2</p>
+    <p>V1.0.3</p>
 </div>
     '''
     st.markdown(footer, unsafe_allow_html=True)
@@ -279,5 +275,5 @@ else:
 
 if st.context.url.startswith('http://localhost:'):
     '---'
-    st.write('### Debugging')
+    st.write('### '+(('debugging.title')))
     st.json(dict(sorted(st.session_state.items())))

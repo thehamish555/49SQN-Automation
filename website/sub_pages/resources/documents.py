@@ -8,7 +8,7 @@ if 'manuals' not in st.session_state:
     if st.session_state.is_local:
         st.session_state.manuals_path = './resources/configurations/manuals.json'
     else:
-        st.session_state.manuals_path = './frontend/website/resources/configurations/manuals.json'
+        st.session_state.manuals_path = './website/resources/configurations/manuals.json'
     with open(st.session_state.manuals_path, 'r') as file:
         st.session_state.manuals = json.load(file)
     st.session_state.manuals = dict(sorted(st.session_state.manuals.items()))

@@ -78,3 +78,5 @@
 .footer:hover {
     opacity: 1;
 }
+
+[data-testid='stHeaderActionElements'] {display: none;} /* Hide the text link button */
