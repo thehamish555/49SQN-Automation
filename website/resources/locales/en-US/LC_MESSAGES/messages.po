@@ -3,11 +3,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: en\n"
 
-msgid "page.title"
-msgstr "49SQN NCO App"
-
 msgid "errors.general"
-msgstr "An error has occured, please try again later!"
+msgstr "An error has occurred, please try again later!"
 
 msgid "debugging.title"
 msgstr "Debugging"
@@ -30,3 +27,8 @@ msgid "page.admin"
 msgstr "Admin"
     msgid "page.admin.manage_users"
     msgstr "Manage Users"
+
+msgid "login.login_required"
+msgstr "To access this website, you will need to log in with an authorized account. If you are unable to log in, please contact an Officer."
+msgid "login.login"
+msgstr "Log in with Google"

@@ -8,7 +8,7 @@ import urllib
 cols = st.columns([3, 5, 1], gap='large')
 
 if 'files' not in st.session_state:
-    st.session_state.files = st.session_state.conn.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.conn.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
+    st.session_state.files = st.session_state.SUPABASE_CONNECTION.supabase.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.SUPABASE_CONNECTION.supabase.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
 if 'pdf' not in st.session_state:
     st.session_state['pdf'] = None
 if 'file_count' not in st.session_state:
@@ -39,14 +39,12 @@ def get_data(file):
         if response.status_code == 200:
             return io.BytesIO(response.content).getvalue()
         st.session_state.pop('files')
-        st.session_state.conn = None
         st.rerun()
     except TypeError:
         response = requests.get(file)
         if response.status_code == 200:
             return io.BytesIO(response.content).getvalue()
         st.session_state.pop('files')
-        st.session_state.conn = None
         st.rerun()
 
 
@@ -75,9 +73,8 @@ def confirmation(file):
             st.rerun()
     with cols[1]:
         if st.button('**:red[Delete]**', use_container_width=True, help='Delete the lesson plan'):
-            st.session_state.conn.remove('lesson_plans', [f'{file}.pdf'])
+            st.session_state.SUPABASE_CONNECTION.supabase.remove('lesson_plans', [f'{file}.pdf'])
             st.session_state.pop('files')
-            st.session_state.conn = None
             st.rerun()
 
 
@@ -115,7 +112,7 @@ with cols[1]:
         with st.form(key='create_lesson', border=False, enter_to_submit=False):
             selected_file = st.selectbox('Select a Lesson Plan', [f['path'].removesuffix('.pdf') for f in st.session_state.files if not f['path'].endswith('Template.pdf')], help='Select a lesson plan to autofill')
             date = st.date_input('Date', format="DD/MM/YYYY", value='today', min_value='today', help='Select the date for the lesson plan')
-            instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.session_state.user['name'], max_chars=50, help='Enter the name of the instructor for the lesson plan')
+            instructor = st.text_input('Instructor', placeholder='Enter the Instructors Name (Rank + Last Name or Full Name)...', value=st.session_state.SUPABASE_CONNECTION.user['name'], max_chars=50, help='Enter the name of the instructor for the lesson plan')
 
             if st.form_submit_button('Create Lesson Plan', use_container_width=True, help='Create a lesson plan with the selected template'):
                 replacements = {
@@ -148,18 +145,17 @@ with cols[1]:
         except AttributeError:
             pass
     with tabs[1]:
-        if 'manage_lesson_plans' in st.session_state.user['permissions_expanded']:
+        if 'manage_lesson_plans' in st.session_state.SUPABASE_CONNECTION.user['permissions_expanded']:
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
                 uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type=['pdf'], help='Select a lesson plan to upload')
-                pdf_name = st.selectbox('Lesson Plan For:', st.session_state.syllabus, help='Select a name for the lesson plan', accept_new_options=True)
+                pdf_name = st.selectbox('Lesson Plan For:', st.session_state.SUPABASE_CONNECTION.syllabus, help='Select a name for the lesson plan', accept_new_options=True)
                 if st.form_submit_button('Upload Lesson Plan', help='Upload the lesson plan to the database'):
                     if not uploaded_pdf:
                         st.error('Please upload a PDF file', icon=':material/error:')
                     else:
                         try:
-                            st.session_state.conn.upload('lesson_plans', source='local', file=uploaded_pdf, destination_path=f'/{pdf_name}.pdf', overwrite='true')
+                            st.session_state.SUPABASE_CONNECTION.supabase.upload('lesson_plans', source='local', file=uploaded_pdf, destination_path=f'/{pdf_name}.pdf', overwrite='true')
                             st.session_state.pop('files')
-                            st.session_state.conn = None
                             st.rerun()
                         except Exception as e:
                             st.error('File already exists, try another name', icon=':material/error:')

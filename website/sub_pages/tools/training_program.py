@@ -9,8 +9,6 @@ def get_data(file):
     response = requests.get(file['signedURL'])
     if response.status_code == 200:
         return io.BytesIO(response.content)
-    st.session_state.pop('training_programs')
-    st.session_state.conn = None
     st.rerun()
 
 
@@ -36,9 +34,7 @@ def confirmation(file):
     with cols[1]:
         if st.button('**:red[Delete]**', use_container_width=True, help='Delete the training program'):
             file = file.replace(': ', '_').replace('Term ', '')
-            st.session_state.conn.remove('training_programs', [f'{file}.pdf'])
-            st.session_state.pop('training_programs')
-            st.session_state.conn = None
+            st.session_state.SUPABASE_CONNECTION.supabase.remove('training_programs', [f'{file}.pdf'])
             st.rerun()
 
 
@@ -53,10 +49,10 @@ def color_users(val):
 
 def get_training_program_names():        
     training_program_files = {}
-    for file in st.session_state.training_programs:
+    for file in st.session_state.SUPABASE_CONNECTION.training_programs:
         if file['path'] == 'active_training_programs.csv':
             active_training_programs = pd.read_csv(get_data(file))
-    for file in st.session_state.training_programs:
+    for file in st.session_state.SUPABASE_CONNECTION.training_programs:
         if file['path'] != 'active_training_programs.csv':
             file_name = file['path']
             file_name = file_name.removesuffix('.csv')
@@ -86,7 +82,7 @@ with tabs[0]:
         with cols[2]:
             weeks = st.multiselect('Select Weeks to Display', options=df.columns[2:], help='Select the Weeks to display.')
         with cols[3]:
-            users = st.multiselect('Select Users to Display', options=[user['name'] for user in st.session_state.users.data], default=st.session_state.user['name'], help='Select the users to display.')
+            users = st.multiselect('Select Users to Display', options=[user['name'] for user in st.session_state.SUPABASE_CONNECTION.users.data], default=st.session_state.SUPABASE_CONNECTION.user['name'], help='Select the users to display.')
 
         next_date = None
         for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
@@ -131,10 +127,10 @@ with tabs[0]:
         st.error('No active training programs available')
 
 with tabs[1]:
-    if 'manage_training_program' in st.session_state.user['permissions_expanded']:
+    if 'manage_training_program' in st.session_state.SUPABASE_CONNECTION.user['permissions_expanded']:
         columns = st.columns([2, 6, 1], gap='large')
         with columns[0]:
-            for file in st.session_state.training_programs:
+            for file in st.session_state.SUPABASE_CONNECTION.training_programs:
                 if file['path'] == 'active_training_programs.csv':
                     active_TPs_df = pd.read_csv(get_data(file))
                     break
@@ -151,18 +147,16 @@ with tabs[1]:
                 csv_bytes = io.BytesIO(edited_data.to_csv(index=False).encode('utf-8'))
                 csv_bytes.name = 'active_training_programs.csv'
                 csv_bytes.type = 'text/csv'
-                st.session_state.conn.upload(bucket_id='training_programs',
+                st.session_state.SUPABASE_CONNECTION.supabase.upload(bucket_id='training_programs',
                                             source='local',
                                             file=csv_bytes,
                                             destination_path='/active_training_programs.csv',
                                             overwrite='true')
-                st.session_state.pop('training_programs')
-                st.session_state.conn = None
                 st.rerun()
         with columns[1]:
             st.write('##### Editor')
             all_training_programs = {}
-            for file in st.session_state.training_programs:
+            for file in st.session_state.SUPABASE_CONNECTION.training_programs:
                 if file['path'] != 'active_training_programs.csv':
                     file_name = file['path']
                     file_name = file_name.removesuffix('.csv')
@@ -191,13 +185,11 @@ with tabs[1]:
                         selected_file = selected_file.replace(': ', '_').replace('Term ', '')
                         csv_bytes.name = f'{selected_file}.csv'
                         csv_bytes.type = 'text/csv'
-                        st.session_state.conn.upload(bucket_id='training_programs',
+                        st.session_state.SUPABASE_CONNECTION.supabase.upload(bucket_id='training_programs',
                                                     source='local',
                                                     file=csv_bytes,
                                                     destination_path=f'/{csv_bytes.name}',
                                                     overwrite='true')
-                        st.session_state.pop('training_programs')
-                        st.session_state.conn = None
                         st.rerun()
                 with sub_cols[1]:
                     if st.button('**:red[Remove Training Program]**', help='Remove the selected training program', use_container_width=True):

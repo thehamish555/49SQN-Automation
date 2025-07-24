@@ -8,10 +8,10 @@ from st_copy_to_clipboard import st_copy_to_clipboard
 
 def get_training_program_names():        
     training_program_files = []
-    for file in st.session_state.training_programs:
+    for file in st.session_state.SUPABASE_CONNECTION.training_programs:
         if file['path'] == 'active_training_programs.csv':
             active_training_programs = pd.read_csv(get_data(file))
-    for file in st.session_state.training_programs:
+    for file in st.session_state.SUPABASE_CONNECTION.training_programs:
         if file['path'] != 'active_training_programs.csv':
             file_name = file['path']
             file_name = file_name.removesuffix('.csv')
@@ -25,7 +25,7 @@ def get_training_program_names():
     return training_program_files
 
 
-if st.session_state.user:
+if st.session_state.SUPABASE_CONNECTION.user:
     @st.cache_data(ttl=3600)
     def get_data(file):
         response = requests.get(file['signedURL'])
@@ -37,10 +37,7 @@ if st.session_state.user:
 
     cols = st.columns([1, 13])
     with cols[0]:
-        if st.session_state.is_local:
-            st.image('resources/media/logo.png')
-        else:
-            st.image('./website/resources/media/logo.png')
+        st.image(st.session_state.BASE_PATH + '/resources/media/logo.png')
     with cols[1]:
         st.title('49SQN NCO Portal')
         st.write('This portal is used to assist NCOs and Officers within the 49SQN Air Cadet Unit.')

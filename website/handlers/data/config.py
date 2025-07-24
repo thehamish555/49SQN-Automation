@@ -25,40 +25,35 @@ class PageConfig:
                 st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/manage_accounts:')
             ]
         }
+
+    def __add_component(self, component: str) -> None:
+        st.write(
+            component,
+            unsafe_allow_html=True
+        )
     
     def load_ui_components(self):
         with open(f'{st.session_state.BASE_PATH}/resources/style.css', 'r') as f:
-            st.write(
-                f'<style>{f.read()}</style>',
-                unsafe_allow_html=True
-            )
+            self.__add_component(f'<style>{f.read()}</style>')
 
-        st.write(
-            '<p hidden>49SQN NCO App</p>',
-            unsafe_allow_html=True
-        )
+        self.__add_component('<p hidden>49SQN NCO App</p>')
 
         # Version footer
-        st.write(
-            f'<div class="footer">{self.version}</div>',
-            unsafe_allow_html=True
-        )
+        self.__add_component(f'<div class="footer">{self.version}</div>')
 
         # Back to top button
-        st.write(
+        self.__add_component(
             '''
                 <a target="_self" href="#49-sqn-nco-app">
                     <button class="back_to_top">
                         ↑ Back to Top
                     </button>
                 </a>
-            ''',
-            unsafe_allow_html=True
+            '''
         )
 
         # Beta features warning
         if st.session_state.beta_features:
-            st.write(
-                '<div class="beta">Beta Features Enabled</div>',
-                unsafe_allow_html=True
+            self.__add_component(
+                '<div class="beta">Beta Features Enabled</div>'
             )

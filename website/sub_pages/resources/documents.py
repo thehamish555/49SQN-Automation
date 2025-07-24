@@ -5,10 +5,7 @@ import requests
 import io
 
 if 'manuals' not in st.session_state:
-    if st.session_state.is_local:
-        st.session_state.manuals_path = './resources/configurations/manuals.json'
-    else:
-        st.session_state.manuals_path = './website/resources/configurations/manuals.json'
+    st.session_state.manuals_path = st.session_state.BASE_PATH + '/resources/configurations/manuals.json'
     with open(st.session_state.manuals_path, 'r') as file:
         st.session_state.manuals = json.load(file)
     st.session_state.manuals = dict(sorted(st.session_state.manuals.items()))
@@ -20,7 +17,7 @@ if 'syllabus_count' not in st.session_state:
 @st.cache_data(ttl=3600)
 def get_data(file):
     try:
-        response = requests.get(st.session_state.syllabus[file]['url'])
+        response = requests.get(st.session_state.SUPABASE_CONNECTION.syllabus[file]['url'])
         if response.status_code == 200:
             return io.BytesIO(response.content).getvalue()
     except KeyError:
@@ -74,11 +71,11 @@ with cols[0]:
 with cols[1]:
     st.write('### Syllabus')
     search = st.text_input('Search', placeholder='Search for Lessons...', help='Search for a specific Lesson', on_change=lambda x='syllabus': update_search(x))
-    syllabus = [s for s in st.session_state.syllabus if search.lower() in s.lower()]
-    st.caption(f'*Showing {len(syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10])}/{len(st.session_state.syllabus)} lessons*')
+    syllabus = [s for s in st.session_state.SUPABASE_CONNECTION.syllabus if search.lower() in s.lower()]
+    st.caption(f'*Showing {len(syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10])}/{len(st.session_state.SUPABASE_CONNECTION.syllabus)} lessons*')
     for syllabus_item in syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10]:
         if st.session_state.display_as_links:
-            st.write(f':material/docs: [{syllabus_item}]({st.session_state.syllabus[syllabus_item]['url']})')
+            st.write(f':material/docs: [{syllabus_item}]({st.session_state.SUPABASE_CONNECTION.syllabus[syllabus_item]['url']})')
         else:
             if st.button(syllabus_item, type='tertiary', help='View this lesson', icon=':material/docs:'):
                 view_large_pdf(syllabus_item)
