@@ -2,28 +2,19 @@ import streamlit as st
 
 import os
 
-from handlers.data import loaders, config
+from handlers.data.PageConfig import PageConfig
+from handlers.data.LanguageLoader import LanguageLoader
+from handlers.data.SupabaseLoader import SupabaseLoader
 
 st.session_state.BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-lang = loaders.LanguageLoader(st.context.locale)
+lang = LanguageLoader(st.session_state.get('locale', 'en-US'))
 _ = lang.install()
 st.session_state._ = _
 
-page_config = config.PageConfig(version='V1.0.4')
+page_config = PageConfig(version='V1.0.5')
 
-st.set_page_config(
-    page_title='49SQN NCO App',
-    page_icon=(st.session_state.BASE_PATH + '/resources/media/icon.png'),
-    layout='wide',
-    menu_items={
-        'Get Help': None,
-        'Report a bug': 'mailto:hamishlester555@gmail.com',
-        'About': None
-    }
-)
-
-st.session_state.SUPABASE_CONNECTION = loaders.SupabaseLoader()
+st.session_state.SUPABASE_CONNECTION = SupabaseLoader()
 
 try:
     st.logo(
@@ -31,8 +22,7 @@ try:
         size='large',
         icon_image=st.session_state.BASE_PATH + '/resources/media/logo.png'
     )
-    pg = st.navigation(page_config.get_pages())
-    pg.run()
+    st.navigation(page_config.get_pages()).run()
 except AttributeError as e:
     st.warning(_('errors.general'), icon=':material/error:')
     st.error(e)

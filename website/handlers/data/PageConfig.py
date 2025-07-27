@@ -6,6 +6,19 @@ class PageConfig:
         self.version = version
         self._ = st.session_state._
 
+        st.set_page_config(
+            page_title='49SQN NCO App',
+            page_icon=(st.session_state.BASE_PATH + '/resources/media/icon.png'),
+            layout='wide',
+            menu_items={
+                'Get Help': None,
+                'Report a bug': 'mailto:hamishlester555@gmail.com',
+                'About': None
+            }
+        )
+
+        st.markdown("<div id='top'></div>", unsafe_allow_html=True)
+
     def get_pages(self):
         return {
             self._('page.home'): [
@@ -33,10 +46,9 @@ class PageConfig:
         )
     
     def load_ui_components(self):
+        # Load CSS styles
         with open(f'{st.session_state.BASE_PATH}/resources/style.css', 'r') as f:
             self.__add_component(f'<style>{f.read()}</style>')
-
-        self.__add_component('<p hidden>49SQN NCO App</p>')
 
         # Version footer
         self.__add_component(f'<div class="footer">{self.version}</div>')
@@ -44,7 +56,7 @@ class PageConfig:
         # Back to top button
         self.__add_component(
             '''
-                <a target="_self" href="#49-sqn-nco-app">
+                <a target="_self" href="#top">
                     <button class="back_to_top">
                         ↑ Back to Top
                     </button>

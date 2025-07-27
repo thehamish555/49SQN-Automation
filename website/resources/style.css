@@ -79,4 +79,13 @@
     opacity: 1;
 }
 
-[data-testid='stHeaderActionElements'] {display: none;} /* Hide the text link button */
+/* Hide the header and move top of page further up*/
+.block-container {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+[data-testid='stHeader'] {display: none;}
+
+[data-testid='stHeaderActionElements'] {display: none;} /* Hide the text link button? */
