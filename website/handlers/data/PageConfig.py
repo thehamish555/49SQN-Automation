@@ -17,7 +17,7 @@ class PageConfig:
             }
         )
 
-        st.markdown("<div id='top'></div>", unsafe_allow_html=True)
+        st.markdown("<div id='top'><br><br><br></div>", unsafe_allow_html=True)
 
     def get_pages(self):
         return {
