@@ -7,59 +7,72 @@ runOnSave = true
 maxUploadSize = 2
 
 [theme]
-base = "dark"
-primaryColor = "#A3D5FF"                    # Pastel blue (sky with softness)
-backgroundColor = "#101B26"                 # Navy base
-secondaryBackgroundColor = "#1A2A38"        # Card backgrounds
-textColor = "#F5F9FA"                       # Soft white
-linkColor = "#FFDD94"                       # Pastel yellow for links
-linkUnderline = true
-codeBackgroundColor = "#0D1A24"             # Navy black for code
-font = "sans-serif"
-baseFontSize = 17
-baseFontWeight = 400
-headingFont = "sans-serif"
-headingFontSizes = ["2.75rem", "2.25rem", "2rem", "1.75rem", "1.5rem", "1.25rem"]
-headingFontWeights = [700, 600, 600, 500, 500, 500]
-codeFont = "monospace"
-codeFontSize = "1rem"
-codeFontWeight = 400
-baseRadius = "1rem"
-buttonRadius = "2rem"
-borderColor = "#2F3E4F"
-dataframeBorderColor = "#2F3E4F"
-dataframeHeaderBackgroundColor = "#223344"
-showWidgetBorder = false
-showSidebarBorder = false
+# Base and font
+base                          = "dark"
+font                          = "sans-serif"
+baseFontSize                  = 17
+baseFontWeight                = 400
+headingFont                   = "sans-serif"
+headingFontSizes              = ["2.5rem", "2rem", "1.75rem", "1.5rem", "1.25rem", "1rem"]
+headingFontWeights            = [700, 600, 600, 500, 500, 500]
+codeFont                      = "monospace"
+codeFontSize                  = "1rem"
+codeFontWeight                = 400
+
+# Color palette - One UI-inspired
+primaryColor                  = "#71AFFF"    # Soft blue (primary accent)
+backgroundColor               = "#0E1621"    # Main dark background
+secondaryBackgroundColor      = "#1A2533"    # Cards/panels
+textColor                     = "#F1F4F7"    # High contrast white
+linkColor                     = "#FFD361"    # Warm pastel yellow
+linkUnderline                 = false
+codeBackgroundColor           = "#101B2A"    # Code box
+borderColor                   = "#2A3A4B"    # Flat muted border
+dataframeBorderColor          = "#2A3A4B"
+dataframeHeaderBackgroundColor = "#1E2C3C"
+
+# UI Design
+baseRadius                    = "1.25rem"     # Large and modern
+buttonRadius                  = "2.5rem"
+showWidgetBorder              = false
+showSidebarBorder             = false
+
+# Charts - consistent soft tones
 chartCategoricalColors = [
-  "#A3D5FF", # pastel blue
-  "#FFD6A5", # pastel peach
-  "#B5EAD7", # pastel mint
-  "#FFDAC1", # pastel cream
-  "#FF9AA2"  # pastel pink-red
+  "#71AFFF",  # accent blue
+  "#FFC971",  # soft orange
+  "#7ED6C0",  # mint green
+  "#FF9A8B",  # warm salmon
+  "#CBA5FF"   # lavender
 ]
+
 chartSequentialColors = [
-  "#0C1B2B", "#153249", "#215273", "#3589A4", "#6CBED6", "#A3D5FF",
-  "#D0E9FF", "#EAF6FF", "#F7FBFF", "#FFFFFF"
+  "#0C131B", "#18212B", "#223045", "#2C4260", "#3C5E80",
+  "#4F7FB0", "#71AFFF", "#A4CEFF", "#D4EBFF", "#F2F9FF"
 ]
 
 [theme.sidebar]
-primaryColor = "#A3D5FF"
-backgroundColor = "#0D1A24"
-secondaryBackgroundColor = "#1B2B3B"
-textColor = "#F5F9FA"
-linkColor = "#FFDD94"
-linkUnderline = true
-codeBackgroundColor = "#0D1A24"
-font = "sans-serif"
-headingFont = "sans-serif"
-headingFontSizes = ["1.75rem", "1.5rem", "1.25rem", "1.125rem", "1rem", "0.875rem"]
-headingFontWeights = [700, 600, 600, 500, 500, 500]
-codeFont = "monospace"
-codeFontSize = "1rem"
-baseRadius = "1rem"
-buttonRadius = "2rem"
-borderColor = "#2F3E4F"
-dataframeBorderColor = "#2F3E4F"
-dataframeHeaderBackgroundColor = "#223344"
-showWidgetBorder = false
+# Fonts and layout
+font                          = "sans-serif"
+headingFont                   = "sans-serif"
+headingFontSizes              = ["1.75rem", "1.5rem", "1.25rem", "1.125rem", "1rem", "0.875rem"]
+headingFontWeights            = [700, 600, 600, 500, 500, 500]
+codeFont                      = "monospace"
+codeFontSize                  = "1rem"
+
+# Sidebar coloring
+primaryColor                  = "#71AFFF"
+backgroundColor               = "#0A121A"
+secondaryBackgroundColor      = "#18212B"
+textColor                     = "#F1F4F7"
+linkColor                     = "#FFD361"
+linkUnderline                 = false
+codeBackgroundColor           = "#101B2A"
+borderColor                   = "#2A3A4B"
+dataframeBorderColor          = "#2A3A4B"
+dataframeHeaderBackgroundColor = "#1E2C3C"
+
+# Sidebar layout
+baseRadius                    = "1.25rem"
+buttonRadius                  = "2.5rem"
+showWidgetBorder              = false
