@@ -32,3 +32,8 @@ msgid "login.login_required"
 msgstr "To access this website, you will need to log in with an authorized account. If you are unable to log in, please contact an Officer."
 msgid "login.login"
 msgstr "Log in with Google"
+
+msgid "ui.beta_features"
+msgstr "Beta Features Enabled"
+msgid "ui.back_to_top"
+msgstr "↑ Back to Top"

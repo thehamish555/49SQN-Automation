@@ -58,7 +58,9 @@ class PageConfig:
             '''
                 <a target="_self" href="#top">
                     <button class="back_to_top">
-                        ↑ Back to Top
+                        '''
+                        + self._('ui.back_to_top') +
+                        '''
                     </button>
                 </a>
             '''
@@ -66,6 +68,4 @@ class PageConfig:
 
         # Beta features warning
         if st.session_state.beta_features:
-            self.__add_component(
-                '<div class="beta">Beta Features Enabled</div>'
-            )
+            self.__add_component('<div class="beta">'+(self._('ui.beta_features'))+'</div>')

@@ -9,12 +9,16 @@ from handlers.data.SupabaseLoader import SupabaseLoader
 st.session_state.BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 lang = LanguageLoader(st.session_state.get('locale', 'en-US'))
-_ = lang.install()
-st.session_state._ = _
+if '_' not in st.session_state:
+    _ = lang.install()
+    st.session_state._ = _
+else:
+    _ = st.session_state._
 
-page_config = PageConfig(version='V1.0.6')
+page_config = PageConfig(version='V1.0.7')
 
-st.session_state.SUPABASE_CONNECTION = SupabaseLoader()
+if 'SUPABASE_CONNECTION' not in st.session_state:
+    st.session_state.SUPABASE_CONNECTION = SupabaseLoader()
 
 try:
     st.logo(
