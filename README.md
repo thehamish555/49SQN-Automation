@@ -1,51 +1,92 @@
 # 49SQN Automation
 
-## Overview
-49SQN Automation is a project designed to streamline tasks using automation. It features a **backend** (currently non-functional) and a **frontend** built with Streamlit for a user-friendly interface.
+A streamlined **Streamlit-based dashboard** for New Zealand Cadet Forces Squadron 49, providing tools for managing accounts, training programs, resources, and more — all in one place.
 
-## Features
-- **Frontend Portal** using Streamlit
-  - Upload, download, and view Lesson Plans
-  - Future feature: Automate training program creation for Officers
-- **Frontend configuration via `.streamlit/config.toml`**
-- **Dependency management** via `requirements.txt`
+---
 
-## Project Structure
+## 🚀 Features
+
+- 🔐 **Account Management** – Easily manage cadets and users.
+- 📚 **Training Resources** – View documents, manuals, and lesson plans.
+- 📅 **Training Program Builder** – Generate or review lesson plans and programs.
+- 🌐 **Multi-language Support** – Internationalization via gettext-compatible `.po/.mo` files.
+- 🎨 **Custom Theme** – Tailored layout with `style.css` and branding media.
+
+---
+
+## 🗂️ Project Structure
+
+```python
+
+website/
+├── app.py                  # Main Streamlit app
+├── handlers/               # Data loading and configuration classes
+├── resources/              # Static files (CSS, images, locales, configs)
+├── sub_pages/              # Page routes (home, tools, account, etc.)
+└── .streamlit/config.toml  # Streamlit UI config
+
 ```
-49SQN-Automation/
-│-- .streamlit/               # Streamlit configuration files
-│-- backend/                  # Backend logic (currently inactive)
-│   ├── facebook/             # Placeholder for Facebook automation module
-│-- frontend/                 # Frontend using Streamlit
-│   ├── website/              # Web interface files
-│   │   ├── app.py            # Main Streamlit app
-│   │   ├── resources/media/  # Media assets (e.g., logo.png)
-│   │   ├── sub_pages/        # Sub-page modules
-│-- requirements.txt          # Python dependencies
-│-- LICENSE                   # GPL-3.0 License
+
+---
+
+## 📦 Requirements
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+````
+
+---
+
+## 🖥️ Running the App
+
+From the `website/` directory, run:
+
+```bash
+streamlit run app.py
 ```
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/thehamish555/49SQN-Automation.git
-   ```
-2. Navigate into the project directory:
-   ```bash
-   cd 49SQN-Automation
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the frontend:
-   ```bash
-   streamlit run frontend/website/app.py
-   ```
+---
 
-## License
-This project is licensed under the **GPL-3.0 License**, as specified in the `LICENSE` file.
+## 🌍 Internationalization
 
-## Contributing
-Feel free to submit issues or pull requests to improve the project!
+Translation files for english are located in:
 
+```txt
+resources/locales/en-US/LC_MESSAGES/messages.po
+```
+
+---
+
+## 📁 Configurations
+
+- `permission_structure.json` – Ranks and permissions
+- `syllabus.json` – Training modules and stages
+- `manuals.json` – Official cadet manuals
+
+---
+
+## 🖼️ Branding & Assets
+
+Brand-aligned media is in `resources/media/`:
+
+- `logo.png`, `icon.png`, `cadets_header.png`
+
+---
+
+## 📃 License
+
+This project is licensed under the terms of the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🛠️ Contributing
+
+Got a feature idea or found a bug? Open an issue or submit a PR!
+
+---
+
+## ✨ Acknowledgments
+
+Created for 49 Squadron (ATC), Royal New Zealand Air Force Cadet Forces.
