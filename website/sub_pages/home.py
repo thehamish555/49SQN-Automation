@@ -82,6 +82,28 @@ if st.session_state.SUPABASE_CONNECTION.user:
         with sub_cols[1]:
             st_copy_to_clipboard('# Weekly Report\n'+'\n'.join(text).replace('### ', ' ').replace('###### ', '## '), before_copy_label='Copy With Styling to Clipboard', after_copy_label='Copied!')
     with cols[1]:
+        training_program_files = get_training_program_names()
+        df = pd.read_csv(get_data(training_program_files[-1]))
+        st.markdown('### Your Upcoming Lessons', help='View your upcoming lessons based on the training program')
+        user_lessons = {}
+        for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
+            user_lessons[date] = []
+        for column in df.columns[2:]:
+            if datetime.datetime.strptime(df[column][0], '%d/%m/%Y') > datetime.datetime.now():
+                num = 2
+                for year in df['Year Group'].unique():
+                    if isinstance(year, str):
+                        for i in range(len(df['Period'].unique())-1):
+                            if isinstance(df[column][num], str) or isinstance(df[column][num + 1], str) or isinstance(df[column][num + 2], str):
+                                if df[column][num+2] == st.session_state.SUPABASE_CONNECTION.user['name']:
+                                    user_lessons[df[column][0]].append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {year}')
+                            num += 3
+        for week, lessons in user_lessons.items():
+            if lessons:
+                st.write(f'#### {week}')
+                for lesson in lessons:
+                    st.write(lesson)
+    with cols[2]:
         '### Quick Links'
         st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
         st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
