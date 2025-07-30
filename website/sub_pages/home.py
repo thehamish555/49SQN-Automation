@@ -89,7 +89,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
         for date in [(datetime.datetime.strptime(df['Week 1'][0], '%d/%m/%Y') + datetime.timedelta(weeks=i)).strftime('%d/%m/%Y') for i in range(len(df.columns) - 2)]:
             user_lessons[date] = []
         for column in df.columns[2:]:
-            if datetime.datetime.strptime(df[column][0], '%d/%m/%Y') > datetime.datetime.now():
+            if datetime.datetime.strptime(df[column][0], '%d/%m/%Y').date() >= datetime.datetime.now().date():
                 num = 2
                 for year in df['Year Group'].unique():
                     if isinstance(year, str):
