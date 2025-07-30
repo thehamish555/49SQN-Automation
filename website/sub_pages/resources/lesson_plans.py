@@ -17,7 +17,7 @@ if 'file_count' not in st.session_state:
 st.session_state.files.sort(key=lambda x: (not x['path'].endswith('Template.pdf'), x['path']))
 icons = {'Default': ':material/docs:',
          'Template': ':material/docs:',
-         'Aviation': 'material/flight',
+         'Aviation': ':material/flight:',
          'Drill': ':material/directions_walk:',
          'Ethics': ':material/docs:',
          'Exercise Planning': ':material/school:',
