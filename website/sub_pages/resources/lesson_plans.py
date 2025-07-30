@@ -17,19 +17,19 @@ if 'file_count' not in st.session_state:
 st.session_state.files.sort(key=lambda x: (not x['path'].endswith('Template.pdf'), x['path']))
 icons = {'Default': ':material/docs:',
          'Template': ':material/docs:',
-         'Aviation': ':material/flight:',
-         'Drill': ':material/directions_walk:',
-         'Ethics': ':material/docs:',
-         'Exercise Planning': ':material/school:',
-         'Firearms': ':material/docs:',
-         'Leadership': ':material/groups:',
-         'Medical': ':material/medical_services:',
-         'Navigation': ':material/explore:',
-         'Operations': ':material/school:',
-         'Physical Training': ':material/fitness_center:',
-         'Protection': ':material/forest:',
-         'Radio': ':material/radio:',
-         'Systems App Learning': ':material/school:',
+         'AVS': ':material/flight:',
+         'DRL': ':material/directions_walk:',
+         'ETH': ':material/docs:',
+         'EXP': ':material/school:',
+         'FAS': ':material/docs:',
+         'LDR': ':material/groups:',
+         'MED': ':material/medical_services:',
+         'NAV': ':material/explore:',
+         'OPS': ':material/school:',
+         'PHY': ':material/fitness_center:',
+         'PMT': ':material/forest:',
+         'RDC': ':material/radio:',
+         'SAL': ':material/school:',
          'Other': ':material/docs:'}
 
 @st.cache_data(ttl=3600)
@@ -86,7 +86,7 @@ with cols[0]:
     st.caption(f'*Showing {len(files[st.session_state.file_count:st.session_state.file_count + 10])}/{len(st.session_state.files)} lesson plans*')
     for file in files[st.session_state.file_count:st.session_state.file_count + 10]:
         try:
-            icon = icons[file['path'].split(' - ')[0].split(' ')[-1]]
+            icon = icons[file['path'].split(' - ')[0].split(' ')[-2]]
         except (KeyError, IndexError):
             icon = icons['Default']
         if st.session_state.display_as_links:
