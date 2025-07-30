@@ -1,5 +1,6 @@
 import streamlit as st
 
+import re
 import json
 from st_supabase_connection import SupabaseConnection, execute_query
 
@@ -53,10 +54,11 @@ class SupabaseLoader:
             raw_syllabus = json.load(file)
 
         flat_syllabus = {
-            f'{year} {lesson_type} - {lesson}': details
+            f'{year} {lesson_type} {match.group(1)} - {match.group(2)}': details
             for year, types in raw_syllabus.items()
             for lesson_type, lessons in types.items()
             for lesson, details in lessons.items()
+            if (match := re.match(r'^([\d.]+)\s+(.*)', lesson))
         }
 
         return dict(sorted(flat_syllabus.items()))
