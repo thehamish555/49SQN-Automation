@@ -4,6 +4,8 @@ import requests
 import io
 import datetime
 from st_copy_to_clipboard import st_copy_to_clipboard
+import streamlit_pdf_viewer as pdf_viewer
+import json
 
 
 def get_training_program_names():        
@@ -26,14 +28,37 @@ def get_training_program_names():
 
 
 if st.session_state.SUPABASE_CONNECTION.user:
+    if 'files' not in st.session_state:
+        st.session_state.files = st.session_state.SUPABASE_CONNECTION.supabase.create_signed_urls('lesson_plans', [file['name'] for file in st.session_state.SUPABASE_CONNECTION.supabase.list_objects('lesson_plans', ttl='0s')], expires_in=3600)
+
+    try:
+        @st.dialog('File Preview', width="large")
+        def view_large_pdf(file_data, file_name):
+            try:
+                st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
+                st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
+                pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
+            except AttributeError:
+                st.write(f'Viewing: *{file_name['path'].removesuffix('.pdf')}*')
+                st.download_button('Download PDF', data=file_data, file_name=file_name['path'], mime='application/octet-stream', icon=':material/download:')
+                pdf_viewer.pdf_viewer(file_data.getvalue(), width=1000, render_text=True)
+
+    except AttributeError:
+        pass
+
     @st.cache_data(ttl=3600)
     def get_data(file):
-        response = requests.get(file['signedURL'])
-        if response.status_code == 200:
-            return io.BytesIO(response.content)
-        st.session_state.pop('training_programs')
-        st.session_state.conn = None
-        st.rerun()
+        try:
+            response = requests.get(st.session_state.SUPABASE_CONNECTION.syllabus[file]['url'])
+            if response.status_code == 200:
+                return io.BytesIO(response.content).getvalue()
+        except TypeError:
+            response = requests.get(file['signedURL'])
+            if response.status_code == 200:
+                return io.BytesIO(response.content)
+            st.session_state.pop('training_programs')
+            st.session_state.conn = None
+            st.rerun()
 
     cols = st.columns([1, 13])
     with cols[0]:
@@ -69,13 +94,20 @@ if st.session_state.SUPABASE_CONNECTION.user:
                 text.append(f'#### {year}')
                 for i in range(len(df['Period'].unique())-1):
                     if isinstance(df[column][num], str) or isinstance(df[column][num + 1], str) or isinstance(df[column][num + 2], str):
-                        text.append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}'.replace('nan', 'Not Specified'))
+                        text.append(f'- **Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {df[column][num + 2]}'.replace('nan', 'Not Specified'))
                     else:
                         if text[-1] != 'No Periods Specified':
                             text.append('No Periods Specified')
                     num += 3
         for text_ in text:
-            st.write(text_)
+            if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other'):
+                if (st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan')):
+                    file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                    if file is None:
+                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                    view_large_pdf(get_data(file), file)
+            else:
+                st.write(text_)
         sub_cols = st.columns(2)
         with sub_cols[0]:
             st_copy_to_clipboard('Weekly Report\n'+'\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy Raw Text to Clipboard', after_copy_label='Copied!')
@@ -96,13 +128,20 @@ if st.session_state.SUPABASE_CONNECTION.user:
                         for i in range(len(df['Period'].unique())-1):
                             if isinstance(df[column][num], str) or isinstance(df[column][num + 1], str) or isinstance(df[column][num + 2], str):
                                 if df[column][num+2] == st.session_state.SUPABASE_CONNECTION.user['name']:
-                                    user_lessons[df[column][0]].append(f'**Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {year}')
+                                    user_lessons[df[column][0]].append(f'- **Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {year}')
                             num += 3
         for week, lessons in user_lessons.items():
             if lessons:
                 st.write(f'#### {week}')
                 for lesson in lessons:
-                    st.write(lesson)
+                    if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other'):
+                        if (st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan')):
+                            file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                            if file is None:
+                                file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                            view_large_pdf(get_data(file), file)
+                    else:
+                        st.write(text_)
     with cols[2]:
         '### Quick Links'
         st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')

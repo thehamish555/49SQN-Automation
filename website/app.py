@@ -15,7 +15,7 @@ if '_' not in st.session_state:
 else:
     _ = st.session_state._
 
-page_config = PageConfig(version='V1.1.4')
+page_config = PageConfig(version='V1.2.0')
 
 if 'SUPABASE_CONNECTION' not in st.session_state:
     st.session_state.SUPABASE_CONNECTION = SupabaseLoader()
