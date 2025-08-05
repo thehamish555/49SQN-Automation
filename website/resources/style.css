@@ -88,3 +88,4 @@
 }
 
 [data-testid='stHeaderActionElements'] {display: none;} /* Hide the text link button? */
+[data-testid='stBaseButton-tertiary'] {text-align: left;} /* Hide the tertiary button? */

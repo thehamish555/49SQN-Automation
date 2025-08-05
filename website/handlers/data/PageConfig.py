@@ -17,7 +17,7 @@ class PageConfig:
             }
         )
 
-        st.markdown("<div id='top'><br><br><br></div>", unsafe_allow_html=True)
+        st.html("<div id='top'><br><br></div>")
 
     def get_pages(self):
         return {
@@ -38,23 +38,16 @@ class PageConfig:
                 st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/manage_accounts:')
             ]
         }
-
-    def __add_component(self, component: str) -> None:
-        st.write(
-            component,
-            unsafe_allow_html=True
-        )
     
     def load_ui_components(self):
         # Load CSS styles
-        with open(f'{st.session_state.BASE_PATH}/resources/style.css', 'r') as f:
-            self.__add_component(f'<style>{f.read()}</style>')
+        st.html(f'{st.session_state.BASE_PATH}/resources/style.css')
 
         # Version footer
-        self.__add_component(f'<div class="footer">{self.version}</div>')
+        st.html(f'<div class="footer">{self.version}</div>')
 
         # Back to top button
-        self.__add_component(
+        st.html(
             '''
                 <a target="_self" href="#top">
                     <button class="back_to_top">
@@ -68,4 +61,4 @@ class PageConfig:
 
         # Beta features warning
         if st.session_state.beta_features:
-            self.__add_component('<div class="beta">'+(self._('ui.beta_features'))+'</div>')
+            st.html('<div class="beta">'+(self._('ui.beta_features'))+'</div>')

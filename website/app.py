@@ -15,10 +15,12 @@ if '_' not in st.session_state:
 else:
     _ = st.session_state._
 
-page_config = PageConfig(version='V1.2.0')
+page_config = PageConfig(version='V1.2.1')
 
 if 'SUPABASE_CONNECTION' not in st.session_state:
     st.session_state.SUPABASE_CONNECTION = SupabaseLoader()
+
+page_config.load_ui_components()
 
 try:
     st.logo(
@@ -31,7 +33,6 @@ except AttributeError as e:
     st.warning(_('errors.general'), icon=':material/error:')
     st.error(e)
 
-page_config.load_ui_components()
 
 if st.context.url.startswith('http://localhost:'):
     '---'
