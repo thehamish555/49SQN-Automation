@@ -5,7 +5,7 @@ import io
 import datetime
 from st_copy_to_clipboard import st_copy_to_clipboard
 import streamlit_pdf_viewer as pdf_viewer
-import json
+import pymupdf
 
 
 def get_training_program_names():        
@@ -101,13 +101,28 @@ if st.session_state.SUPABASE_CONNECTION.user:
                     num += 3
         for text_ in text:
             if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other'):
-                if (st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan')):
+                if st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
                         file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     view_large_pdf(get_data(file), file)
             else:
-                st.write(text_)
+                st.write(text_.lstrip('-'))
+        if st.button('View all Lesson Plans', use_container_width=True, help='Click to view all the lesson plans or guides for this week'):
+            files = []
+            for text_ in text:
+                if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other'):
+                    file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                    if file is None:
+                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                    files.append(file)
+            merged_files = pymupdf.open()
+            for file in files:
+                merged_files.insert_pdf(pymupdf.open(stream=get_data(file)))
+            pdf_bytes = io.BytesIO()
+            merged_files.save(pdf_bytes)
+            view_large_pdf(pdf_bytes.getvalue(), f'{column.split('.')[0]} - {df[column][0]} Report.pdf')
+            pdf_bytes.seek(0)
         sub_cols = st.columns(2)
         with sub_cols[0]:
             st_copy_to_clipboard('Weekly Report\n'+'\n'.join(text).replace('###### ', '').replace('#### ', '').replace('**', ''), before_copy_label='Copy Raw Text to Clipboard', after_copy_label='Copied!')
@@ -135,16 +150,16 @@ if st.session_state.SUPABASE_CONNECTION.user:
                 st.write(f'#### {week}')
                 for lesson in lessons:
                     if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other'):
-                        if (st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan')):
+                        if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                             file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             if file is None:
                                 file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             view_large_pdf(get_data(file), file)
                     else:
-                        st.write(text_)
+                        st.write(lesson.lstrip('-'))
     with cols[2]:
         '### Quick Links'
-        st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/docs:', help='View and download lesson plans')
-        st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/folder:', help='View and download documents')
-        st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/csv:', help='View the training program')
+        st.page_link('sub_pages/resources/lesson_plans.py', label='Lesson Plans', icon=':material/book:', help='View and download lesson plans')
+        st.page_link('sub_pages/resources/documents.py', label='Documents', icon=':material/quick_reference_all:', help='View and download documents')
+        st.page_link('sub_pages/tools/training_program.py', label='Training Program', icon=':material/table:', help='View the training program')
     st.warning('Some pages are still in development')

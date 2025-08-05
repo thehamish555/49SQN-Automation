@@ -19,18 +19,18 @@ icons = {'Default': ':material/docs:',
          'Template': ':material/docs:',
          'AVS': ':material/flight:',
          'DRL': ':material/directions_walk:',
-         'ETH': ':material/docs:',
-         'EXP': ':material/school:',
-         'FAS': ':material/docs:',
+         'ETH': ':material/balance:',
+         'EXP': ':material/event_available:',
+         'FAS': ':material/swords:',
          'LDR': ':material/groups:',
          'MED': ':material/medical_services:',
          'NAV': ':material/explore:',
-         'OPS': ':material/school:',
+         'OPS': ':material/lan:',
          'PHY': ':material/fitness_center:',
          'PMT': ':material/forest:',
          'RDC': ':material/radio:',
          'SAL': ':material/school:',
-         'Other': ':material/docs:'}
+         'Other': ':material/question_mark:'}
 
 @st.cache_data(ttl=3600)
 def get_data(file):

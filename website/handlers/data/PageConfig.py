@@ -25,17 +25,17 @@ class PageConfig:
                 st.Page('sub_pages/home.py', title=self._('page.home'), icon=':material/home:')
             ],
             self._('page.resources'): [
-                st.Page('sub_pages/resources/lesson_plans.py', title=self._('page.resources.lesson_plans'), icon=':material/docs:'),
-                st.Page('sub_pages/resources/documents.py', title=self._('page.resources.documents'), icon=':material/folder:')
+                st.Page('sub_pages/resources/lesson_plans.py', title=self._('page.resources.lesson_plans'), icon=':material/book:'),
+                st.Page('sub_pages/resources/documents.py', title=self._('page.resources.documents'), icon=':material/quick_reference_all:')
             ],
             self._('page.tools'): [
-                st.Page('sub_pages/tools/training_program.py', title=self._('page.tools.training_program'), icon=':material/csv:')
+                st.Page('sub_pages/tools/training_program.py', title=self._('page.tools.training_program'), icon=':material/table:')
             ],
             self._('page.your_account'): [
                 st.Page('sub_pages/accounts/manage_account.py', title=self._('page.your_account'), icon=':material/manage_accounts:')
             ],
             self._('page.admin'): [
-                st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/manage_accounts:')
+                st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/group_search:')
             ]
         }
     
