@@ -132,7 +132,7 @@ with tabs[0]:
         for start in range(2, len(df), 3):
             if start + 1 < len(df):
                 for col in df.columns:
-                    df.loc[start, col] = f'{df.loc[start, col]} {df.loc[start + 1, col]}'.rstrip(' nan')
+                    df.loc[start, col] = f'{df.loc[start, col]} {df.loc[start + 1, col]}'.removesuffix(' nan')
                 rows_to_delete.append(start + 1)
 
         df = df.drop(index=rows_to_delete).reset_index(drop=True)
