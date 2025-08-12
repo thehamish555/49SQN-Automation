@@ -22,14 +22,16 @@ icons = {'Default': ':material/docs:',
          'ETH': ':material/balance:',
          'EXP': ':material/event_available:',
          'FAS': ':material/swords:',
+         'FLD': ':material/grass:',
          'LDR': ':material/groups:',
          'MED': ':material/medical_services:',
          'NAV': ':material/explore:',
          'OPS': ':material/lan:',
          'PHY': ':material/fitness_center:',
          'PMT': ':material/forest:',
-         'RDC': ':material/radio:',
+         'RCD': ':material/radio:',
          'SAL': ':material/school:',
+         'SEA': ':material/sailing:',
          'Other': ':material/question_mark:'}
 
 @st.cache_data(ttl=3600)

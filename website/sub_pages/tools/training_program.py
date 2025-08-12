@@ -44,7 +44,33 @@ def color_column(val):
 
 def color_users(val):
     if users.__contains__(val):
-        return f'background-color: {st.get_option('theme.primaryColor')}'
+        return 'background-color: #ff4500; color: black; font-weight: bold;'
+
+Colors = {
+         'AVS': '#7adbff',
+         'DRL': '#ffd7ff',
+         'ETH': '#ffffcc',
+         'EXP': '#ddebf7',
+         'FAS': '#d5c4b9',
+         'FLD': '#b8caa0',
+         'LDR': '#ffc78f',
+         'MED': '#fda69d',
+         'NAV': '#fbe5fc',
+         'OPS': '#90cbfc',
+         'PHY': '#c9fbfa',
+         'PMT': '#b7d2b4',
+         'RCD': '#ffffff',
+         'SAL': '#d8d8d8',
+         'SEA': '#002060',
+         'Other': "#949494"
+         }
+
+def color_lessons(val):
+    try:
+        if val.split()[0] in Colors:
+            return f'background-color: {Colors[val.split()[0]]}; color: black;'
+    except IndexError:
+        pass
     
 
 def get_training_program_names():        
@@ -101,6 +127,16 @@ with tabs[0]:
             weeks.insert(0, 'Year Group')
             df = df[weeks]
 
+        rows_to_delete = []
+
+        for start in range(2, len(df), 3):
+            if start + 1 < len(df):
+                for col in df.columns:
+                    df.loc[start, col] = f'{df.loc[start, col]} {df.loc[start + 1, col]}'.rstrip(' nan')
+                rows_to_delete.append(start + 1)
+
+        df = df.drop(index=rows_to_delete).reset_index(drop=True)
+
 
         df.fillna(' ', inplace=True)
 
@@ -115,14 +151,14 @@ with tabs[0]:
         column_config['Year Group'] = st.column_config.TextColumn('Year Group', width=100, pinned=True)
         column_config['Period'] = st.column_config.TextColumn('Period', width=100, pinned=True)
         try:
-            st.dataframe(df.style.map(color_column, subset=[column]).map(color_users),
+            st.dataframe(df.style.map(color_column, subset=[column]).map(color_users).map(color_lessons),
                         hide_index=True,
                         column_config=column_config,
-                        height=947)
+                        height=705)
         except KeyError:
             st.dataframe(df,
                         hide_index=True,
-                        height=947)
+                        height=705)
     except KeyError:
         st.error('No active training programs available')
 
