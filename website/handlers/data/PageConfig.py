@@ -20,6 +20,8 @@ class PageConfig:
         st.html("<div id='top'><br><br></div>")
 
     def get_pages(self):
+        admin_pages = []
+        admin_pages.append(st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/group_search:')) if st.session_state.SUPABASE_CONNECTION.user and 'view_users' in st.session_state.SUPABASE_CONNECTION.user['permissions_expanded'] else None
         return {
             self._('page.home'): [
                 st.Page('sub_pages/home.py', title=self._('page.home'), icon=':material/home:')
@@ -34,9 +36,7 @@ class PageConfig:
             self._('page.your_account'): [
                 st.Page('sub_pages/accounts/manage_account.py', title=self._('page.your_account'), icon=':material/manage_accounts:')
             ],
-            self._('page.admin'): [
-                st.Page('sub_pages/accounts/manage_users.py', title=self._('page.admin.manage_users'), icon=':material/group_search:')
-            ]
+            self._('page.admin'): admin_pages
         }
     
     def load_ui_components(self):

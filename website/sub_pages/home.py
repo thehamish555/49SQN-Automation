@@ -107,17 +107,38 @@ if st.session_state.SUPABASE_CONNECTION.user:
                     view_large_pdf(get_data(file), file)
             else:
                 st.write(text_.lstrip('-'))
-        if st.button('View all Lesson Plans', use_container_width=True, help='Click to view all the lesson plans or guides for this week'):
-            files = []
+        if st.button('View Weekly Documents', use_container_width=True, help='Click to view all the lesson plans or guides for this week'):
+            files = {}
             for text_ in text:
                 if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other') and not text_.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
                         file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
-                    files.append(file)
+                    files[text_] = {'file': file, 'instructor': text_.split('with')[-1]}
             merged_files = pymupdf.open()
             for file in files:
-                merged_files.insert_pdf(pymupdf.open(stream=get_data(file)))
+                replacements = {
+                    '[DATE]': df[column][0],
+                    '[INSTRUCTOR]': files[file]['instructor'],
+                    '[NAME]': files[file]['instructor'],
+                    '[NEXT_LESSON]': '',
+                    '[NEXT_INSTRUCTOR]': '',
+                    '[NEXT_LOCATION]': '',
+                    '[NEXT_TIMING]': '',
+                    '[NEXT_DRESS]': '',
+                }
+                pdf = pymupdf.open(stream=get_data(files[file]['file']))
+                for page in pdf:
+                    for key, value in replacements.items():
+                        text_instances = page.search_for(key)
+                        for inst in text_instances:
+                            rect = pymupdf.Rect(inst)
+                            rect.y0 -= 10
+                            rect.y1 += 10
+                            rect.x1 += 300
+                            page.add_redact_annot(rect, value, fontsize=12)
+                    page.apply_redactions()             
+                merged_files.insert_pdf(pdf)
             pdf_bytes = io.BytesIO()
             merged_files.save(pdf_bytes)
             view_large_pdf(pdf_bytes.getvalue(), f'{column.split('.')[0]} - {df[column][0]} Report.pdf')
