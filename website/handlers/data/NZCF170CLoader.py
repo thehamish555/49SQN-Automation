@@ -31,7 +31,6 @@ class NZCF170CLoader:
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_argument("--silent")
-        chromedriver_autoinstaller.install()
         self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
         self.wait = WebDriverWait(self.driver, 20)
 
