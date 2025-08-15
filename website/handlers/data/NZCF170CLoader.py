@@ -2,6 +2,7 @@ import json
 import pathlib
 import re
 import time
+import platform
 import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -10,8 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from pyvirtualdisplay import Display
-import platform
+
 
 class NZCF170CLoader:
     BASE = "https://www.cadetnet.org.nz"
@@ -25,26 +25,25 @@ class NZCF170CLoader:
             st.session_state.BASE_PATH + "/resources/configurations/syllabus.json"
         )
 
-        if platform.system() != "Windows":
-            # Start virtual display
-            from pyvirtualdisplay import Display
-            self.display = Display(visible=0, size=(1920, 1080))
-            self.display.start()
-        else:
-            self.display = None  # Windows doesn't need it
-
-        # Configure Chrome headless
+        # Chrome options
         chrome_options = Options()
-        chrome_options.add_argument("--headless=new")
+        chrome_options.add_argument("--headless=new")  # modern headless
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--log-level=3")
-        chrome_options.add_argument("--silent")
-        self.driver = webdriver.Chrome(
-            service=ChromeService(ChromeDriverManager().install()), options=chrome_options
+        chrome_options.add_argument(
+            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/115.0.0.0 Safari/537.36"
         )
-        self.wait = WebDriverWait(self.driver, 30)
+
+        # Initialize driver
+        self.driver = webdriver.Chrome(
+            service=ChromeService(ChromeDriverManager().install()),
+            options=chrome_options,
+        )
+        self.wait = WebDriverWait(self.driver, 30)  # wait up to 30s for elements
 
     def _save_json(self, data):
         self.out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -62,20 +61,29 @@ class NZCF170CLoader:
 
     def _login(self, username, password):
         self.driver.get(self.LOGIN_URL)
-        self.wait.until(EC.presence_of_element_located((By.ID, "user_login")))
+
+        # Wait for login form
+        try:
+            self.wait.until(EC.presence_of_element_located((By.ID, "user_login")))
+        except:
+            st.error("Login form did not appear. Check website or CAPTCHA.")
+            return False
 
         # Fill form and submit
         self.driver.find_element(By.ID, "user_login").send_keys(username)
         self.driver.find_element(By.ID, "user_pass").send_keys(password)
         self.driver.find_element(By.ID, "wp-submit").click()
 
-        # Wait until redirected to target or dashboard
-        time.sleep(2)
+        # Wait until dashboard or redirect
+        time.sleep(3)
+        return True
 
     def _extract_lessons(self, username, password):
         lessons = self._get_existing_data()
 
-        self._login(username, password)
+        if not self._login(username, password):
+            return lessons
+
         self.driver.get(self.TARGET_URL)
         time.sleep(self.DELAY)
 
@@ -104,13 +112,14 @@ class NZCF170CLoader:
             ):
                 continue
 
+            # Periods
             try:
                 periods_td = row.find_element(By.CSS_SELECTOR, "td[style*='text-align:right']")
                 periods = int(re.search(r"(\d+)", periods_td.text).group(1))
             except:
                 periods = None
 
-            # Open subpage
+            # Open subpage for PDF
             self.driver.get(href)
             time.sleep(self.DELAY)
 
@@ -140,10 +149,4 @@ class NZCF170CLoader:
         username = st.secrets["cadetnet"]["USERNAME"]
         password = st.secrets["cadetnet"]["PASSWORD"]
         data = self._extract_lessons(username, password)
-
-        # Stop virtual display after scraping
-        self.driver.quit()
-        if self.display:
-            self.display.stop()
-
         return data
