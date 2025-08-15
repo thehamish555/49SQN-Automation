@@ -1,52 +1,44 @@
 import json
 import pathlib
-import urllib.parse
-import sys
 import re
 import time
-import requests
-from bs4 import BeautifulSoup
 import streamlit as st
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class NZCF170CLoader:
     BASE = "https://www.cadetnet.org.nz"
     LOGIN_URL = BASE + "/wp-login.php"
     TARGET_URL = BASE + "/7-training/nzcf-170c/"
-    HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/8.0)"}
-    TIMEOUT = 30
-    DELAY = 1.5  # seconds between requests to avoid rate limit
 
-    def __init__(self) -> None:
-        # Output path based on session state
+    DELAY = 2  # seconds between page fetches
+
+    def __init__(self):
         self.out_path = pathlib.Path(
             st.session_state.BASE_PATH + "/resources/configurations/syllabus.json"
         )
 
-    def _full_url(self, src: str | None) -> str | None:
-        return urllib.parse.urljoin(self.BASE, src) if src else None
+        # Configure Chrome headless
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--log-level=3")
+        chrome_options.add_argument("--silent")
+        self.driver = webdriver.Chrome(options=chrome_options)
+        self.wait = WebDriverWait(self.driver, 20)
 
-    def _hidden_inputs(self, form) -> dict:
-        return {i["name"]: i.get("value", "") for i in form.select("input[type=hidden][name]")}
+    def _save_json(self, data):
+        self.out_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.out_path.open("w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
 
-    def _login(self, user: str, pw: str) -> requests.Session:
-        s = requests.Session()
-        pg = s.get(self.LOGIN_URL, headers=self.HEADERS, timeout=self.TIMEOUT)
-        pg.raise_for_status()
-        soup = BeautifulSoup(pg.text, "html.parser")
-        form = soup.select_one("form#loginform") or sys.exit("Login form missing")
-
-        payload = {"log": user, "pwd": pw, "wp-submit": "Log In", **self._hidden_inputs(form)}
-        s.post(self.LOGIN_URL, data=payload, headers=self.HEADERS, timeout=self.TIMEOUT)
-        return s
-
-    def _login_and_fetch_html(self, user: str, pw: str, url: str):
-        s = self._login(user, pw)
-        resp = s.get(url, headers=self.HEADERS, timeout=self.TIMEOUT)
-        resp.raise_for_status()
-        return resp.text, s
-
-    def _get_existing_data(self) -> dict:
+    def _get_existing_data(self):
         if self.out_path.exists():
             try:
                 with self.out_path.open("r", encoding="utf-8") as f:
@@ -55,30 +47,43 @@ class NZCF170CLoader:
                 return {}
         return {}
 
-    def _save_json(self, data: dict) -> None:
-        self.out_path.parent.mkdir(parents=True, exist_ok=True)
-        with self.out_path.open("w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    def _login(self, username, password):
+        self.driver.get(self.LOGIN_URL)
+        self.wait.until(EC.presence_of_element_located((By.ID, "user_login")))
 
-    def _extract_lessons(self, main_html: str, session: requests.Session, username: str, password: str) -> dict:
-        soup = BeautifulSoup(main_html, "html.parser")
+        # Fill form and submit
+        self.driver.find_element(By.ID, "user_login").send_keys(username)
+        self.driver.find_element(By.ID, "user_pass").send_keys(password)
+        self.driver.find_element(By.ID, "wp-submit").click()
+
+        # Wait until redirected to target or dashboard
+        time.sleep(2)
+
+    def _extract_lessons(self, username, password):
         lessons = self._get_existing_data()
 
-        for row in soup.select("tr"):
-            a_tag = row.select_one("td a[href*='/7-training/nzcf-170c/']")
-            if not a_tag:
+        self._login(username, password)
+        self.driver.get(self.TARGET_URL)
+        time.sleep(self.DELAY)
+
+        rows = self.driver.find_elements(By.CSS_SELECTOR, "tr")
+        for row in rows:
+            try:
+                a_tag = row.find_element(By.CSS_SELECTOR, "td a[href*='/7-training/nzcf-170c/']")
+            except:
                 continue
 
-            href = self._full_url(a_tag.get("href"))
-            text = a_tag.get_text(strip=True).replace("–", "-")
-
-            m = re.match(r"([A-Z]{3})\s+(\d+\.\d+)\s*-\s*(.+)", text)
+            href = a_tag.get_attribute("href")
+            text = a_tag.text.replace("–", "-")
+            m = re.match(r"([A-Z]{3})[-\s]?(\d+\.\d+)\s*(?:[-–]\s*)?(.+)", text)
             if not m:
+                st.warning(f"Skipped parsing: {text}")
                 continue
+
             module, lesson_num, lesson_title = m.groups()
             year = f"Year {lesson_num.split('.')[0]}"
 
-            # Skip if already in saved data
+            # Skip already saved
             if (
                 year in lessons
                 and module in lessons[year]
@@ -86,49 +91,40 @@ class NZCF170CLoader:
             ):
                 continue
 
-            periods_td = row.select_one("td[style*='text-align:right']")
             try:
-                periods = int(re.search(r"(\d+)", periods_td.get_text(strip=True)).group(1))
+                periods_td = row.find_element(By.CSS_SELECTOR, "td[style*='text-align:right']")
+                periods = int(re.search(r"(\d+)", periods_td.text).group(1))
             except:
                 periods = None
 
-            # Delay before request
+            # Open subpage
+            self.driver.get(href)
             time.sleep(self.DELAY)
-            sub_html = session.get(href, headers=self.HEADERS, timeout=self.TIMEOUT).text
 
-            # Re-login if session expired
-            if "wp-login.php" in sub_html:
-                st.warning("Session expired or rate-limited — re-logging in...")
-                session = self._login(username, password)
-                time.sleep(self.DELAY)
-                sub_html = session.get(href, headers=self.HEADERS, timeout=self.TIMEOUT).text
-
-            sub_soup = BeautifulSoup(sub_html, "html.parser")
             pdf_link = None
-            for link in sub_soup.select("a[href$='.pdf']"):
-                if "instructor_guides" in link.get("href"):
-                    pdf_link = self._full_url(link.get("href"))
+            pdf_els = self.driver.find_elements(By.CSS_SELECTOR, "a[href$='.pdf']")
+            for el in pdf_els:
+                link = el.get_attribute("href")
+                if "instructor_guides" in link:
+                    pdf_link = link
                     break
 
             if not pdf_link:
-                st.warning(f"Skipped {module} {lesson_num} — no instructor guide found")
+                st.warning(f"No instructor guide for {module} {lesson_num}")
                 continue
 
             lessons.setdefault(year, {}).setdefault(module, {})[
                 f"{lesson_num} {lesson_title}"
-            ] = {
-                "url": pdf_link,
-                "periods": periods
-            }
-            self._save_json(lessons)  # Progressive save
+            ] = {"url": pdf_link, "periods": periods}
+
+            # Progressive save
+            self._save_json(lessons)
+            print(f"Saved: {lesson_num} {lesson_title}")
 
         return lessons
 
-    def install(self) -> dict:
-        """Logs in, scrapes data with rate-limit handling, saves JSON progressively, and returns the dict."""
+    def install(self):
         username = st.secrets["cadetnet"]["USERNAME"]
         password = st.secrets["cadetnet"]["PASSWORD"]
-
-        main_html, session = self._login_and_fetch_html(username, password, self.TARGET_URL)
-        lessons_data = self._extract_lessons(main_html, session, username, password)
-        return lessons_data
+        data = self._extract_lessons(username, password)
+        return data
