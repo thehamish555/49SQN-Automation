@@ -30,9 +30,10 @@ with cols[0]:
                             column_config={
                                 'name': st.column_config.TextColumn('Name', help='The name of the user'),
                                 'email': st.column_config.TextColumn('Email', help='The email address of the user'),
+                                'discord_id': st.column_config.TextColumn('Discord ID', help='The Discord ID of the user', width=200),
                                 'permissions': st.column_config.ListColumn('Permissions', help='The permissions of the user', width=300)
                                 },
-                            column_order=['name', 'email', 'permissions'],
+                            column_order=['name', 'email', 'discord_id', 'permissions'],
                             hide_index=True,
                             use_container_width=True,
                             height=325)
@@ -45,6 +46,7 @@ if 'manage_users' in st.session_state.SUPABASE_CONNECTION.user['permissions_expa
             with st.form(key='create_user', border=False, enter_to_submit=False):
                 name = st.text_input('Name', placeholder='Name', max_chars=50, help='Enter the name of the new user')
                 email = st.text_input('Email', placeholder='Email', max_chars=50, help='Enter the email address of the new user')
+                discord_id = st.text_input('Discord ID', placeholder='Discord ID', max_chars=50, help='Enter the Discord ID of the new user')
                 permissions = st.multiselect('Permissions', options=json.load(open(st.session_state.BASE_PATH + '/resources/configurations/permission_structure.json', 'r')), placeholder='Select Permissions', help='Select the permissions for the new user')
                 if st.form_submit_button('Create User', help='Create a new user with the provided details'):
                     if 'Admin' in permissions and 'Admin' not in st.session_state.SUPABASE_CONNECTION.user['permissions']:
@@ -78,6 +80,7 @@ if 'manage_users' in st.session_state.SUPABASE_CONNECTION.user['permissions_expa
                 st.error('Cannot edit an admin user')
             else:
                 name = st.text_input('Name', value=[row['name'] for row in st.session_state.SUPABASE_CONNECTION.users.data if row['email'] == selected_email][0], max_chars=50, help='Enter the name of the selected user')
+                discord_id = st.text_input('Discord ID', value=[row['discord_id'] for row in st.session_state.SUPABASE_CONNECTION.users.data if row['email'] == selected_email][0], max_chars=50, help='Enter the Discord ID of the selected user')
                 selected_permissions = st.multiselect('Permissions', options=json.load(open(st.session_state.BASE_PATH + '/resources/configurations/permission_structure.json', 'r')), default=[row['permissions'] for row in st.session_state.SUPABASE_CONNECTION.users.data if row['email'] == selected_email][0], help='Select the permissions for the selected user')
                 if 'Admin' in selected_permissions and 'Admin' not in st.session_state.SUPABASE_CONNECTION.user['permissions']:
                     st.error('Cannot grant admin permissions')
@@ -85,7 +88,7 @@ if 'manage_users' in st.session_state.SUPABASE_CONNECTION.user['permissions_expa
                     if st.button('Edit User', help='Edit the selected user with the provided details'):
                         execute_query(
                             st.session_state.SUPABASE_CONNECTION.supabase.table('users')
-                            .update({'name': name, 'permissions': selected_permissions})
+                            .update({'name': name, 'discord_id': discord_id, 'permissions': selected_permissions})
                             .eq('email', selected_email),
                             ttl=0,
                         )
