@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -31,7 +32,7 @@ class NZCF170CLoader:
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_argument("--silent")
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         self.wait = WebDriverWait(self.driver, 20)
 
     def _save_json(self, data):
