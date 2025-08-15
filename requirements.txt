@@ -5,4 +5,4 @@ st-supabase-connection==2.0.1
 st-copy-to-clipboard==0.1.6
 beautifulsoup4==4.13.4
 selenium==4.35.0
-chromedriver-autoinstaller==0.6.4
+webdriver-manager==4.0.2
