@@ -10,7 +10,7 @@ import streamlit as st
 
 
 class NZCF170CLoader:
-    BASE = "https://www.cadetnet.org.nz"
+    BASE = "https://wild-lab-6641.hamishlester555.workers.dev/"
     LOGIN_URL = BASE + "/wp-login.php"
     TARGET_URL = BASE + "/7-training/nzcf-170c/"
     HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/8.0)"}
