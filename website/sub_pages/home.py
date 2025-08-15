@@ -100,7 +100,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
                             text.append('No Periods Specified')
                     num += 3
         for text_ in text:
-            if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other'):
+            if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other') and not text_.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                 if st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
@@ -111,7 +111,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
         if st.button('View all Lesson Plans', use_container_width=True, help='Click to view all the lesson plans or guides for this week'):
             files = []
             for text_ in text:
-                if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other'):
+                if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other') and not text_.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
                         file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
@@ -149,7 +149,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
             if lessons:
                 st.write(f'#### {week}')
                 for lesson in lessons:
-                    if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other'):
+                    if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other') and not lesson.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                         if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                             file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             if file is None:

@@ -1,1098 +1,1518 @@
 {
-    "Year 1": {
-        "DRL": {
-            "1.1 Introduction to Drill and Compliments": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.1_Introduction_to_Drill_and_Compliments.pdf",
-                "periods": 1
-            },
-            "1.2 Demonstrate Forming Up": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.2_Demonstrate_Forming_Up.pdf",
-                "periods": 1
-            },
-            "1.3 Demonstrate Dressing, Open and Close Order March": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.3_Demonstrate_Dressing_Open_and_Close_Order_March.pdf",
-                "periods": 1
-            },
-            "1.4 Demonstrate Marching, Halting, and Wheeling": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.4_Demonstrate_Marching_Halting_and_Wheeling.pdf",
-                "periods": 2
-            },
-            "1.5 Demonstrate Saluting to the Front at the Halt": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.5_Demonstrate_Saluting_to_the_Front_at_the_Halt.pdf",
-                "periods": 1
-            },
-            "1.6 Demonstrate Corps Specific Parade Format": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.6_Demonstrate_Corps_Specific_Parade_Format.pdf",
-                "periods": 2
-            },
-            "1.7 Conduct Turning, Inclining, Dismissing, and Falling Out": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.7_Conduct_Turning_Inclining_Dismissing_and_Falling_Out.pdf",
-                "periods": 1
-            },
-            "1.8 Carry out Numbering, Proving, and Sizing": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.8_Carry_out_Numbering_Proving_and_Sizing.pdf",
-                "periods": 1
-            },
-            "1.9 Demonstrate Saluting to the Flank, Reporting to an Officer, Eyes Right and Left": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.9_Demonstrate_Saluting_to_the_Flank_Reporting_to_an_Officer_Eyes_Left_and_Right.pdf",
-                "periods": 1
-            },
-            "1.10 Demonstrate Positions with the Rifle at the Halt and on the March": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.10_Demonstrate_positions_with_the_Rifle_at_the_Halt_and_on_the_March.pdf",
-                "periods": 1
-            },
-            "1.11 Conduct Saluting with the Rifle at the Halt": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.11_Conduct_Saluting_with_the_Rifle_at_the_Halt.pdf",
-                "periods": 1
-            },
-            "1.12 Get on Parade with and without the Rifles": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.12_Get_On_Parade_with_and_without_Rifle.pdf",
-                "periods": 2
-            },
-            "1.13 Change Step in Quick Time" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.13_Change_Step_in_Quick_Time.pdf",
-                "periods": 1
-            },
-            "1.14 Mark Time in Quick Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.14_Mark_Time_in_Quick_Time.pdf",
-                "periods": 1
-            },
-            "1.15 Conduct Open Order and Close Order": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.15_Conduct_Open_and_Close_Order.pdf",
-                "periods": 1
-            }
-        },
-        "ETH": {
-            "1.1 Recall NZCF Vision, Mission, Values" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.1_Recall_NZCF_Vision_Mission_Values.pdf",
-                "periods": 1
-            },
-            "1.2 Explain NZCF Code of Conduct": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.2_Explain_NZCF_Code_of_Conduct.pdf",
-                "periods": 1
-            },
-            "1.3 Describe Duty of Care": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.3_Describe_Duty_of_Care.pdf",
-                "periods": 1
-            },
-            "1.4 Identify NZCF Key Legislation": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.4_Identify_NZCF_Key_Legislation.pdf",
-                "periods": 1
-            },
-            "1.5 Demonstrate Diversity & Anti-Harassment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.5_Demonstrate_Diversity_and_Anti-Harassment.pdf",
-                "periods": 1
-            }
-        },
-        "FAS": {
-            "1.1 Recall the Seven Basic Rules": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.1_Recall_the_Seven_Basic_Rules.pdf",
-                "periods": 1
-            },
-            "1.2 Comply with Safe Handling": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.2_Comply_with_Safe_Handling.pdf",
-                "periods": 1
-            },
-            "1.3 List Characteristics and Technical Description - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.3_List_Characteristics_and_Technical_Description-In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "1.4 Carry out Safety Precautions - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.4_Carry_Out_Safety_Precautions-In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "1.5 Pass DFTTs - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.5_Pass_DFTTs_In-Service_Firearm.pdf",
-                "periods": 3
-            },
-            "1.6 Strip, Clean, and Assemble - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.6_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
-                "periods": 2.5
-            }
-        },
-        "LDR": {
-            "1.1 Introduction to Formal Orders": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-1.1_Introduction_to_Formal_Orders.pdf",
-                "periods": 1
-            },
-            "1.2 Introduction to Lead Self": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-1.2_Introduction_to_Lead_Self.pdf",
-                "periods": 1
-            }
-        },
-        "MED": {
-            "1.1 Carry out Personal Wellness - Management in the Field(E)": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.1_Carry_out_Personal_Wellness%E2%80%93Management_in_the_Field(E).pdf",
-                "periods": 1
-            },
-            "1.2 Identify Environmental Related Illness": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.2_Identify_Environmental_Related_Illness.pdf",
-                "periods": 1
-            }
-        },
-        "NAV": {
-            "1.1 Aim and Purpose of Map/Chart Reading and Definitions": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.1_Aim_and_Purpose_of_Map_and_Chart_Reading_and_Definitions.pdf",
-                "periods": 1
-            },
-            "1.2 Explain the Care of Maps/Charts and Marginal Information": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.2_Explain_the_Care_of_Maps_Charts_and_Marginal_Information.pdf",
-                "periods": 1
-            },
-            "1.3 Explain the Map/Chart Reference System": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.3_Explain_the_Map_Chart_Reference_System.pdf",
-                "periods": 1
-            },
-            "1.4 Plot and Read Grid References using the Service Protractor": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.4_Plot_and_Read_Grid_References_using_the_Service_Protractor.pdf",
-                "periods": 1
-            },
-            "1.5 Measure Distance on a Map": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.5_Measure_Distance_on_a_Map.pdf",
-                "periods": 1
-            },
-            "1.6 Plot and Measure Grid Bearings": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.6_Plot_and_Measure_Grid_Bearings.pdf",
-                "periods": 1
-            },
-            "1.7 Interpret Relief and Contours (SCC Symbols and Datum)": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.7_Interpret_Relief_and_Contours_SCC_Symbols_and_Datum.pdf",
-                "periods": 1
-            },
-            "1.8 Explain Direction and North Points": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.8_Explain_Direction_and_North_Points.pdf",
-                "periods": 1
-            },
-            "1.9 Use a Compass": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.9_Use_a_Compass.pdf",
-                "periods": 1
-            }
-        },
-        "OPS": {
-            "1.1 Describe Basic Administration and Unit Processes (CadetNet)": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.1_Describe_Basic_Administration_and_Unit_Processes-CadetNet.pdf",
-                "periods": 1
-            },
-            "1.2 Identify NZCF Terms and Conditions of Membership": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.2_Identify_NZCF_Terms_and_Conditions_of_Membership.pdf",
-                "periods": 1
-            },
-            "1.3 Describe Unit Structure": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.3_Describe_Unit_Structure.pdf",
-                "periods": 1
-            },
-            "1.4 Identify Uniform Names and Numbers": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.4_Identify_Uniform_Names_and_Numbers.pdf",
-                "periods": 1
-            },
-            "1.5 Describe and Demonstrate Uniform Wear, Care & Maintenance": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.5_Describe_and_Demonstrate_Uniform_Wear_Care_and_Maintenance.pdf",
-                "periods": 2
-            },
-            "1.6 Describe Uniform Grooming Standards": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.6_Describe_Uniform_Grooming_Standards.pdf",
-                "periods": 1
-            },
-            "1.7 Identify Corps Specific Ranks": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.7_Identify_Corps_Specific_Ranks.pdf",
-                "periods": 1
-            },
-            "1.8 Describe Corps of the NZCF": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.8_Describe_the_Corps_of_the_NZCF.pdf",
-                "periods": 1
-            },
-            "1.9 Describe Unit Emergency Procedures": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.9_Describe_Unit_Emergency_Procedures.pdf",
-                "periods": 1
-            },
-            "1.10 Identify Key Dates and Events - Unit": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.10_Identify_Key_Dates_and_Events%E2%80%93Unit.pdf",
-                "periods": 1
-            },
-            "1.11 List Cadet Awards and Badges": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.11_List_Cadet_Awards_and_Badges.pdf",
-                "periods": 2
-            },
-            "1.12 Recall Key Dates, Conflicts and Deployments - Parent Corps Specific": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.12_Recall_Key_Dates_Conflicts_and_Deployments%E2%80%93Parent_Corps_Specific.pdf",
-                "periods": 1
-            },
-            "1.13 Recall Parent Service Vision, Mission, Ethos and Values": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.13_Recall_Parent_Service_Vision_Mission_Ethos_and_Values.pdf",
-                "periods": 1
-            },
-            "1.14 Understand Camp and Base Operations": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.14_Understand_Camp_and_Base_Operations.pdf",
-                "periods": 1
-            }
-        },
-        "PHY": {
-            "1.1 Introduction to Warm Up / Down and Stretches": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.1_Introduction_to_Warm_Up_Warm_Down_and_Stretches.pdf",
-                "periods": 1
-            },
-            "1.2 Introduction to Basic PT Techniques": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.2_Introduction_to_Basic_PT_Techniques.pdf",
-                "periods": 1
-            },
-            "1.3 Conduct a Beep Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.3_Conduct_a_Beep_Test.pdf",
-                "periods": 1
-            },
-            "1.4 Conduct Parent Service Fitness Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.4_Conduct_Parent_Service_Fitness_Test.pdf",
-                "periods": 1
-            },
-            "1.5 Conduct the NZCF Fitness Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.5_Conduct_The_NZCF_Fitness_Assessment.pdf",
-                "periods": 1
-            },
-            "1.6 Employ Safe Handling and Lifting Techniques": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.6_Employ_Safe_Handling_and_Lifting_Techniques.pdf",
-                "periods": 1
-            },
-            "1.7 Conduct a Tug-of-War": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.7_Conduct_Tug-of-War.pdf",
-                "periods": 1
-            },
-            "1.8 Conduct a Swim Test / Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.8_Conduct_a_Swim_Test-Assessment.pdf",
-                "periods": 1
-            }
-        },
-        "PMT": {
-            "1.1 Define Environmental Care": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.1_Define_Environmental_Care.pdf",
-                "periods": 1
-            },
-            "1.2 Apply Clothing and Layering": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.2_Apply_Clothing_and_Layering.pdf",
-                "periods": 1
-            },
-            "1.3 Identify Personal Equipment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.3_Identify_Personal_Equipment.pdf",
-                "periods": 1
-            },
-            "1.4 Identify First Aid and Survival Kits": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.4_Identify_First_Aid_and_Survival_Kits.pdf",
-                "periods": 2
-            },
-            "1.5 Identify Group Equipment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.5_Identify_Group_Equipment.pdf",
-                "periods": 1
-            },
-            "1.6 Use Food, Ration Packs, and Cooking": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.6_Use_Food_Ration_Packs_and_Cooking.pdf",
-                "periods": 2
-            },
-            "1.7 Practise Packing a Pack": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.7_Practice_Packing_a_Pack.pdf",
-                "periods": 1
-            },
-            "1.8 Erect Tentage": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.8_Erect_Tentage.pdf",
-                "periods": 1
-            },
-            "1.9 Carry out Lost Procedures": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.9_Carry_Out_Lost_Procedures.pdf",
-                "periods": 1
-            },
-            "1.10 Identify Knots and Lashings": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.10_Identify_Knots_and_Lashings.pdf",
-                "periods": 2
-            }
-        },
-        "RCD": {
-            "1.1 Familiarisation of Equipment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.1_Familiarisation_of_Equipment.pdf",
-                "periods": 1
-            },
-            "1.2 Conduct Operations - SAD": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.2_Conduct_Operations%E2%80%93SAD.pdf",
-                "periods": 1
-            },
-            "1.3 State Figures, Phonetics, and Pro-Words": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.3_State_Figures_Phonetics_and_Pro_Words.pdf",
-                "periods": 2
-            },
-            "1.4 Conduct Radio Checks": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.4_Conduct_Radio_Checks.pdf",
-                "periods": 1
-            },
-            "1.5 Use the 24-Hour Clock": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.5_Use_The_24-Hour_Clock.pdf",
-                "periods": 1
-            }
-        },
-        "AVS": {
-            "1.1 Research History of Aviation": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.1_Research_History_of_Aviation.pdf",
-                "periods": 1
-            },
-            "1.2 Identify Principles of Flight": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.2_Identify_Principles_of_Flight.pdf",
-                "periods": 1
-            },
-            "1.3 Identify Flight Controls": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.3_Identify_Flight_Controls.pdf",
-                "periods": 1
-            },
-            "1.4 Define Effects of Controls": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.4_Define_the_Effects_of_Controls.pdf",
-                "periods": 1
-            },
-            "1.5 Describe Airfield Layout/Safety": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.5_Describe_Airfield_Layout_and_Safety.pdf",
-                "periods": 1
-            },
-            "1.6 Describe Cockpit Layout": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.6_Describe_the_Cockpit_Layout.pdf",
-                "periods": 2
-            }
-        }
+  "Year 1": {
+    "DRL": {
+      "1.1 Introduction to Drill and Compliments": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.1_Introduction_to_Drill_and_Compliments.pdf",
+        "periods": 1
+      },
+      "1.2 Demonstrate Forming Up": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.2_Demonstrate_Forming_Up.pdf",
+        "periods": 1
+      },
+      "1.3 Demonstrate Dressing, Open and Close Order March": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.3_Demonstrate_Dressing_Open_and_Close_Order_March.pdf",
+        "periods": 1
+      },
+      "1.4 Demonstrate Marching, Halting, and Wheeling": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.4_Demonstrate_Marching_Halting_and_Wheeling.pdf",
+        "periods": 2
+      },
+      "1.5 Demonstrate Saluting to the Front at the Halt": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.5_Demonstrate_Saluting_to_the_Front_at_the_Halt.pdf",
+        "periods": 1
+      },
+      "1.6 Demonstrate Corps Specific Parade Format": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.6_Demonstrate_Corps_Specific_Parade_Format.pdf",
+        "periods": 2
+      },
+      "1.7 Conduct Turning, Inclining, Dismissing, and Falling Out": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.7_Conduct_Turning_Inclining_Dismissing_and_Falling_Out.pdf",
+        "periods": 1
+      },
+      "1.8 Carry out Numbering, Proving, and Sizing": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.8_Carry_out_Numbering_Proving_and_Sizing.pdf",
+        "periods": 1
+      },
+      "1.9 Demonstrate Saluting to the Flank, Reporting to an Officer, Eyes Right and Left": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.9_Demonstrate_Saluting_to_the_Flank_Reporting_to_an_Officer_Eyes_Left_and_Right.pdf",
+        "periods": 1
+      },
+      "1.10 Demonstrate Positions with the Rifle at the Halt and on the March": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.10_Demonstrate_positions_with_the_Rifle_at_the_Halt_and_on_the_March.pdf",
+        "periods": 1
+      },
+      "1.11 Conduct Saluting with the Rifle at the Halt": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.11_Conduct_Saluting_with_the_Rifle_at_the_Halt.pdf",
+        "periods": 1
+      },
+      "1.12 Get on Parade with and without the Rifles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.12_Get_On_Parade_with_and_without_Rifle.pdf",
+        "periods": 2
+      },
+      "1.13 Change Step in Quick Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.13_Change_Step_in_Quick_Time.pdf",
+        "periods": 1
+      },
+      "1.14 Mark Time in Quick Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.14_Mark_Time_in_Quick_Time.pdf",
+        "periods": 1
+      },
+      "1.15 Conduct Open Order and Close Order": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-1.15_Conduct_Open_and_Close_Order.pdf",
+        "periods": 1
+      }
     },
-    "Year 2": {
-        "DRL": {
-            "2.1 Recall Words of Command": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.1_Recall_Words_of_Command.pdf",
-                "periods": 1
-            },
-            "2.2 Identify the Sequence of a Drill Lesson": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.2_Identify_the_Sequence_of_a_Drill_Lesson.pdf",
-                "periods": 1
-            },
-            "2.3 Demonstrate Turnings in Quick Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.3_Demonstrate_Turnings_in_Quick_Time.pdf",
-                "periods": 1
-            },
-            "2.4 March and Halt in Slow Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.4_March_and_Halt_in_Slow_Time.pdf",
-                "periods": 1
-            },
-            "2.5 Mark Time in Slow Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.5_Mark_Time_in_Slow_Time.pdf",
-                "periods": 1
-            },
-            "2.6 Change Step in Slow Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.6_Change_Step_in_Slow_Time.pdf",
-                "periods": 1
-            },
-            "2.7 Demonstrate Turnings in Slow Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.7_Demonstrate_Turnings_in_Slow_Time.pdf",
-                "periods": 1
-            },
-            "2.8 Demonstrate Salute to the Front on the March": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.8_Demonstrate_Salute_to_the_Front_on_the_March.pdf",
-                "periods": 1
-            },
-            "2.9 Ground Arms and Take Up Arms": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.9_Ground_Arms_and_Take_Up_Arms.pdf",
-                "periods": 1
-            },
-            "2.10 Present Arms and Shoulder Arms": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.10_Present_Arms_and_Shoulder_Arms.pdf",
-                "periods": 1
-            },
-            "2.11 Salute with the Rifle on the March": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.11_Salute_with_the_Rifle_on_the_March.pdf",
-                "periods": 1
-            }
-        },
-        "ETH": {
-            "2.1 Refresher - Code of Conduct and Duty of Care": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-2.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
-                "periods": 1
-            },
-            "2.2 Refresher - Diversity and Anti-Harassment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-2.2_Refresher-Diversity_and_Anti-Harassment.pdf",
-                "periods": 1
-            }
-        },
-        "FAS": {
-            "2.1 Identify Types of Firearms and Legal Requirements": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.1_Identify_Types_of_Firearms_and_Legal_Requirements.pdf",
-                "periods": 2
-            },
-            "2.2 Apply Marksmanship Principles": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.2_List_Key_Marksmanship_Principles.pdf",
-                "periods": 1
-            },
-            "2.3 Demonstrate Scoring of Targets": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.3_Demonstrate_Scoring_of_Targets.pdf",
-                "periods": 1
-            },
-            "2.4 Identify Range Operations, Conduct and Key Appointments": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.4_Identify_Range_Operations_Conduct_and_Key_Appointments.pdf",
-                "periods": 1
-            },
-            "2.5 Refresher - Carry out Safety Precautions - In Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.5_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "2.6 Refresher - Pass DFTTs - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.6_Refresher_Pass_DFTTS_In-Service_Firearm.pdf",
-                "periods": 3
-            },
-            "2.7 Refresher - Strip, Clean and Assemble - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.7_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
-                "periods": 1
-            }
-        },
-        "LDR": {
-            "2.1 Introduction to Lead Teams": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-2.1_Introduction_to_Lead_Teams.pdf",
-                "periods": 1
-            },
-            "2.2 Demonstrate JNCO Command Presence": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-2.2_Demonstrate_JNCO_Command_Presence.pdf",
-                "periods": 10
-            }
-        },
-        "MED": {
-            "2.1 Apply Buddy Aid": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.1_Apply_Buddy_Aid.pdf",
-                "periods": 2
-            },
-            "2.2 Identify Asthma and Allergies": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.2_Identify_Asthma_and_Allergies.pdf",
-                "periods": 2
-            },
-            "2.3 Describe Psychological First Aid": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.3_Describe_Psychological_First_Aid.pdf",
-                "periods": 2
-            }
-        },
-        "NAV": {
-            "2.1 Set a Map by Compass and Inspection": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.1_Set_a_Map_by_Compass_and_Inspection.pdf",
-                "periods": 1
-            },
-            "2.2 Locate your Position": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.2_Locate_your_Position.pdf",
-                "periods": 1
-            },
-            "2.3 Estimate Distance": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.3_Estimate_Distance.pdf",
-                "periods": 1
-            },
-            "2.4 Utilise Aids to Navigation": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.4_Utilise_Aids_to_Navigation.pdf",
-                "periods": 1
-            },
-            "2.5 Construct a Navigation Data Sheet": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.5_Construct_a_Navigation_Data_Sheet.pdf",
-                "periods": 1
-            },
-            "2.6 Navigate an Area - by Day": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.6_Navigate_an_Area_by_Day.pdf",
-                "periods": 3
-            },
-            "2.7 Calculate Magnetic Variation and Convert Bearings": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.7_Calculate_Magnetic_Variation_and_Convert_Bearings.pdf",
-                "periods": 1
-            },
-            "2.8 Maintain Direction and Bypass Obstacles": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.8_Maintain_Direction_and_Bypass_Obstacles.pdf",
-                "periods": 2
-            }
-        },
-        "OPS": {
-            "2.1 Identify Structure of Region and Area": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.1_Identify_Structure_of_Region_and_Area.pdf",
-                "periods": 1
-            },
-            "2.2 Identify other Services Ranks": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.2_Identify_Other_NZCF_Service_Ranks.pdf",
-                "periods": 1
-            },
-            "2.3 Identify HQ NZCF Leadership Structure": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.3_Identify_HQ_NZCF_Leadership_Structure.pdf",
-                "periods": 1
-            },
-            "2.4 Identify Parent Service Ranks": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.4_Identify_Parent_Service_Ranks.pdf",
-                "periods": 1
-            },
-            "2.5 Identify Reserves Structure and Units": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.5_Identify_Reserves_Structure_And_Units.pdf",
-                "periods": 1
-            },
-            "2.6 Understand Coursing, Competitions, and Selection Process": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.6_Understand_Coursing_Competitions_And_Selection_Process.pdf",
-                "periods": 1
-            },
-            "2.7 Recall Single Service Key Dates and Events": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.7_Recall_Single_Service_Key_Dates_And_Events.pdf",
-                "periods": 1
-            },
-            "2.8 Recall NZCF Key Dates and Events": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.8_Recall_NZCF_Key_Dates_And_Events.pdf",
-                "periods": 1
-            },
-            "2.9 Identify Equipment, Weapon Systems, and Vehicles": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.9_Identify_Equipment_Weapon_Systems_And_Vehicles.pdf",
-                "periods": 1
-            },
-            "2.10 Recall NZDF Conflicts and Deployments": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.10_Recall_NZDF_Conflicts_And_Deployments.pdf",
-                "periods": 1
-            },
-            "2.11 Identify NZCF Awards, Commendations, and Medals": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.11_Identify_NZCF_Awards_Commendations_and_Medals.pdf",
-                "periods": 1
-            },
-            "2.12 Identify Forms and Manuals": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.12_Identify_Forms_and_Manuals.pdf",
-                "periods": 1
-            }
-        },
-        "PHY": {
-            "2.1 Conduct a Beep Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.1_Conduct_a_Beep_Test.pdf",
-                "periods": 1
-            },
-            "2.2 Conduct Parent Service Fitness Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.2_Conduct_Parent_Service_Fitness_Test.pdf",
-                "periods": 1
-            },
-            "2.3 Conduct the NZCF Fitness Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
-                "periods": 1
-            },
-            "2.4 Conduct a Swim Test / Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.4_Conduct_a_Swim_Test-Assessment.pdf",
-                "periods": 1
-            }
-        },
-        "PMT": {
-            "2.1 Construct Emergency Shelter(s)": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.1_Construct_Emergency_Shelters.pdf",
-                "periods": 2
-            },
-            "2.2 Use Emergency Radios": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.2_Use_Emergency_Radios.pdf",
-                "periods": 1
-            },
-            "2.3 Identify Campsite Selection and Layout": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.3_Identify_Campsite_Selection_and_Layout.pdf",
-                "periods": 2
-            }
-        },
-        "RCD": {
-            "2.1 Refresher of SAD, Equipment, Figures, Phonetics, and Pro-Words": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.1_Refresher_Equipment_Figures_Phonetics_and_Pro_Words.pdf",
-                "periods": 1
-            },
-            "2.2 Refresher - Conduct Radio Checks and Use the 24-Hour Clock": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.2_Refresher_Conduct_Radio_Checks_and_Use_24_Hour_Clock.pdf",
-                "periods": 1
-            }
-        },
-        "SAL": {
-            "2.1 Introduction to the Systems Approach to Learning (SAL) Model": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-2.1_Introduction_to_the_SAL_Model.pdf",
-                "periods": 1
-            }
-        },
-        "AVS": {
-            "2.1 Introduction to Civilian Careers in RNZAF": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.1_Introduction_to_Careers_in_the_RNZAF.pdf",
-                "periods": 1
-            },
-            "2.2 Introduction to Air Navigation": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.2_Introduction_to_Air_Navigation.pdf",
-                "periods": 2
-            },
-            "2.3 Describe Propulsion": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.3_Describe_Propulsion.pdf",
-                "periods": 1
-            }
-        }
+    "ETH": {
+      "1.1 Recall NZCF Vision, Mission, Values": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.1_Recall_NZCF_Vision_Mission_Values.pdf",
+        "periods": 1
+      },
+      "1.2 Explain NZCF Code of Conduct": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.2_Explain_NZCF_Code_of_Conduct.pdf",
+        "periods": 1
+      },
+      "1.3 Describe Duty of Care": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.3_Describe_Duty_of_Care.pdf",
+        "periods": 1
+      },
+      "1.4 Identify NZCF Key Legislation": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.4_Identify_NZCF_Key_Legislation.pdf",
+        "periods": 1
+      },
+      "1.5 Demonstrate Diversity & Anti-Harassment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.5_Demonstrate_Diversity_and_Anti-Harassment.pdf",
+        "periods": 1
+      }
     },
-    "Year 3": {
-        "DRL": {
-            "3.1 March in Line in Slow and Quick Time": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.1_March_in_Line_in_Slow_and_Quick_Time.pdf",
-                "periods": 1
-            },
-            "3.2 Demonstrate Eyes Left and Eyes Right" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.2_Demonstrate_Eyes_Left_and_Eyes_Right.pdf",
-                "periods": 1
-            },
-            "3.3 Identify the Qualities of a Drill Instructor": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.3_Identify_the_Qualities_of_a_Drill_Instructor.pdf",
-                "periods": 1
-            },
-            "3.4 Conduct Fault Checking" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.4_Conduct_Fault_Checking.pdf",
-                "periods": 1
-            },
-            "3.5 Conduct Coaching": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.5_Conduct_Coaching.pdf",
-                "periods": 1
-            },
-            "3.6 Use Aids to Drill Instruction" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.6_Use_Aids_to_Drill_Instruction.pdf",
-                "periods": 1
-            },
-            "3.7 Refresher - Recall Words of Command": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.7_Refresher_Recall_Words_of_Command.pdf",
-                "periods": 1
-            }
-        },
-        "ETH": {
-            "3.1 Refresher - Code of Conduct and Duty of Care": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-3.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
-                "periods": 1
-            },
-            "3.2 Refresher - Diversity and Anti-Harassment" : {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-3.2_Refresher-Diversity_and_Anti-Harassment.pdf",
-                "periods": 1
-            }
-        },
-        "FAS": {
-            "3.1 Refresher - Carry out Safety Precautions - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.1_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "3.2 Refresher - Pass DFTTs - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "3.3 Refresher - Strip, Clean and Assemble - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.3_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
-                "periods": 1
-            }
-        },
-        "LDR": {
-            "3.1 Introduction to Lead Leaders": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.1_Introduction_to_Lead_Leaders.pdf",
-                "periods": 1
-            },
-            "3.2 Demonstrate SNCO Command Presence": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.2_Demonstrate_SNCO_Command_Presence.pdf",
-                "periods": 1
-            },
-            "3.3 Deliver Formal Orders": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.3_Deliver_Formal_Orders.pdf",
-                "periods": 2
-            },
-            "3.4 Deliver Informational Brief (Public Speaking)": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.4_Deliver_Informal_Brief.pdf",
-                "periods": 3
-            }
-        },
-        "MED": {
-            "3.1 Conduct Primary Survey": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.1_Conduct_Primary_Survey.pdf",
-                "periods": 2
-            },
-            "3.2 Conduct Secondary Survey": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.2_Conduct_Secondary_Survey.pdf",
-                "periods": 2
-            },
-            "3.3 Apply Trauma First Aid": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.3_Apply_Trauma_First_Aid.pdf",
-                "periods": 4
-            }
-        },
-        "NAV": {
-            "3.1 Navigate an Area - by Day and Night": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-3.1_Navigate_an_Area_by_Day_and_Night.pdf",
-                "periods": 3
-            },
-            "3.2 Refresher - Construct a Navigation Data Sheet": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-3.2_Refresher_Construct_a_Navigation_Data_Sheet.pdf",
-                "periods": 1
-            }
-        },
-        "OPS": {
-            "3.1 Introduction to Parent Service Trades": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.1_Introduction_to_Parent_Service_Trades.pdf",
-                "periods": 1
-            },
-            "3.2 Identify Key NZDF Personnel": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.2_Identify_Key_NZDF_Personnel.pdf",
-                "periods": 1
-            },
-            "3.3 Introduction to Parent Service ORBATs": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.3_Introduction_to_Parent_Service_ORBATs.pdf",
-                "periods": 1
-            },
-            "3.4 Introduction to NZDF Medals, Citations, and Decorations": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.4_Introduction_to_NZDF_Medals_Citations_and_Decorations.pdf",
-                "periods": 1
-            },
-            "3.5 Identify NZDF other Service Ranks": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.5_Identify_NZDF_Other_Service_Ranks.pdf",
-                "periods": 1
-            },
-            "3.6 Name NZDF Ships, Camps, and Bases": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.6_Name_NZDF_Ships_Camps_Bases.pdf",
-                "periods": 1
-            },
-            "3.7 Introduction to the NZCF Haka": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.7_Introduction_to_NZCF_Haka.pdf",
-                "periods": 2
-            }
-        },
-        "PHY": {
-            "3.1 Conduct a Beep Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.1_Conduct_a_Beep_Test.pdf",
-                "periods": 1
-            },
-            "3.2 Conduct Parent Service Fitness Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.2_Conduct_Parent_Service_Fitness_Test.pdf",
-                "periods": 1
-            },
-            "3.3 Conduct the NZCF Fitness Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
-                "periods": 1
-            },
-            "3.4 Conduct a Swim Test / Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.4_Conduct_a_Swim_Test-Assessment.pdf",
-                "periods": 1
-            }
-        },
-        "PMT": {
-            "3.1 Identify Survival Skills": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-3.1_Identify_Survival_Skills.pdf",
-                "periods": 1
-            },
-            "3.2 Demonstrate Fire Lighting and Fire Control": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-3.2_Demonstrate_Fire_Lighting_And_Fire_Control.pdf",
-                "periods": 1
-            }
-        },
-        "RCD": {
-            "3.1 Identify the Radio Net, Call Signs, Calling Answering, Call Types": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-3.1_Identify_Radio_Net_Call_Signs_Calling_Answering_and_Call_Types.pdf",
-                "periods": 1
-            },
-            "3.2 Carry out Relays and Messages": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-3.2_Carry_Out_Relays_and_Messages.pdf",
-                "periods": 1
-            }
-        },
-        "SAL": {
-            "3.1 Identify Instructor Roles and Responsibilities": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.1_Identify_Instructor_Roles_And_Responsibilities.pdf",
-                "periods": 1
-            },
-            "3.2 Outline Objectives and Outcomes": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.2_OutlineObjectives_And_Outcomes.pdf",
-                "periods": 1
-            },
-            "3.3 Produce Lesson Plans": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.3_Produce_Lesson_Plans.pdf",
-                "periods": 2
-            },
-            "3.4 Conduct Planning Construction": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.4_Conduct_Planning_Construction.pdf",
-                "periods": 4
-            },
-            "3.5 List Nine Steps of Instruction": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.5_List_Nine_Steps_of_Instruction.pdf",
-                "periods": 1
-            },
-            "3.6 Use Questioning Techniques": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.6_Use_Questioning_Techniques.pdf",
-                "periods": 1
-            },
-            "3.7 Provide Feedback": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.7_Provide_Feedback.pdf",
-                "periods": 1
-            },
-            "3.8 Carry Out Reflection": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.8_Carry_Out_Reflection.pdf",
-                "periods": 1
-            },
-            "3.9 Identify and Use Training Aids": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.9_Identify_And_Use_Training_Aids.pdf",
-                "periods": 2
-            },
-            "3.10 Deliver a Practical Lesson": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.10_Deliver_a_Practical_Lesson.pdf",
-                "periods": 1
-            }
-        },
-        "AVS": {
-            "3.1 Assess Clouds and Precipitation": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.1_Assess_Clouds_and_Precipitation.pdf",
-                "periods": 2
-            },
-            "3.2 Conduct Weather Map Reading": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.2_Conduct_Weather_Map_Reading.pdf",
-                "periods": 2
-            },
-            "3.3 Decode Aviation Weather Forecast Reports": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.3_Decode_Aviation_Weather_Forecasts_and_Reports.pdf",
-                "periods": 2
-            }
-        }
+    "FAS": {
+      "1.1 Recall the Seven Basic Rules": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.1_Recall_the_Seven_Basic_Rules.pdf",
+        "periods": 1
+      },
+      "1.2 Comply with Safe Handling": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.2_Comply_with_Safe_Handling.pdf",
+        "periods": 1
+      },
+      "1.3 List Characteristics and Technical Description - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.3_List_Characteristics_and_Technical_Description-In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "1.4 Carry out Safety Precautions - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.4_Carry_Out_Safety_Precautions-In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "1.5 Pass DFTTs - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.5_Pass_DFTTs_In-Service_Firearm.pdf",
+        "periods": 3
+      },
+      "1.6 Strip, Clean, and Assemble - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-1.6_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+        "periods": 2.5
+      }
     },
-    "Year 4": {
-        "DRL": {
-            "4.1 Change Direction by Forming": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.1_Change_Direction_by_Forming.pdf",
-                "periods": 2
-            },
-            "4.2 Conduct Cenotaph Guard Drill": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.2_Conduct_Cenotaph_Guard_Drill.pdf",
-                "periods": 2
-            },
-            "4.3 Conduct Flag Orderly Drill": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.3_Conduct_Flag_Orderly_Drill.pdf",
-                "periods": 1
-            },
-            "4.4 Conduct Flag Bearer Drill": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.4_Conduct_Flag_Bearer_Drill.pdf",
-                "periods": 1
-            },
-            "4.5 Conduct Colour Party Drill": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.5_Conduct_Colour_Party_Drill.pdf",
-                "periods": 1
-            }
-        },
-        "ETH": {
-            "4.1 Refresher - Code of Conduct and Duty of Care": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
-                "periods": 1
-            },
-            "4.2 Refresher - Diversity and Anti-Harassment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.2_Refresher-Diversity_and_Anti-Harassment.pdf",
-                "periods": 1
-            },
-            "4.3 Conduct Care and Protection of Cadets": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.3_Conduct_Care_and_Protection_of_Cadets.pdf",
-                "periods": 1
-            }
-        },
-        "EXP": {
-            "4.1 Develop Exercise Objectives": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.1_Develop_Exercise_Objectives.pdf",
-                "periods": 1
-            },
-            "4.2 Present a Concept to CUCDR / USC": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.2_Present_a_Concept_to_CUCDR_or_USC.pdf",
-                "periods": 1
-            },
-            "4.3 Carry Out a Back Brief": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.3_Carry_Out_A_Back_Brief.pdf",
-                "periods": 1
-            },
-            "4.4 Produce a Warning Order": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.4_Produce_a_Warning_Order.pdf",
-                "periods": 1
-            },
-            "4.5 Produce an OPORD": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.5_Produce_an_OPORD.pdf",
-                "periods": 1
-            },
-            "4.6 Produce an Administration Instruction": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.6_Produce_an_Administration_Instruction.pdf",
-                "periods": 1
-            },
-            "4.7 Produce a Joining Instruction": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.7_Produce_a_Joining_Instruction.pdf",
-                "periods": 1
-            },
-            "4.8 Produce Exercise Specific Orders": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.8_Produce_Exercise_Specific_orders.pdf",
-                "periods": 1
-            },
-            "4.9 Produce a Budget": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.9_Produce_a_Budget.pdf",
-                "periods": 1
-            },
-            "4.10 Produce a Stores and Equipment Request": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.10_Produce_a_Stores_and_Equipment_Request.pdf",
-                "periods": 1
-            },
-            "4.11 Apply the Appreciation Process": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.11_Apply_the_Appreciation_Process.pdf",
-                "periods": 1
-            },
-            "4.12 Conduct a Risk Assessment for Unit Location Activity": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.12_Conduct_a_Risk_Assessment_for_Unit_Location_Activity.pdf",
-                "periods": 1
-            },
-            "4.13 Conduct a Risk Assessment for an External Activity": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.13_Conduct_a_Risk_Assessment_for_an_External_Activity.pdf",
-                "periods": 1
-            },
-            "4.14 Produce an NZCF 11 and NZCF 12": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.14_Produce_an_NZCF_11_and_12.pdf",
-                "periods": 2
-            }
-        },
-        "FAS": {
-            "4.1 Refresher - Carry out Safety Precautions - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.1_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "4.2 Refresher - Pass DFTTs - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
-                "periods": 1
-            },
-            "4.3 Refresher - Strip, Clean, and Assemble - In-Service Firearm": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.3_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
-                "periods": 1
-            }
-        },
-        "LDR": {
-            "4.1 Introduction to Lead Systems": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.1_Introduction_to_Lead_Systems.pdf",
-                "periods": 1
-            },
-            "4.2 Refresher - Deliver Formal Orders": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.2_Refresher_Deliver_Formal_Orders.pdf",
-                "periods": 1
-            },
-            "4.3 Identify Unit Command Roles and Directives": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.3_Identify_Unit_Command_Roles_And_Directives.pdf",
-                "periods": 1
-            },
-            "4.4 Identify Unit Management Roles, and Directives": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.4_Identify_Unit_Management_Roles_And_Directives.pdf",
-                "periods": 1
-            },
-            "4.5 Produce an Administration Management Training Package": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.5_Produce_An_Administration_Management_Training_Package.pdf",
-                "periods": 1
-            },
-            "4.6 Produce a Training Management Training Package": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.6_Produce_A_Training_Management_Training_Package.pdf",
-                "periods": 2
-            },
-            "4.7 Produce a Stores and Stores Accounting Training Package": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.7_Produce_A_Stores_And_Stores_Accounting_Training_Package.pdf",
-                "periods": 1
-            },
-            "4.8 Produce Written Communication": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.8_Produce_Written_Communications.pdf",
-                "periods": 1
-            }
-        },
-        "MED": {
-            "4.1 Conduct a CASEVAC": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.1_Conduct_a_CASEVAC.pdf",
-                "periods": 1
-            },
-            "4.2 Complete a First Aid Course": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.2_Complete_a_First_Aid_Course.pdf",
-                "periods": 1
-            }
-        },
-        "NAV": {
-            "4.1 Navigate an Area - by Day and Night": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.1_Navigate_an_Area_by_Day_and_Night.pdf",
-                "periods": 3
-            },
-            "4.2 Refresher - Construct a Navigation Data Sheet": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.2_Refresher_Construct_a_Navigation_Data_Sheet.pdf",
-                "periods": 1
-            }
-        },
-        "OPS": {
-            "4.1 Identify HQ NZCF Staff Officer, Area, ASO Structure": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.1_Identify_HQ_NZCF_Staff_Officer_Area_ASO_Structures.pdf",
-                "periods": 1
-            },
-            "4.2 Identify Parent Service Current Operations": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.2_Identify_Parent_Service_Current_Operations.pdf",
-                "periods": 1
-            },
-            "4.3 Practice the NZCF Haka": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.3_Practice_the_NZCF_Haka.pdf",
-                "periods": 2
-            },
-            "4.4 Perform the NZCF Haka": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.4_Perform_the_NZCF_Haka.pdf",
-                "periods": 1
-            },
-            "4.5 Participate in a Formal Dining In": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.5_Participate_in_a_Formal_Dining_In.pdf",
-                "periods": 1
-            }
-        },
-        "PHY": {
-            "4.1 Conduct a Beep Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.1_Conduct_a_Beep_Test.pdf",
-                "periods": 1
-            },
-            "4.2 Conduct Parent Service Fitness Test": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.2_Conduct_Parent_Service_Fitness_Test.pdf",
-                "periods": 1
-            },
-            "4.3 Conduct the NZCF Fitness Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
-                "periods": 1
-            },
-            "4.4 Conduct a Swim Test / Assessment": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.4_Conduct_a_Swim_Test-Assessment.pdf",
-                "periods": 1
-            },
-            "4.5 Participate in Circuit Training": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.5_Participate_in_Circuit_Training.pdf",
-                "periods": 1
-            },
-            "4.6 Conduct Sports": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.6_Conduct_Sports.pdf",
-                "periods": 1
-            }
-        },
-        "SAL": {
-            "4.1 Identify Learning Styles": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.1_Identify_Learning_Styles.pdf",
-                "periods": 1
-            },
-            "4.2 Identify Learners Needs": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.2_Identify_Learners_Needs.pdf",
-                "periods": 1
-            },
-            "4.3 Design Instruction": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.3_Design_Instruction.pdf",
-                "periods": 2
-            },
-            "4.4 Write Assessments": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.4_Write_Assessments.pdf",
-                "periods": 3
-            },
-            "4.5 Write Reports": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.5_Write_Reports.pdf",
-                "periods": 1
-            }
-        },
-        "AVS": {
-            "4.1 Introduction to Helicopter Theory": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-4.1_Introduction_to_Helicopter_Theory.pdf",
-                "periods": 2
-            }
-        }
+    "LDR": {
+      "1.1 Introduction to Formal Orders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-1.1_Introduction_to_Formal_Orders.pdf",
+        "periods": 1
+      },
+      "1.2 Introduction to Lead Self": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-1.2_Introduction_to_Lead_Self.pdf",
+        "periods": 1
+      }
     },
-    "Year 5": {
-        "DRL": {
-            "4.1 Conduct Cane Drill - Introduction and History": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.1_Conduct_Cane_Drill%E2%80%93Introduction_and_History.pdf",
-                "periods": 1
-            },
-            "4.2 Conduct Cane Drill - Positions at the Halt": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.2_Conduct_Cane_Drill%E2%80%93Positions_at_the_Halt.pdf",
-                "periods": 1
-            },
-            "4.3 Conduct Cane Drill - Marching and Halting": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.3_Conduct_Cane_Drill%E2%80%93Marching_and_Halting.pdf",
-                "periods": 1
-            },
-            "4.4 Conduct Cane Drill - Saluting": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.4_Conduct_Cane_Drill%E2%80%93Saluting.pdf",
-                "periods": 1
-            },
-            "4.5 Conduct Cane Drill - Reporting to an Officer": {
-                "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.5_Conduct_Cane_Drill%E2%80%93Reporting_to_an_Officer.pdf",
-                "periods": 1
-            }
-        }
+    "MED": {
+      "1.1 Carry out Personal Wellness - Management in the Field(E)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.1_Carry_out_Personal_Wellness%E2%80%93Management_in_the_Field(E).pdf",
+        "periods": 1
+      },
+      "1.2 Identify Environmental Related Illness": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.2_Identify_Environmental_Related_Illness.pdf",
+        "periods": 1
+      }
+    },
+    "NAV": {
+      "1.1 Aim and Purpose of Map/Chart Reading and Definitions": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.1_Aim_and_Purpose_of_Map_and_Chart_Reading_and_Definitions.pdf",
+        "periods": 1
+      },
+      "1.2 Explain the Care of Maps/Charts and Marginal Information": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.2_Explain_the_Care_of_Maps_Charts_and_Marginal_Information.pdf",
+        "periods": 1
+      },
+      "1.3 Explain the Map/Chart Reference System": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.3_Explain_the_Map_Chart_Reference_System.pdf",
+        "periods": 1
+      },
+      "1.4 Plot and Read Grid References using the Service Protractor": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.4_Plot_and_Read_Grid_References_using_the_Service_Protractor.pdf",
+        "periods": 1
+      },
+      "1.5 Measure Distance on a Map": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.5_Measure_Distance_on_a_Map.pdf",
+        "periods": 1
+      },
+      "1.6 Plot and Measure Grid Bearings": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.6_Plot_and_Measure_Grid_Bearings.pdf",
+        "periods": 1
+      },
+      "1.7 Interpret Relief and Contours (SCC Symbols and Datum)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.7_Interpret_Relief_and_Contours_SCC_Symbols_and_Datum.pdf",
+        "periods": 1
+      },
+      "1.8 Explain Direction and North Points": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.8_Explain_Direction_and_North_Points.pdf",
+        "periods": 1
+      },
+      "1.9 Use a Compass": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-1.9_Use_a_Compass.pdf",
+        "periods": 1
+      }
+    },
+    "OPS": {
+      "1.1 Describe Basic Administration and Unit Processes (CadetNet)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.1_Describe_Basic_Administration_and_Unit_Processes-CadetNet.pdf",
+        "periods": 1
+      },
+      "1.2 Identify NZCF Terms and Conditions of Membership": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.2_Identify_NZCF_Terms_and_Conditions_of_Membership.pdf",
+        "periods": 1
+      },
+      "1.3 Describe Unit Structure": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.3_Describe_Unit_Structure.pdf",
+        "periods": 1
+      },
+      "1.4 Identify Uniform Names and Numbers": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.4_Identify_Uniform_Names_and_Numbers.pdf",
+        "periods": 1
+      },
+      "1.5 Describe and Demonstrate Uniform Wear, Care & Maintenance": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.5_Describe_and_Demonstrate_Uniform_Wear_Care_and_Maintenance.pdf",
+        "periods": 2
+      },
+      "1.6 Describe Uniform Grooming Standards": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.6_Describe_Uniform_Grooming_Standards.pdf",
+        "periods": 1
+      },
+      "1.7 Identify Corps Specific Ranks": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.7_Identify_Corps_Specific_Ranks.pdf",
+        "periods": 1
+      },
+      "1.8 Describe Corps of the NZCF": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.8_Describe_the_Corps_of_the_NZCF.pdf",
+        "periods": 1
+      },
+      "1.9 Describe Unit Emergency Procedures": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.9_Describe_Unit_Emergency_Procedures.pdf",
+        "periods": 1
+      },
+      "1.10 Identify Key Dates and Events - Unit": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.10_Identify_Key_Dates_and_Events%E2%80%93Unit.pdf",
+        "periods": 1
+      },
+      "1.11 List Cadet Awards and Badges": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.11_List_Cadet_Awards_and_Badges.pdf",
+        "periods": 2
+      },
+      "1.12 Recall Key Dates, Conflicts and Deployments - Parent Corps Specific": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.12_Recall_Key_Dates_Conflicts_and_Deployments%E2%80%93Parent_Corps_Specific.pdf",
+        "periods": 1
+      },
+      "1.13 Recall Parent Service Vision, Mission, Ethos and Values": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.13_Recall_Parent_Service_Vision_Mission_Ethos_and_Values.pdf",
+        "periods": 1
+      },
+      "1.14 Understand Camp and Base Operations": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.14_Understand_Camp_and_Base_Operations.pdf",
+        "periods": 1
+      }
+    },
+    "PHY": {
+      "1.1 Introduction to Warm Up / Down and Stretches": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.1_Introduction_to_Warm_Up_Warm_Down_and_Stretches.pdf",
+        "periods": 1
+      },
+      "1.2 Introduction to Basic PT Techniques": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.2_Introduction_to_Basic_PT_Techniques.pdf",
+        "periods": 1
+      },
+      "1.3 Conduct a Beep Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.3_Conduct_a_Beep_Test.pdf",
+        "periods": 1
+      },
+      "1.4 Conduct Parent Service Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.4_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      },
+      "1.5 Conduct the NZCF Fitness Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.5_Conduct_The_NZCF_Fitness_Assessment.pdf",
+        "periods": 1
+      },
+      "1.6 Employ Safe Handling and Lifting Techniques": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.6_Employ_Safe_Handling_and_Lifting_Techniques.pdf",
+        "periods": 1
+      },
+      "1.7 Conduct a Tug-of-War": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.7_Conduct_Tug-of-War.pdf",
+        "periods": 1
+      },
+      "1.8 Conduct a Swim Test / Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-1.8_Conduct_a_Swim_Test-Assessment.pdf",
+        "periods": 1
+      }
+    },
+    "PMT": {
+      "1.1 Define Environmental Care": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.1_Define_Environmental_Care.pdf",
+        "periods": 1
+      },
+      "1.2 Apply Clothing and Layering": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.2_Apply_Clothing_and_Layering.pdf",
+        "periods": 1
+      },
+      "1.3 Identify Personal Equipment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.3_Identify_Personal_Equipment.pdf",
+        "periods": 1
+      },
+      "1.4 Identify First Aid and Survival Kits": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.4_Identify_First_Aid_and_Survival_Kits.pdf",
+        "periods": 2
+      },
+      "1.5 Identify Group Equipment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.5_Identify_Group_Equipment.pdf",
+        "periods": 1
+      },
+      "1.6 Use Food, Ration Packs, and Cooking": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.6_Use_Food_Ration_Packs_and_Cooking.pdf",
+        "periods": 2
+      },
+      "1.7 Practise Packing a Pack": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.7_Practice_Packing_a_Pack.pdf",
+        "periods": 1
+      },
+      "1.8 Erect Tentage": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.8_Erect_Tentage.pdf",
+        "periods": 1
+      },
+      "1.9 Carry out Lost Procedures": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.9_Carry_Out_Lost_Procedures.pdf",
+        "periods": 1
+      },
+      "1.10 Identify Knots and Lashings": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-1.10_Identify_Knots_and_Lashings.pdf",
+        "periods": 2
+      }
+    },
+    "RCD": {
+      "1.1 Familiarisation of Equipment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.1_Familiarisation_of_Equipment.pdf",
+        "periods": 1
+      },
+      "1.2 Conduct Operations - SAD": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.2_Conduct_Operations%E2%80%93SAD.pdf",
+        "periods": 1
+      },
+      "1.3 State Figures, Phonetics, and Pro-Words": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.3_State_Figures_Phonetics_and_Pro_Words.pdf",
+        "periods": 2
+      },
+      "1.4 Conduct Radio Checks": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.4_Conduct_Radio_Checks.pdf",
+        "periods": 1
+      },
+      "1.5 Use the 24-Hour Clock": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.5_Use_The_24-Hour_Clock.pdf",
+        "periods": 1
+      }
+    },
+    "AVS": {
+      "1.1 Research History of Aviation": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.1_Research_History_of_Aviation.pdf",
+        "periods": 1
+      },
+      "1.2 Identify Principles of Flight": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.2_Identify_Principles_of_Flight.pdf",
+        "periods": 1
+      },
+      "1.3 Identify Flight Controls": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.3_Identify_Flight_Controls.pdf",
+        "periods": 1
+      },
+      "1.4 Define Effects of Controls": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.4_Define_the_Effects_of_Controls.pdf",
+        "periods": 1
+      },
+      "1.5 Describe Airfield Layout/Safety": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.5_Describe_Airfield_Layout_and_Safety.pdf",
+        "periods": 1
+      },
+      "1.6 Describe Cockpit Layout": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-1.6_Describe_the_Cockpit_Layout.pdf",
+        "periods": 2
+      }
+    },
+    "SEA": {
+      "1.1 Perform Colours and Sunset Ceremonies as Colour Party": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.1_Colours_Sunset.pdf",
+        "periods": 1
+      },
+      "1.2 Use the Bosun’s Call and Identify Common Orders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.2_Bosun-s_Call_and_Piping.pdf",
+        "periods": 1
+      },
+      "1.3 Participate in Regular Ship Routines": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.3_Regular_Ship_Routines.pdf",
+        "periods": 1
+      },
+      "1.4 Perform Basic Rope Handling and Stowage": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.4_Perform_Basic_Rope_Handling_and_Stowage.pdf",
+        "periods": 1
+      },
+      "1.5 Perform Basic Knots used in Sailing": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.5_Perform_Basic_Knots_Used_in_Sailing.pdf",
+        "periods": 1
+      },
+      "1.6 Perform Heaving Line Throws": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.6_Perform_Heaving_Line_Throws.pdf",
+        "periods": 1
+      },
+      "1.7 Demonstrate Correct Use of Personal Equipment for on Water Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.7_Personal_Equipment_for_On-Water_Activities.pdf",
+        "periods": 2
+      },
+      "1.8 Identify Essential Features and Properties of Boats": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.8_Essential_Features_and_Properties_of_Boats.pdf",
+        "periods": 4
+      },
+      "1.9 Participate in Preparations for On-Water Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.9_Participate_in_Preparations_for_On-Water_Activities.pdf",
+        "periods": 2
+      },
+      "1.10 Participate as crew on Water Emergencies and Emergency Drills": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.10_Participate_as_Crew_in_on_Water_Emergencies_and_Emergency_Drills.pdf",
+        "periods": 3
+      },
+      "1.11 Participate as Crew in Crown Pulling Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.11_Participate_as_Crew_in_Crown_Pulling_Activities.pdf",
+        "periods": 3
+      },
+      "1.12 Participate as Crew in Crown Sailing Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.12_Participate_as_Crew_in_Crown_Sailing_Activities.pdf",
+        "periods": 4
+      },
+      "1.13 Demonstrate Application of Basic Sailing Theory as Crew": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.13_Demonstrate_Application_of_Basic_Sailing_Theory_as_Crew.pdf",
+        "periods": 5
+      },
+      "1.14 Identify Common Buoys and Beacons": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.14_Identify_Common_Bouys_and_Beacons.pdf",
+        "periods": 1
+      },
+      "1.15 Identify the Basic Maritime Rules": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.15_Identify_the_Basic_Maritime_Rules.pdf",
+        "periods": 1
+      },
+      "1.16 (Optional) Participate in Kayaking Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.16_Participate_in_Kayaking_Activities-OPTIONAL.pdf",
+        "periods": 2
+      }
+    },
+    "FLD": {
+      "1.1 Erect an Individual Shelter, Lay out and Re-pack Equipment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-1.1_Erect_an_Individual_Shelter_Lay_out_and_Re-pack_Equipment.pdf",
+        "periods": 2
+      },
+      "1.2 Communicate by Hand Signals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-1.2_Communicate_by_Hand_Signals.pdf",
+        "periods": 2
+      },
+      "1.3 Construct Field Latrines": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-1.3_Construct_Field_Latrines.pdf",
+        "periods": 2
+      },
+      "1.4 Identify and Construct Cooking Areas": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-1.4_Construct_Field_Cooking_Areas.pdf",
+        "periods": 2
+      },
+      "1.5 Introduction to Personal Camouflage and Concealment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-1.5_Introduction_to_Personal_Camouflage_and_Concealment.pdf",
+        "periods": 2
+      }
     }
+  },
+  "Year 2": {
+    "DRL": {
+      "2.1 Recall Words of Command": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.1_Recall_Words_of_Command.pdf",
+        "periods": 1
+      },
+      "2.2 Identify the Sequence of a Drill Lesson": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.2_Identify_the_Sequence_of_a_Drill_Lesson.pdf",
+        "periods": 1
+      },
+      "2.3 Demonstrate Turnings in Quick Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.3_Demonstrate_Turnings_in_Quick_Time.pdf",
+        "periods": 1
+      },
+      "2.4 March and Halt in Slow Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.4_March_and_Halt_in_Slow_Time.pdf",
+        "periods": 1
+      },
+      "2.5 Mark Time in Slow Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.5_Mark_Time_in_Slow_Time.pdf",
+        "periods": 1
+      },
+      "2.6 Change Step in Slow Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.6_Change_Step_in_Slow_Time.pdf",
+        "periods": 1
+      },
+      "2.7 Demonstrate Turnings in Slow Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.7_Demonstrate_Turnings_in_Slow_Time.pdf",
+        "periods": 1
+      },
+      "2.8 Demonstrate Salute to the Front on the March": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.8_Demonstrate_Salute_to_the_Front_on_the_March.pdf",
+        "periods": 1
+      },
+      "2.9 Ground Arms and Take Up Arms": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.9_Ground_Arms_and_Take_Up_Arms.pdf",
+        "periods": 1
+      },
+      "2.10 Present Arms and Shoulder Arms": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.10_Present_Arms_and_Shoulder_Arms.pdf",
+        "periods": 1
+      },
+      "2.11 Salute with the Rifle on the March": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.11_Salute_with_the_Rifle_on_the_March.pdf",
+        "periods": 1
+      },
+      "2.9 Ground Arms and Take up Arms": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-2.9_Ground_Arms_and_Take_Up_Arms.pdf",
+        "periods": 1
+      }
+    },
+    "ETH": {
+      "2.1 Refresher - Code of Conduct and Duty of Care": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-2.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
+        "periods": 1
+      },
+      "2.2 Refresher - Diversity and Anti-Harassment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-2.2_Refresher-Diversity_and_Anti-Harassment.pdf",
+        "periods": 1
+      }
+    },
+    "FAS": {
+      "2.1 Identify Types of Firearms and Legal Requirements": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.1_Identify_Types_of_Firearms_and_Legal_Requirements.pdf",
+        "periods": 2
+      },
+      "2.2 Apply Marksmanship Principles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.2_List_Key_Marksmanship_Principles.pdf",
+        "periods": 1
+      },
+      "2.3 Demonstrate Scoring of Targets": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.3_Demonstrate_Scoring_of_Targets.pdf",
+        "periods": 1
+      },
+      "2.4 Identify Range Operations, Conduct and Key Appointments": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.4_Identify_Range_Operations_Conduct_and_Key_Appointments.pdf",
+        "periods": 1
+      },
+      "2.5 Refresher - Carry out Safety Precautions - In Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.5_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "2.6 Refresher - Pass DFTTs - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.6_Refresher_Pass_DFTTS_In-Service_Firearm.pdf",
+        "periods": 3
+      },
+      "2.7 Refresher - Strip, Clean and Assemble - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.7_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+        "periods": 1
+      }
+    },
+    "LDR": {
+      "2.1 Introduction to Lead Teams": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-2.1_Introduction_to_Lead_Teams.pdf",
+        "periods": 1
+      },
+      "2.2 Demonstrate JNCO Command Presence": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-2.2_Demonstrate_JNCO_Command_Presence.pdf",
+        "periods": 10
+      },
+      "2.1 Introduction To Lead Teams": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-2.1_Introduction_to_Lead_Teams.pdf",
+        "periods": 1
+      }
+    },
+    "MED": {
+      "2.1 Apply Buddy Aid": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.1_Apply_Buddy_Aid.pdf",
+        "periods": 2
+      },
+      "2.2 Identify Asthma and Allergies": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.2_Identify_Asthma_and_Allergies.pdf",
+        "periods": 2
+      },
+      "2.3 Describe Psychological First Aid": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-2.3_Describe_Psychological_First_Aid.pdf",
+        "periods": 2
+      }
+    },
+    "NAV": {
+      "2.1 Set a Map by Compass and Inspection": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.1_Set_a_Map_by_Compass_and_Inspection.pdf",
+        "periods": 1
+      },
+      "2.2 Locate your Position": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.2_Locate_your_Position.pdf",
+        "periods": 1
+      },
+      "2.3 Estimate Distance": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.3_Estimate_Distance.pdf",
+        "periods": 1
+      },
+      "2.4 Utilise Aids to Navigation": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.4_Utilise_Aids_to_Navigation.pdf",
+        "periods": 1
+      },
+      "2.5 Construct a Navigation Data Sheet": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.5_Construct_a_Navigation_Data_Sheet.pdf",
+        "periods": 1
+      },
+      "2.6 Navigate an Area - by Day": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.6_Navigate_an_Area_by_Day.pdf",
+        "periods": 3
+      },
+      "2.7 Calculate Magnetic Variation and Convert Bearings": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.7_Calculate_Magnetic_Variation_and_Convert_Bearings.pdf",
+        "periods": 1
+      },
+      "2.8 Maintain Direction and Bypass Obstacles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.8_Maintain_Direction_and_Bypass_Obstacles.pdf",
+        "periods": 2
+      },
+      "2.5 Construct a Navigation Datasheet": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.5_Construct_a_Navigation_Data_Sheet.pdf",
+        "periods": 1
+      },
+      "2.8 Maintain Direction and Explain Methods of Bypassing Obstacles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-2.8_Maintain_Direction_and_Bypass_Obstacles.pdf",
+        "periods": 2
+      }
+    },
+    "OPS": {
+      "2.1 Identify Structure of Region and Area": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.1_Identify_Structure_of_Region_and_Area.pdf",
+        "periods": 1
+      },
+      "2.2 Identify other Services Ranks": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.2_Identify_Other_NZCF_Service_Ranks.pdf",
+        "periods": 1
+      },
+      "2.3 Identify HQ NZCF Leadership Structure": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.3_Identify_HQ_NZCF_Leadership_Structure.pdf",
+        "periods": 1
+      },
+      "2.4 Identify Parent Service Ranks": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.4_Identify_Parent_Service_Ranks.pdf",
+        "periods": 1
+      },
+      "2.5 Identify Reserves Structure and Units": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.5_Identify_Reserves_Structure_And_Units.pdf",
+        "periods": 1
+      },
+      "2.6 Understand Coursing, Competitions, and Selection Process": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.6_Understand_Coursing_Competitions_And_Selection_Process.pdf",
+        "periods": 1
+      },
+      "2.7 Recall Single Service Key Dates and Events": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.7_Recall_Single_Service_Key_Dates_And_Events.pdf",
+        "periods": 1
+      },
+      "2.8 Recall NZCF Key Dates and Events": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.8_Recall_NZCF_Key_Dates_And_Events.pdf",
+        "periods": 1
+      },
+      "2.9 Identify Equipment, Weapon Systems, and Vehicles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.9_Identify_Equipment_Weapon_Systems_And_Vehicles.pdf",
+        "periods": 1
+      },
+      "2.10 Recall NZDF Conflicts and Deployments": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.10_Recall_NZDF_Conflicts_And_Deployments.pdf",
+        "periods": 1
+      },
+      "2.11 Identify NZCF Awards, Commendations, and Medals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.11_Identify_NZCF_Awards_Commendations_and_Medals.pdf",
+        "periods": 1
+      },
+      "2.12 Identify Forms and Manuals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-2.12_Identify_Forms_and_Manuals.pdf",
+        "periods": 1
+      }
+    },
+    "PHY": {
+      "2.1 Conduct a Beep Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.1_Conduct_a_Beep_Test.pdf",
+        "periods": 1
+      },
+      "2.2 Conduct Parent Service Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      },
+      "2.3 Conduct the NZCF Fitness Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
+        "periods": 1
+      },
+      "2.4 Conduct a Swim Test / Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.4_Conduct_a_Swim_Test-Assessment.pdf",
+        "periods": 1
+      },
+      "2.2 Conduct Parent Corps Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-2.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      }
+    },
+    "PMT": {
+      "2.1 Construct Emergency Shelter(s)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.1_Construct_Emergency_Shelters.pdf",
+        "periods": 2
+      },
+      "2.2 Use Emergency Radios": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.2_Use_Emergency_Radios.pdf",
+        "periods": 1
+      },
+      "2.3 Identify Campsite Selection and Layout": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-2.3_Identify_Campsite_Selection_and_Layout.pdf",
+        "periods": 2
+      }
+    },
+    "RCD": {
+      "2.1 Refresher of SAD, Equipment, Figures, Phonetics, and Pro-Words": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.1_Refresher_Equipment_Figures_Phonetics_and_Pro_Words.pdf",
+        "periods": 1
+      },
+      "2.2 Refresher - Conduct Radio Checks and Use the 24-Hour Clock": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.2_Refresher_Conduct_Radio_Checks_and_Use_24_Hour_Clock.pdf",
+        "periods": 1
+      },
+      "2.1 Refresher of Equipment, Figures, Phonetics, and Pro-Words": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.1_Refresher_Equipment_Figures_Phonetics_and_Pro_Words.pdf",
+        "periods": 1
+      },
+      "2.2 Refresher - Conduct Radio Checks and Use the 24 Hour Clock": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-2.2_Refresher_Conduct_Radio_Checks_and_Use_24_Hour_Clock.pdf",
+        "periods": 1
+      }
+    },
+    "SAL": {
+      "2.1 Introduction to the Systems Approach to Learning (SAL) Model": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-2.1_Introduction_to_the_SAL_Model.pdf",
+        "periods": 1
+      },
+      "2.1 Introduction to the SAL Model": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-2.1_Introduction_to_the_SAL_Model.pdf",
+        "periods": 1
+      }
+    },
+    "AVS": {
+      "2.1 Introduction to Civilian Careers in RNZAF": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.1_Introduction_to_Careers_in_the_RNZAF.pdf",
+        "periods": 1
+      },
+      "2.2 Introduction to Air Navigation": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.2_Introduction_to_Air_Navigation.pdf",
+        "periods": 2
+      },
+      "2.3 Describe Propulsion": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-2.3_Describe_Propulsion.pdf",
+        "periods": 1
+      }
+    },
+    "SEA": {
+      "2.1 Identify Ship’s Time and the Naval Watch System": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.1_Identify_Ship-s_Time_and_the_Naval_Watch_System.pdf",
+        "periods": 1
+      },
+      "2.2 Identify Duties of the Officer of the Day, Quartermaster and Duty Watch": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.2_Identify_Duties_of_the_Officer_of_the_Day_Quartermaster_and_Duty Watch.pdf",
+        "periods": 1
+      },
+      "2.3 Identify International Code of Signals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.3_Identify_International_Code_of_Signals.pdf",
+        "periods": 1
+      },
+      "2.4 Perform Intermediate Knots and Lashings used in Maritime Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.4_Intermediate_Knots_and_Lashings_for_Maritime_Activities.pdf",
+        "periods": 4
+      },
+      "2.5 Describe Intermediate Principles of Boat Handling": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.5_Intermediate_Principles_of_Boat_Handling.pdf",
+        "periods": 4
+      },
+      "2.6 Prepare Trailers for Transport": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.6_Prepare_Trailers_for_Transport.pdf",
+        "periods": 1
+      },
+      "2.7 Identify Distress Signals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.7_Identify_Distress_Signals.pdf",
+        "periods": 1
+      },
+      "2.8 Describe Principles of Damage Control on Vessels": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.8_Damage_Control_on_Vessels.pdf",
+        "periods": 2
+      },
+      "2.9 Participate as Crew in Feva Sailing Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.9_Participate_as_Crew_in_Feva_Sailing_Activities.pdf",
+        "periods": 2
+      },
+      "2.10 Describe Methods of Towing Vessels on the Water": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.10_Towing_Vessels_on_the_Water.pdf",
+        "periods": 1
+      },
+      "2.11 Participate as Helm in Crown or Feva Sailing Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.11_Participate_as_Helm_in_Crown_or_Feva_Sailing_Activities.pdf",
+        "periods": 2
+      },
+      "2.12 Demonstrate Sailing a Course (Helm)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.12_Demonstrate_Sailing_a_Course_Helm.pdf",
+        "periods": 6
+      },
+      "2.13 Demonstrate as Helm Man Overboard Manoeuvres for Sailing Vessels": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.13_Demonstrate_as_Helm_Man_Overboard_Manoeuvres_for_Sailing_Vessels.pdf",
+        "periods": 3
+      },
+      "2.14 Identify Environmental Factors Affecting Maritime Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.14_Environmental_Factors_Affecting_Maritime_Activities.pdf",
+        "periods": 4
+      }
+    },
+    "FLD": {
+      "2.1 Cook a 24-Hour Ration Pack": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.1_Cook_a_24-Hour_Ration_Pack.pdf",
+        "periods": 2
+      },
+      "2.2 Construct Knots and Lashings": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.2_Construct_Knots_and_Lashings.pdf",
+        "periods": 1
+      },
+      "2.3 Identify Light Order, Patrol Order, Marching Order": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.3_Identify_Light_Order_Patrol_Order_and_Marching_Order.pdf",
+        "periods": 2
+      },
+      "2.4 Identify PPE for the Field": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.4_Identify_PPE_for_the_Field.pdf",
+        "periods": 1
+      },
+      "2.5 Apply Personal Camouflage and Concealment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.5_Apply_Personal_Camouflage_and_Concealment.pdf",
+        "periods": 2
+      },
+      "2.6 Conduct Individual Daylight Movement": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.6_Conduct_Individual_Daylight_Movement.pdf",
+        "periods": 2
+      },
+      "2.7 Conduct Individual Night Movement": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.7_Conduct_Individual_Night_Movement.pdf",
+        "periods": 2
+      },
+      "2.8 Apply Scanning and Searching Techniques": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.8_Apply_Scanning_and_Searching_Techniques.pdf",
+        "periods": 2
+      },
+      "2.9 Judge Distances": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.9_Judge_Distances.pdf",
+        "periods": 2
+      },
+      "2.10 Carry out Duties of a Sentry": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.10_Carry_out_the_Duties_of_a_Sentry.pdf",
+        "periods": 2
+      },
+      "2.11 State the Organisation of a Rifle Section": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.11_State_the_Organisation_of_a_Rifle_Section.pdf",
+        "periods": 1
+      },
+      "2.12 Identify Section Formations": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.12_Identify_Section_Formations.pdf",
+        "periods": 1
+      },
+      "2.13 Explain the Aims and Types of Patrols": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.13_Explain_the_Aims_and_Types_of_Patrols.pdf",
+        "periods": 1
+      },
+      "2.14 Perform Platoon Harbour Routine": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.14_Perform_Platoon_Harbour_Routine.pdf",
+        "periods": 2
+      },
+      "2.15 Demonstrate Movement by Vehicle": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.15_Movement_By_Vehicle.pdf",
+        "periods": 1
+      },
+      "2.16 Employ River Crossing Techniques": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-2.16_Employ_River_Crossing_Techniques.pdf",
+        "periods": 4
+      }
+    }
+  },
+  "Year 3": {
+    "DRL": {
+      "3.1 March in Line in Slow and Quick Time": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.1_March_in_Line_in_Slow_and_Quick_Time.pdf",
+        "periods": 1
+      },
+      "3.2 Demonstrate Eyes Left and Eyes Right": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.2_Demonstrate_Eyes_Left_and_Eyes_Right.pdf",
+        "periods": 1
+      },
+      "3.3 Identify the Qualities of a Drill Instructor": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.3_Identify_the_Qualities_of_a_Drill_Instructor.pdf",
+        "periods": 1
+      },
+      "3.4 Conduct Fault Checking": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.4_Conduct_Fault_Checking.pdf",
+        "periods": 1
+      },
+      "3.5 Conduct Coaching": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.5_Conduct_Coaching.pdf",
+        "periods": 1
+      },
+      "3.6 Use Aids to Drill Instruction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.6_Use_Aids_to_Drill_Instruction.pdf",
+        "periods": 1
+      },
+      "3.7 Refresher - Recall Words of Command": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-3.7_Refresher_Recall_Words_of_Command.pdf",
+        "periods": 1
+      }
+    },
+    "ETH": {
+      "3.1 Refresher - Code of Conduct and Duty of Care": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-3.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
+        "periods": 1
+      },
+      "3.2 Refresher - Diversity and Anti-Harassment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-3.2_Refresher-Diversity_and_Anti-Harassment.pdf",
+        "periods": 1
+      }
+    },
+    "FAS": {
+      "3.1 Refresher - Carry out Safety Precautions - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.1_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "3.2 Refresher - Pass DFTTs - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "3.3 Refresher - Strip, Clean and Assemble - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.3_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+        "periods": 1
+      }
+    },
+    "LDR": {
+      "3.1 Introduction to Lead Leaders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.1_Introduction_to_Lead_Leaders.pdf",
+        "periods": 1
+      },
+      "3.2 Demonstrate SNCO Command Presence": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.2_Demonstrate_SNCO_Command_Presence.pdf",
+        "periods": 1
+      },
+      "3.3 Deliver Formal Orders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.3_Deliver_Formal_Orders.pdf",
+        "periods": 2
+      },
+      "3.4 Deliver Informational Brief (Public Speaking)": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-3.4_Deliver_Informal_Brief.pdf",
+        "periods": 3
+      }
+    },
+    "MED": {
+      "3.1 Conduct Primary Survey": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.1_Conduct_Primary_Survey.pdf",
+        "periods": 2
+      },
+      "3.2 Conduct Secondary Survey": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.2_Conduct_Secondary_Survey.pdf",
+        "periods": 2
+      },
+      "3.3 Apply Trauma First Aid": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-3.3_Apply_Trauma_First_Aid.pdf",
+        "periods": 4
+      }
+    },
+    "NAV": {
+      "3.1 Navigate an Area - by Day and Night": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-3.1_Navigate_an_Area_by_Day_and_Night.pdf",
+        "periods": 3
+      },
+      "3.2 Refresher - Construct a Navigation Data Sheet": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-3.2_Refresher_Construct_a_Navigation_Data_Sheet.pdf",
+        "periods": 1
+      }
+    },
+    "OPS": {
+      "3.1 Introduction to Parent Service Trades": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.1_Introduction_to_Parent_Service_Trades.pdf",
+        "periods": 1
+      },
+      "3.2 Identify Key NZDF Personnel": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.2_Identify_Key_NZDF_Personnel.pdf",
+        "periods": 1
+      },
+      "3.3 Introduction to Parent Service ORBATs": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.3_Introduction_to_Parent_Service_ORBATs.pdf",
+        "periods": 1
+      },
+      "3.4 Introduction to NZDF Medals, Citations, and Decorations": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.4_Introduction_to_NZDF_Medals_Citations_and_Decorations.pdf",
+        "periods": 1
+      },
+      "3.5 Identify NZDF other Service Ranks": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.5_Identify_NZDF_Other_Service_Ranks.pdf",
+        "periods": 1
+      },
+      "3.6 Name NZDF Ships, Camps, and Bases": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.6_Name_NZDF_Ships_Camps_Bases.pdf",
+        "periods": 1
+      },
+      "3.7 Introduction to the NZCF Haka": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-3.7_Introduction_to_NZCF_Haka.pdf",
+        "periods": 2
+      }
+    },
+    "PHY": {
+      "3.1 Conduct a Beep Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.1_Conduct_a_Beep_Test.pdf",
+        "periods": 1
+      },
+      "3.2 Conduct Parent Service Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      },
+      "3.3 Conduct the NZCF Fitness Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
+        "periods": 1
+      },
+      "3.4 Conduct a Swim Test / Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.4_Conduct_a_Swim_Test-Assessment.pdf",
+        "periods": 1
+      },
+      "3.2 Conduct Parent Corps Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-3.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      }
+    },
+    "PMT": {
+      "3.1 Identify Survival Skills": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-3.1_Identify_Survival_Skills.pdf",
+        "periods": 1
+      },
+      "3.2 Demonstrate Fire Lighting and Fire Control": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PMT-3.2_Demonstrate_Fire_Lighting_And_Fire_Control.pdf",
+        "periods": 1
+      }
+    },
+    "RCD": {
+      "3.1 Identify the Radio Net, Call Signs, Calling Answering, Call Types": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-3.1_Identify_Radio_Net_Call_Signs_Calling_Answering_and_Call_Types.pdf",
+        "periods": 1
+      },
+      "3.2 Carry out Relays and Messages": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-3.2_Carry_Out_Relays_and_Messages.pdf",
+        "periods": 1
+      }
+    },
+    "SAL": {
+      "3.1 Identify Instructor Roles and Responsibilities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.1_Identify_Instructor_Roles_And_Responsibilities.pdf",
+        "periods": 1
+      },
+      "3.2 Outline Objectives and Outcomes": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.2_OutlineObjectives_And_Outcomes.pdf",
+        "periods": 1
+      },
+      "3.3 Produce Lesson Plans": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.3_Produce_Lesson_Plans.pdf",
+        "periods": 2
+      },
+      "3.4 Conduct Planning Construction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.4_Conduct_Planning_Construction.pdf",
+        "periods": 4
+      },
+      "3.5 List Nine Steps of Instruction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.5_List_Nine_Steps_of_Instruction.pdf",
+        "periods": 1
+      },
+      "3.6 Use Questioning Techniques": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.6_Use_Questioning_Techniques.pdf",
+        "periods": 1
+      },
+      "3.7 Provide Feedback": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.7_Provide_Feedback.pdf",
+        "periods": 1
+      },
+      "3.8 Carry Out Reflection": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.8_Carry_Out_Reflection.pdf",
+        "periods": 1
+      },
+      "3.9 Identify and Use Training Aids": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.9_Identify_And_Use_Training_Aids.pdf",
+        "periods": 2
+      },
+      "3.10 Deliver a Practical Lesson": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-3.10_Deliver_a_Practical_Lesson.pdf",
+        "periods": 1
+      }
+    },
+    "AVS": {
+      "3.1 Assess Clouds and Precipitation": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.1_Assess_Clouds_and_Precipitation.pdf",
+        "periods": 2
+      },
+      "3.2 Conduct Weather Map Reading": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.2_Conduct_Weather_Map_Reading.pdf",
+        "periods": 2
+      },
+      "3.3 Decode Aviation Weather Forecast Reports": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-3.3_Decode_Aviation_Weather_Forecasts_and_Reports.pdf",
+        "periods": 2
+      }
+    },
+    "SEA": {
+      "3.1 Perform Common Splices on Ropes": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.1_Perform_Common_Splices_on_Ropes.pdf",
+        "periods": 2
+      },
+      "3.2 Perform Common Whipping and Seizing on Ropes": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.2_Perform_Common_Whipping_And_Seizing_on_Ropes.pdf",
+        "periods": 2
+      },
+      "3.3 Describe Blocks, Tackles and Winches": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.3_Describe_Blocks_Tackles_And_Winches.pdf",
+        "periods": 2
+      },
+      "3.4 Describe Types and Operation of Marine Engines": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.4_Describe_Types_And_Operation_Of_Marine_Engines.pdf",
+        "periods": 2
+      },
+      "3.5 Describe Principles of Managing Accidents and Emergencies at Sea": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.5_Describe_Principles_Of_Managing_Accidents_And_Emergencies_At_Sea.pdf",
+        "periods": 4
+      },
+      "3.6 Describe Skipper Responsibilities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.6_Describe_The_Responsibilities_of_the_Skipper_of_a_Vessel.pdf",
+        "periods": 1
+      },
+      "3.7 Identify Maritime Rules (advances) and Local Navigation Bylaws": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.7_Identify_Maritime_Rules-Advanced_and_Local_Navigation_Bylaws.pdf",
+        "periods": 1
+      },
+      "3.8 Identify Maritime Radio Frequencies and Their Usage": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.8_Identify_Maritime_Radio_Frequencies_and_Their_Usage.pdf",
+        "periods": 1
+      },
+      "3.9 Perform Sailing Manoeuvres": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.9_Perform_Sailing_Manoeuvres.pdf",
+        "periods": 3
+      },
+      "3.10 Lead Pulling Crew": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.10_Lead_Pulling_Crew.pdf",
+        "periods": 2
+      },
+      "3.11 Lead a Sailing Crew": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.11_Lead_Sailing_Crew.pdf",
+        "periods": 3
+      },
+      "3.12 Sail a Race": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.12_Sail_a_Race.pdf",
+        "periods": 3
+      },
+      "3.13 Identify Vessels and Navigation Marks by Day and Night": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.13_Identify_Vessels_and_Navigation_Marks_by_Day_and_Night.pdf",
+        "periods": 3
+      },
+      "3.14 Perform Maritime Route Planning": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.14_Perform_Marine_Route_Planning.pdf",
+        "periods": 3
+      },
+      "3.15 Identify Electronic Aids to Maritime Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.15_Identify_Electronic_Aids_to_Maritime_Navigation.pdf",
+        "periods": 2
+      },
+      "3.16 Apply Meteorology Concepts to Maritime Activities": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.16_Apply_Meteorology_Concepts_to_Maritime_Activities.pdf",
+        "periods": 1
+      },
+      "3.17 (Optional) Perform Advanced Knots": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.17_Optional-Perform_Advanced_Knots.pdf",
+        "periods": 3
+      },
+      "3.18 (Optional) Describe Basic Principles of Damage Control on Naval Vessels": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.18_Optional–Describe_Basic_Principles_of_Damage_Control_on_Naval_Vessels.pdf",
+        "periods": 1
+      },
+      "3.19 (Optional) Demonstrate use of Crown Sprinkler": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.19_Optional–Demonstrate_the_use_of_a_Crown_Spinnaker.pdf",
+        "periods": 2
+      },
+      "3.20 (Optional) Demonstrate use of a Feva Gennaker": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.20_Optional–Demonstrate_the_use_of_a_Feva_Gennaker.pdf",
+        "periods": 2
+      }
+    },
+    "FLD": {
+      "3.1 Identify Section Equipment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-3.1_Identify_Section_Equipment.pdf",
+        "periods": 1
+      },
+      "3.2 Detect Objects": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-3.2_Detect_Objects.pdf",
+        "periods": 2
+      },
+      "3.3 Indicate and Recognise Objects": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-3.3_Indicate_And_Recognise_Objects.pdf",
+        "periods": 1
+      }
+    }
+  },
+  "Year 4": {
+    "DRL": {
+      "4.1 Change Direction by Forming": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.1_Change_Direction_by_Forming.pdf",
+        "periods": 2
+      },
+      "4.2 Conduct Cenotaph Guard Drill": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.2_Conduct_Cenotaph_Guard_Drill.pdf",
+        "periods": 2
+      },
+      "4.3 Conduct Flag Orderly Drill": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.3_Conduct_Flag_Orderly_Drill.pdf",
+        "periods": 1
+      },
+      "4.4 Conduct Flag Bearer Drill": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.4_Conduct_Flag_Bearer_Drill.pdf",
+        "periods": 1
+      },
+      "4.5 Conduct Colour Party Drill": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-4.5_Conduct_Colour_Party_Drill.pdf",
+        "periods": 1
+      }
+    },
+    "ETH": {
+      "4.1 Refresher - Code of Conduct and Duty of Care": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.1_Refresher-Code_of_Conduct_and_Duty_of_Care.pdf",
+        "periods": 1
+      },
+      "4.2 Refresher - Diversity and Anti-Harassment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.2_Refresher-Diversity_and_Anti-Harassment.pdf",
+        "periods": 1
+      },
+      "4.3 Conduct Care and Protection of Cadets": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-4.3_Conduct_Care_and_Protection_of_Cadets.pdf",
+        "periods": 1
+      }
+    },
+    "EXP": {
+      "4.1 Develop Exercise Objectives": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.1_Develop_Exercise_Objectives.pdf",
+        "periods": 1
+      },
+      "4.2 Present a Concept to CUCDR / USC": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.2_Present_a_Concept_to_CUCDR_or_USC.pdf",
+        "periods": 1
+      },
+      "4.3 Carry Out a Back Brief": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.3_Carry_Out_A_Back_Brief.pdf",
+        "periods": 1
+      },
+      "4.4 Produce a Warning Order": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.4_Produce_a_Warning_Order.pdf",
+        "periods": 1
+      },
+      "4.5 Produce an OPORD": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.5_Produce_an_OPORD.pdf",
+        "periods": 1
+      },
+      "4.6 Produce an Administration Instruction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.6_Produce_an_Administration_Instruction.pdf",
+        "periods": 1
+      },
+      "4.7 Produce a Joining Instruction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.7_Produce_a_Joining_Instruction.pdf",
+        "periods": 1
+      },
+      "4.8 Produce Exercise Specific Orders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.8_Produce_Exercise_Specific_orders.pdf",
+        "periods": 1
+      },
+      "4.9 Produce a Budget": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.9_Produce_a_Budget.pdf",
+        "periods": 1
+      },
+      "4.10 Produce a Stores and Equipment Request": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.10_Produce_a_Stores_and_Equipment_Request.pdf",
+        "periods": 1
+      },
+      "4.11 Apply the Appreciation Process": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.11_Apply_the_Appreciation_Process.pdf",
+        "periods": 1
+      },
+      "4.12 Conduct a Risk Assessment for Unit Location Activity": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.12_Conduct_a_Risk_Assessment_for_Unit_Location_Activity.pdf",
+        "periods": 1
+      },
+      "4.13 Conduct a Risk Assessment for an External Activity": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.13_Conduct_a_Risk_Assessment_for_an_External_Activity.pdf",
+        "periods": 1
+      },
+      "4.14 Produce an NZCF 11 and NZCF 12": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.14_Produce_an_NZCF_11_and_12.pdf",
+        "periods": 2
+      },
+      "4.14 Produce a NZCF 11 and 12": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/EXP-4.14_Produce_an_NZCF_11_and_12.pdf",
+        "periods": 2
+      }
+    },
+    "FAS": {
+      "4.1 Refresher - Carry out Safety Precautions - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.1_Refresher_Carry_out_Safety_Precautions_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "4.2 Refresher - Pass DFTTs - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "4.3 Refresher - Strip, Clean, and Assemble - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.3_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+        "periods": 1
+      },
+      "4.3 Refresher - Strip, Clean and Assemble - In-Service Firearm": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.3_Refresher_Strip_Clean_and_Assemble_In-Service_Firearm.pdf",
+        "periods": 1
+      }
+    },
+    "LDR": {
+      "4.1 Introduction to Lead Systems": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.1_Introduction_to_Lead_Systems.pdf",
+        "periods": 1
+      },
+      "4.2 Refresher - Deliver Formal Orders": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.2_Refresher_Deliver_Formal_Orders.pdf",
+        "periods": 1
+      },
+      "4.3 Identify Unit Command Roles and Directives": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.3_Identify_Unit_Command_Roles_And_Directives.pdf",
+        "periods": 1
+      },
+      "4.4 Identify Unit Management Roles, and Directives": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.4_Identify_Unit_Management_Roles_And_Directives.pdf",
+        "periods": 1
+      },
+      "4.5 Produce an Administration Management Training Package": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.5_Produce_An_Administration_Management_Training_Package.pdf",
+        "periods": 1
+      },
+      "4.6 Produce a Training Management Training Package": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.6_Produce_A_Training_Management_Training_Package.pdf",
+        "periods": 2
+      },
+      "4.7 Produce a Stores and Stores Accounting Training Package": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.7_Produce_A_Stores_And_Stores_Accounting_Training_Package.pdf",
+        "periods": 1
+      },
+      "4.8 Produce Written Communication": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.8_Produce_Written_Communications.pdf",
+        "periods": 1
+      },
+      "4.4 Identify Unit Management Roles and Directives": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/LDR-4.4_Identify_Unit_Management_Roles_And_Directives.pdf",
+        "periods": 1
+      }
+    },
+    "MED": {
+      "4.1 Conduct a CASEVAC": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.1_Conduct_a_CASEVAC.pdf",
+        "periods": 1
+      },
+      "4.2 Complete a First Aid Course": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.2_Complete_a_First_Aid_Course.pdf",
+        "periods": 1
+      }
+    },
+    "NAV": {
+      "4.1 Navigate an Area - by Day and Night": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.1_Navigate_an_Area_by_Day_and_Night.pdf",
+        "periods": 3
+      },
+      "4.2 Refresher - Construct a Navigation Data Sheet": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.2_Refresher_Construct_a_Navigation_Data_Sheet.pdf",
+        "periods": 1
+      }
+    },
+    "OPS": {
+      "4.1 Identify HQ NZCF Staff Officer, Area, ASO Structure": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.1_Identify_HQ_NZCF_Staff_Officer_Area_ASO_Structures.pdf",
+        "periods": 1
+      },
+      "4.2 Identify Parent Service Current Operations": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.2_Identify_Parent_Service_Current_Operations.pdf",
+        "periods": 1
+      },
+      "4.3 Practice the NZCF Haka": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.3_Practice_the_NZCF_Haka.pdf",
+        "periods": 2
+      },
+      "4.4 Perform the NZCF Haka": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.4_Perform_the_NZCF_Haka.pdf",
+        "periods": 1
+      },
+      "4.5 Participate in a Formal Dining In": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-4.5_Participate_in_a_Formal_Dining_In.pdf",
+        "periods": 1
+      }
+    },
+    "PHY": {
+      "4.1 Conduct a Beep Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.1_Conduct_a_Beep_Test.pdf",
+        "periods": 1
+      },
+      "4.2 Conduct Parent Service Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      },
+      "4.3 Conduct the NZCF Fitness Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.3_Conduct_The_NZCF_Fitness_Assessment.pdf",
+        "periods": 1
+      },
+      "4.4 Conduct a Swim Test / Assessment": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.4_Conduct_a_Swim_Test-Assessment.pdf",
+        "periods": 1
+      },
+      "4.5 Participate in Circuit Training": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.5_Participate_in_Circuit_Training.pdf",
+        "periods": 1
+      },
+      "4.6 Conduct Sports": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.6_Conduct_Sports.pdf",
+        "periods": 1
+      },
+      "4.2 Conduct Parent Corps Fitness Test": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/PHY-4.2_Conduct_Parent_Service_Fitness_Test.pdf",
+        "periods": 1
+      }
+    },
+    "SAL": {
+      "4.1 Identify Learning Styles": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.1_Identify_Learning_Styles.pdf",
+        "periods": 1
+      },
+      "4.2 Identify Learners Needs": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.2_Identify_Learners_Needs.pdf",
+        "periods": 1
+      },
+      "4.3 Design Instruction": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.3_Design_Instruction.pdf",
+        "periods": 2
+      },
+      "4.4 Write Assessments": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.4_Write_Assessments.pdf",
+        "periods": 3
+      },
+      "4.5 Write Reports": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SAL-4.5_Write_Reports.pdf",
+        "periods": 1
+      }
+    },
+    "AVS": {
+      "4.1 Introduction to Helicopter Theory": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/AVS-4.1_Introduction_to_Helicopter_Theory.pdf",
+        "periods": 2
+      }
+    },
+    "SEA": {
+      "4.1 Perform Basic Maintenance on Crowns and Fevas": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.1_Perform_Basic_Maintenance_On_Crowns_And_Fevas.pdf",
+        "periods": 3
+      },
+      "4.2 Perform Basic Powerboat Maintenance": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.2_Perform_Basic_Powerboat_Maintenance.pdf",
+        "periods": 1
+      },
+      "4.3 Perform Basic Trailer Maintenance and safe loading of Trailers": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.3_Perform_Basic_Trailer_Maintenance_and_Safe_Loading_of_Trailers.pdf",
+        "periods": 2
+      },
+      "4.4 Plan a Daytime Sailing Activity": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.4_Plan_a_Daytime_Sailing_Activity.pdf",
+        "periods": 6
+      },
+      "4.5 (Optional) Describe Sailing Coaching Skills": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.5_OPTIONAL_Describe_Sailing_Coaching_Skills.pdf",
+        "periods": 1
+      },
+      "4.6 (Optional) Participate as Helm in Powerboat Manoeuvres": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.6_OPTIONAL_Participate_as_Crew_and_Helm_in_Powerboat_Maneuvers.pdf",
+        "periods": 6
+      },
+      "4.7 (Optional) Participate as Crew and Helm in Emergency Powerboat Drills": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-4.7_OPTIONAL_Participate_as_Crew_and_Helm_in_Emergency_Powerboat_Drills.pdf",
+        "periods": 4
+      }
+    },
+    "FLD": {
+      "4.1 Identify Working with Helicopters": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-4.1_List_Key_Elements_of_Working_with_Helicopters.pdf",
+        "periods": 1
+      },
+      "4.2 Conduct Ground-to-Air Signals": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FLD-4.2_Conduct_Ground_to_Air_Signals.pdf",
+        "periods": 1
+      }
+    }
+  },
+  "Year 5": {
+    "DRL": {
+      "4.1 Conduct Cane Drill - Introduction and History": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.1_Conduct_Cane_Drill%E2%80%93Introduction_and_History.pdf",
+        "periods": 1
+      },
+      "4.2 Conduct Cane Drill - Positions at the Halt": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.2_Conduct_Cane_Drill%E2%80%93Positions_at_the_Halt.pdf",
+        "periods": 1
+      },
+      "4.3 Conduct Cane Drill - Marching and Halting": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.3_Conduct_Cane_Drill%E2%80%93Marching_and_Halting.pdf",
+        "periods": 1
+      },
+      "4.4 Conduct Cane Drill - Saluting": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.4_Conduct_Cane_Drill%E2%80%93Saluting.pdf",
+        "periods": 1
+      },
+      "4.5 Conduct Cane Drill - Reporting to an Officer": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.5_Conduct_Cane_Drill%E2%80%93Reporting_to_an_Officer.pdf",
+        "periods": 1
+      },
+      "5.1 Conduct Cane Drill - Introduction and History": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.1_Conduct_Cane_Drill–Introduction_and_History.pdf",
+        "periods": 1
+      },
+      "5.2 Conduct Cane Drill - Positions at the Halt": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.2_Conduct_Cane_Drill–Positions_at_the_Halt.pdf",
+        "periods": 1
+      },
+      "5.3 Conduct Cane Drill - Marching and Halting": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.3_Conduct_Cane_Drill–Marching_and_Halting.pdf",
+        "periods": 1
+      },
+      "5.4 Conduct Cane Drill - Saluting": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.4_Conduct_Cane_Drill–Saluting.pdf",
+        "periods": 1
+      },
+      "5.5 Conduct Cane Drill - Reporting to an Officer": {
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.5_Conduct_Cane_Drill–Reporting_to_an_Officer.pdf",
+        "periods": 1
+      }
+    }
+  }
 }

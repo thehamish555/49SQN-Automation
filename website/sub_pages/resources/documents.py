@@ -3,6 +3,7 @@ import streamlit_pdf_viewer as pdf_viewer
 import json
 import requests
 import io
+from handlers.data.NZCF170CLoader import NZCF170CLoader
 
 if 'manuals' not in st.session_state:
     st.session_state.manuals_path = st.session_state.BASE_PATH + '/resources/configurations/manuals.json'
@@ -70,7 +71,7 @@ with cols[0]:
 
 with cols[1]:
     st.write('### Syllabus')
-    search = st.text_input('Search', placeholder='Search for Lessons...', help='Search for a specific Lesson', on_change=lambda x='syllabus': update_search(x))
+    search = st.text_input('Search', placeholder='Search for Instructor Guides...', help='Search for a specific Lesson', on_change=lambda x='syllabus': update_search(x))
     syllabus = [s for s in st.session_state.SUPABASE_CONNECTION.syllabus if search.lower() in s.lower()]
     st.caption(f'*Showing {len(syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10])}/{len(st.session_state.SUPABASE_CONNECTION.syllabus)} lessons*')
     for syllabus_item in syllabus[st.session_state.syllabus_count:st.session_state.syllabus_count + 10]:
@@ -92,7 +93,16 @@ with cols[1]:
                 st.rerun()
 
 with cols[2]:
-    st.info("Left intentionally blank for now...")
+    if 'Admin' in st.session_state.SUPABASE_CONNECTION.user['permissions']:
+        if 'NZCF170C_LOADER' not in st.session_state:
+            st.session_state.NZCF170C_LOADER = NZCF170CLoader()
+        if st.button('Update Syllabus', icon=':material/update:', use_container_width=True, help='Update the syllabus from CadetNet'):
+            loader = st.session_state.NZCF170C_LOADER
+            with st.spinner('Fetching lessons from CadetNet...'):
+                data = loader.install()
+            st.success('Lessons updated successfully!')
+    else:
+        st.warning('Admin required to view this section')
 '---'
 
 st.write('#### Quick Links')

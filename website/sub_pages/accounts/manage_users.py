@@ -57,7 +57,7 @@ if 'manage_users' in st.session_state.SUPABASE_CONNECTION.user['permissions_expa
                             try:
                                 execute_query(
                                     st.session_state.SUPABASE_CONNECTION.supabase.table('users').insert(
-                                        [{'name': name, 'email': email, 'permissions': permissions}],
+                                        [{'name': name, 'email': email, 'discord_id': discord_id, 'permissions': permissions}],
                                         count='None'
                                     ),
                                     ttl=0
