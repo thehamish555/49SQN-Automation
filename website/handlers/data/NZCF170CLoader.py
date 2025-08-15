@@ -2,6 +2,7 @@ import json
 import pathlib
 import re
 import time
+import platform
 import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -9,6 +10,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.os_manager import ChromeType
+from webdriver_manager.core.os_manager import ChromeType
 
 
 class NZCF170CLoader:
@@ -23,12 +27,12 @@ class NZCF170CLoader:
             st.session_state.BASE_PATH + "/resources/configurations/syllabus.json"
         )
 
-        # Chrome headless for Streamlit Cloud
+        # Chrome options
         chrome_options = Options()
         chrome_options.add_argument("--headless=new")  # modern headless
+        chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -36,13 +40,12 @@ class NZCF170CLoader:
             "Chrome/115.0.0.0 Safari/537.36"
         )
 
-        # Use Chromium installed via packages.txt
-        chrome_options.binary_location = "/usr/bin/chromium-browser"
+        # Initialize driver
         self.driver = webdriver.Chrome(
-            service=ChromeService("/usr/bin/chromedriver"),
+            service=ChromeService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),
             options=chrome_options,
         )
-        self.wait = WebDriverWait(self.driver, 30)
+        self.wait = WebDriverWait(self.driver, 30)  # wait up to 30s for elements
 
     def _save_json(self, data):
         self.out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -61,16 +64,19 @@ class NZCF170CLoader:
     def _login(self, username, password):
         self.driver.get(self.LOGIN_URL)
 
+        # Wait for login form
         try:
             self.wait.until(EC.presence_of_element_located((By.ID, "user_login")))
         except:
             st.error("Login form did not appear. Check website or CAPTCHA.")
             return False
 
+        # Fill form and submit
         self.driver.find_element(By.ID, "user_login").send_keys(username)
         self.driver.find_element(By.ID, "user_pass").send_keys(password)
         self.driver.find_element(By.ID, "wp-submit").click()
 
+        # Wait until dashboard or redirect
         time.sleep(3)
         return True
 
@@ -100,6 +106,7 @@ class NZCF170CLoader:
             module, lesson_num, lesson_title = m.groups()
             year = f"Year {lesson_num.split('.')[0]}"
 
+            # Skip already saved
             if (
                 year in lessons
                 and module in lessons[year]
@@ -107,12 +114,14 @@ class NZCF170CLoader:
             ):
                 continue
 
+            # Periods
             try:
                 periods_td = row.find_element(By.CSS_SELECTOR, "td[style*='text-align:right']")
                 periods = int(re.search(r"(\d+)", periods_td.text).group(1))
             except:
                 periods = None
 
+            # Open subpage for PDF
             self.driver.get(href)
             time.sleep(self.DELAY)
 
@@ -132,6 +141,7 @@ class NZCF170CLoader:
                 f"{lesson_num} {lesson_title}"
             ] = {"url": pdf_link, "periods": periods}
 
+            # Progressive save
             self._save_json(lessons)
             print(f"Saved: {lesson_num} {lesson_title}")
 
