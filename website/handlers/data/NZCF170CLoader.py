@@ -10,7 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-
+from pyvirtualdisplay import Display
+import platform
 
 class NZCF170CLoader:
     BASE = "https://www.cadetnet.org.nz"
@@ -24,6 +25,14 @@ class NZCF170CLoader:
             st.session_state.BASE_PATH + "/resources/configurations/syllabus.json"
         )
 
+        if platform.system() != "Windows":
+            # Start virtual display
+            from pyvirtualdisplay import Display
+            self.display = Display(visible=0, size=(1920, 1080))
+            self.display.start()
+        else:
+            self.display = None  # Windows doesn't need it
+
         # Configure Chrome headless
         chrome_options = Options()
         chrome_options.add_argument("--headless")
@@ -32,8 +41,10 @@ class NZCF170CLoader:
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_argument("--silent")
-        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-        self.wait = WebDriverWait(self.driver, 20)
+        self.driver = webdriver.Chrome(
+            service=ChromeService(ChromeDriverManager().install()), options=chrome_options
+        )
+        self.wait = WebDriverWait(self.driver, 30)
 
     def _save_json(self, data):
         self.out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -129,4 +140,10 @@ class NZCF170CLoader:
         username = st.secrets["cadetnet"]["USERNAME"]
         password = st.secrets["cadetnet"]["PASSWORD"]
         data = self._extract_lessons(username, password)
+
+        # Stop virtual display after scraping
+        self.driver.quit()
+        if self.display:
+            self.display.stop()
+
         return data
