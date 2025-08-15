@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_autoinstaller
 
 
 class NZCF170CLoader:
@@ -30,6 +31,7 @@ class NZCF170CLoader:
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--log-level=3")
         chrome_options.add_argument("--silent")
+        chromedriver_autoinstaller.install()
         self.driver = webdriver.Chrome(options=chrome_options)
         self.wait = WebDriverWait(self.driver, 20)
 
