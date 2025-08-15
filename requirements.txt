@@ -4,3 +4,4 @@ PyMuPDF==1.25.5
 st-supabase-connection==2.0.1
 st-copy-to-clipboard==0.1.6
 beautifulsoup4==4.13.4
+requests==2.32.3

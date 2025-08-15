@@ -13,7 +13,7 @@ class NZCF170CLoader:
     BASE = "https://www.cadetnet.org.nz"
     LOGIN_URL = BASE + "/wp-login.php"
     TARGET_URL = BASE + "/7-training/nzcf-170c/"
-    HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0 Safari/537.36"}
+    HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/8.0)"}
     TIMEOUT = 30
     DELAY = 1.5  # seconds between requests to avoid rate limit
 
@@ -32,7 +32,7 @@ class NZCF170CLoader:
     def _login(self, user: str, pw: str) -> requests.Session:
         s = requests.Session()
         pg = s.get(self.LOGIN_URL, headers=self.HEADERS, timeout=self.TIMEOUT)
-
+        pg.raise_for_status()
         soup = BeautifulSoup(pg.text, "html.parser")
         form = soup.select_one("form#loginform") or sys.exit("Login form missing")
 
@@ -43,6 +43,7 @@ class NZCF170CLoader:
     def _login_and_fetch_html(self, user: str, pw: str, url: str):
         s = self._login(user, pw)
         resp = s.get(url, headers=self.HEADERS, timeout=self.TIMEOUT)
+        resp.raise_for_status()
         return resp.text, s
 
     def _get_existing_data(self) -> dict:
