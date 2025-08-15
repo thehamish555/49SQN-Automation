@@ -13,7 +13,7 @@ class NZCF170CLoader:
     BASE = "https://www.cadetnet.org.nz"
     LOGIN_URL = BASE + "/wp-login.php"
     TARGET_URL = BASE + "/7-training/nzcf-170c/"
-    HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/8.0)"}
+    HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0 Safari/537.36"}
     TIMEOUT = 30
     DELAY = 1.5  # seconds between requests to avoid rate limit
 
