@@ -1583,6 +1583,11 @@
         "title": "Conduct a CASEVAC",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.1_Conduct_a_CASEVAC.pdf",
         "periods": 1
+      },
+      "4.2": {
+        "title": "Complete a First Aid Course",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/documents/CadetNet_User_Guide.pdf",
+        "periods": 1
       }
     },
     "NAV": {
@@ -1590,11 +1595,6 @@
         "title": "Navigate an Area - by Day and Night",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.1_Navigate_an_Area_by_Day_and_Night.pdf",
         "periods": 3
-      },
-      "4.2": {
-        "title": "Refresher - Construct a Navigation Data Sheet",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/NAV-4.2_Refresher_Construct_a_Navigation_Data_Sheet.pdf",
-        "periods": 1
       }
     },
     "OPS": {

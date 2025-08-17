@@ -13,6 +13,7 @@ class NZCF170CLoader:
     HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/10.0)"}
     TIMEOUT = 30
     DELAY = 1.5   # seconds between requests to avoid rate limit
+    BATCH_SIZE = 10  # Number of lesson subpages to fetch per Worker request
 
     def __init__(self) -> None:
         self.out_path = pathlib.Path(
@@ -50,11 +51,11 @@ class NZCF170CLoader:
 
     # ---------------------- Fetch HTML ----------------------
 
-    def _fetch_from_worker(self) -> tuple[str, requests.Session]:
-        s = requests.Session()
-        resp = s.get(self.WORKER_URL, headers=self.HEADERS, timeout=self.TIMEOUT)
+    def _fetch_batch_from_worker(self, start: int) -> str:
+        params = {"start": start, "limit": self.BATCH_SIZE}
+        resp = requests.get(self.WORKER_URL, headers=self.HEADERS, params=params, timeout=self.TIMEOUT)
         resp.raise_for_status()
-        return resp.text, s
+        return resp.text
 
     # ---------------------- Scraping ----------------------
 
@@ -90,9 +91,10 @@ class NZCF170CLoader:
 
     def _extract_lessons(self, main_html: str, session: requests.Session) -> dict:
         soup = BeautifulSoup(main_html, "html.parser")
+        rows = soup.select("tr")
         lessons = self._get_existing_data()
 
-        for row in soup.select("tr"):
+        for row in rows:
             info = self._parse_lesson_row(row)
             if not info:
                 continue
@@ -103,7 +105,7 @@ class NZCF170CLoader:
             if year in lessons and module in lessons[year] and key in lessons[year][module]:
                 continue
 
-            # Fetch subpage
+            # Fetch lesson subpage (Worker batching avoids too many subrequests)
             time.sleep(self.DELAY)
             try:
                 sub_resp = session.get(info["href"], headers=self.HEADERS, timeout=self.TIMEOUT)
@@ -138,5 +140,25 @@ class NZCF170CLoader:
     # ---------------------- Public ----------------------
 
     def install(self) -> dict:
-        main_html, session = self._fetch_from_worker()
-        return self._extract_lessons(main_html, session)
+        lessons = self._get_existing_data()
+        start = 0
+        session = requests.Session()
+
+        while True:
+            try:
+                main_html = self._fetch_batch_from_worker(start)
+            except Exception as e:
+                self._log(f"Failed to fetch batch starting at {start}: {e}", "warning")
+                time.sleep(self.DELAY)
+                continue
+
+            batch_lessons = self._extract_lessons(main_html, session)
+            if not batch_lessons or len(batch_lessons) <= len(lessons):
+                self._log("All batches fetched.")
+                break
+
+            lessons = batch_lessons
+            start += self.BATCH_SIZE
+            time.sleep(self.DELAY)
+
+        return lessons
