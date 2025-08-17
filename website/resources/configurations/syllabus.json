@@ -88,18 +88,13 @@
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.2_Explain_NZCF_Code_of_Conduct.pdf",
         "periods": 1
       },
-      "1.3": {
-        "title": "Describe Duty of Care",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.3_Describe_Duty_of_Care.pdf",
-        "periods": 1
-      },
       "1.4": {
         "title": "Identify NZCF Key Legislation",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.4_Identify_NZCF_Key_Legislation.pdf",
         "periods": 1
       },
       "1.5": {
-        "title": "Demonstrate Diversity & Anti-Harassment",
+        "title": "Demonstrate Diversity &#038; Anti-Harassment",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/ETH-1.5_Demonstrate_Diversity_and_Anti-Harassment.pdf",
         "periods": 1
       }
@@ -126,7 +121,7 @@
         "periods": 1
       },
       "1.5": {
-        "title": "Describe and Demonstrate Uniform Wear, Care & Maintenance",
+        "title": "Describe and Demonstrate Uniform Wear, Care &#038; Maintenance",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.5_Describe_and_Demonstrate_Uniform_Wear_Care_and_Maintenance.pdf",
         "periods": 2
       },
@@ -152,7 +147,7 @@
       },
       "1.10": {
         "title": "Identify Key Dates and Events - Unit",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.10_Identify_Key_Dates_and_Events–Unit.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.10_Identify_Key_Dates_and_Events%E2%80%93Unit.pdf",
         "periods": 1
       },
       "1.11": {
@@ -162,7 +157,7 @@
       },
       "1.12": {
         "title": "Recall Key Dates, Conflicts and Deployments - Parent Corps Specific",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.12_Recall_Key_Dates_Conflicts_and_Deployments–Parent_Corps_Specific.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/OPS-1.12_Recall_Key_Dates_Conflicts_and_Deployments%E2%80%93Parent_Corps_Specific.pdf",
         "periods": 1
       },
       "1.13": {
@@ -223,7 +218,7 @@
     "MED": {
       "1.1": {
         "title": "Carry out Personal Wellness - Management in the Field(E)",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.1_Carry_out_Personal_Wellness–Management_in_the_Field(E).pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-1.1_Carry_out_Personal_Wellness%E2%80%93Management_in_the_Field(E).pdf",
         "periods": 1
       },
       "1.2": {
@@ -381,7 +376,7 @@
       },
       "1.2": {
         "title": "Conduct Operations - SAD",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.2_Conduct_Operations–SAD.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/RCD-1.2_Conduct_Operations%E2%80%93SAD.pdf",
         "periods": 1
       },
       "1.3": {
@@ -407,7 +402,7 @@
         "periods": 1
       },
       "1.2": {
-        "title": "Use the Bosun’s Call and Identify Common Orders",
+        "title": "Use the Bosun&#8217;s Call and Identify Common Orders",
         "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-1.2_Bosun-s_Call_and_Piping.pdf",
         "periods": 1
       },
@@ -640,7 +635,7 @@
       },
       "2.6": {
         "title": "Refresher - Pass DFTTs - In-Service Firearm",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.6_Refresher_Pass DFTTs_In-Service_Firearm.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-2.6_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
         "periods": 3
       },
       "2.7": {
@@ -848,7 +843,7 @@
       },
       "2.2": {
         "title": "Identify Duties of the Officer of the Day, Quartermaster and Duty Watch",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.2_Identify_Duties_of_the_Officer_of_the_Day_Quartermaster_and_Duty Watch.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-2.2_Identify_Duties_of_the_Officer_of_the_Day_Quartermaster_and_Duty%20Watch.pdf",
         "periods": 1
       },
       "2.3": {
@@ -1070,7 +1065,7 @@
       },
       "3.2": {
         "title": "Refresher - Pass DFTTs - In-Service Firearm",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.2_Refresher_Pass DFTTs_In-Service_Firearm.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-3.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
         "periods": 1
       },
       "3.3": {
@@ -1353,17 +1348,17 @@
       },
       "3.18": {
         "title": "(Optional) Describe Basic Principles of Damage Control on Naval Vessels",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.18_Optional–Describe_Basic_Principles_of_Damage_Control_on_Naval_Vessels.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.18_Optional%E2%80%93Describe_Basic_Principles_of_Damage_Control_on_Naval_Vessels.pdf",
         "periods": 1
       },
       "3.19": {
         "title": "(Optional) Demonstrate use of Crown Sprinkler",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.19_Optional–Demonstrate_the_use_of_a_Crown_Spinnaker.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.19_Optional%E2%80%93Demonstrate_the_use_of_a_Crown_Spinnaker.pdf",
         "periods": 2
       },
       "3.20": {
         "title": "(Optional) Demonstrate use of a Feva Gennaker",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.20_Optional–Demonstrate_the_use_of_a_Feva_Gennaker.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/SEA-3.20_Optional%E2%80%93Demonstrate_the_use_of_a_Feva_Gennaker.pdf",
         "periods": 2
       }
     },
@@ -1527,7 +1522,7 @@
       },
       "4.2": {
         "title": "Refresher - Pass DFTTs - In-Service Firearm",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.2_Refresher_Pass DFTTs_In-Service_Firearm.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/FAS-4.2_Refresher_Pass%20DFTTs_In-Service_Firearm.pdf",
         "periods": 1
       },
       "4.3": {
@@ -1586,7 +1581,7 @@
       },
       "4.2": {
         "title": "Complete a First Aid Course",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/documents/CadetNet_User_Guide.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/MED-4.2_Complete_a_First_Aid_Course.pdf",
         "periods": 1
       }
     },
@@ -1744,27 +1739,27 @@
     "DRL": {
       "5.1": {
         "title": "Conduct Cane Drill - Introduction and History",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.1_Conduct_Cane_Drill–Introduction_and_History.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.1_Conduct_Cane_Drill%E2%80%93Introduction_and_History.pdf",
         "periods": 1
       },
       "5.2": {
         "title": "Conduct Cane Drill - Positions at the Halt",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.2_Conduct_Cane_Drill–Positions_at_the_Halt.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.2_Conduct_Cane_Drill%E2%80%93Positions_at_the_Halt.pdf",
         "periods": 1
       },
       "5.3": {
         "title": "Conduct Cane Drill - Marching and Halting",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.3_Conduct_Cane_Drill–Marching_and_Halting.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.3_Conduct_Cane_Drill%E2%80%93Marching_and_Halting.pdf",
         "periods": 1
       },
       "5.4": {
         "title": "Conduct Cane Drill - Saluting",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.4_Conduct_Cane_Drill–Saluting.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.4_Conduct_Cane_Drill%E2%80%93Saluting.pdf",
         "periods": 1
       },
       "5.5": {
         "title": "Conduct Cane Drill - Reporting to an Officer",
-        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.5_Conduct_Cane_Drill–Reporting_to_an_Officer.pdf",
+        "url": "https://www.cadetnet.org.nz/wp-content/uploads/instructor_guides/DRL-5.5_Conduct_Cane_Drill%E2%80%93Reporting_to_an_Officer.pdf",
         "periods": 1
       }
     }

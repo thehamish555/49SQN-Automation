@@ -95,9 +95,9 @@ with cols[1]:
 with cols[2]:
     if 'Admin' in st.session_state.SUPABASE_CONNECTION.user['permissions']:
         if st.button('Update Syllabus', icon=':material/update:', use_container_width=True, help='Update the syllabus from CadetNet'):
-            loader = NZCF170CLoader()
+            loader = NZCF170CLoader(st.session_state.BASE_PATH)
             with st.spinner('Fetching lessons from CadetNet...'):
-                data = loader.install()
+                data = loader.fetch_all_lessons()
             st.success('Lessons updated successfully!')
     else:
         st.warning('Admin required to view this section')
