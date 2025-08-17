@@ -1,7 +1,6 @@
 import json
 import pathlib
 import urllib.parse
-import sys
 import re
 import time
 import requests
@@ -10,41 +9,26 @@ import streamlit as st
 
 
 class NZCF170CLoader:
-    BASE = "https://wild-lab-6641.hamishlester555.workers.dev/"
-    LOGIN_URL = BASE + "/wp-login.php"
-    TARGET_URL = BASE + "/7-training/nzcf-170c/"
-    HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/8.0)"}
+    WORKER_URL = "https://wild-lab-6641.hamishlester555.workers.dev/"
+    HEADERS = {"User-Agent": "Mozilla/5.0 (cadetnet-scraper/10.0)"}
     TIMEOUT = 30
-    DELAY = 1.5  # seconds between requests to avoid rate limit
+    DELAY = 1.5   # seconds between requests to avoid rate limit
 
     def __init__(self) -> None:
-        # Output path based on session state
         self.out_path = pathlib.Path(
             st.session_state.BASE_PATH + "/resources/configurations/syllabus.json"
         )
 
+    # ---------------------- Utilities ----------------------
+
+    def _log(self, msg: str, level: str = "info") -> None:
+        if hasattr(st, level):
+            getattr(st, level)(msg)
+        else:
+            print(f"[{level.upper()}] {msg}")
+
     def _full_url(self, src: str | None) -> str | None:
-        return urllib.parse.urljoin(self.BASE, src) if src else None
-
-    def _hidden_inputs(self, form) -> dict:
-        return {i["name"]: i.get("value", "") for i in form.select("input[type=hidden][name]")}
-
-    def _login(self, user: str, pw: str) -> requests.Session:
-        s = requests.Session()
-        pg = s.get(self.LOGIN_URL, headers=self.HEADERS, timeout=self.TIMEOUT)
-        pg.raise_for_status()
-        soup = BeautifulSoup(pg.text, "html.parser")
-        form = soup.select_one("form#loginform") or sys.exit("Login form missing")
-
-        payload = {"log": user, "pwd": pw, "wp-submit": "Log In", **self._hidden_inputs(form)}
-        s.post(self.LOGIN_URL, data=payload, headers=self.HEADERS, timeout=self.TIMEOUT)
-        return s
-
-    def _login_and_fetch_html(self, user: str, pw: str, url: str):
-        s = self._login(user, pw)
-        resp = s.get(url, headers=self.HEADERS, timeout=self.TIMEOUT)
-        resp.raise_for_status()
-        return resp.text, s
+        return urllib.parse.urljoin("https://www.cadetnet.org.nz", src) if src else None
 
     def _get_existing_data(self) -> dict:
         if self.out_path.exists():
@@ -52,84 +36,107 @@ class NZCF170CLoader:
                 with self.out_path.open("r", encoding="utf-8") as f:
                     return json.load(f)
             except json.JSONDecodeError:
+                self._log("Corrupt JSON detected, starting fresh", "warning")
                 return {}
         return {}
 
     def _save_json(self, data: dict) -> None:
         self.out_path.parent.mkdir(parents=True, exist_ok=True)
-        with self.out_path.open("w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        try:
+            with self.out_path.open("w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            self._log(f"Error saving JSON: {e}", "error")
 
-    def _extract_lessons(self, main_html: str, session: requests.Session, username: str, password: str) -> dict:
+    # ---------------------- Fetch HTML ----------------------
+
+    def _fetch_from_worker(self) -> tuple[str, requests.Session]:
+        s = requests.Session()
+        resp = s.get(self.WORKER_URL, headers=self.HEADERS, timeout=self.TIMEOUT)
+        resp.raise_for_status()
+        return resp.text, s
+
+    # ---------------------- Scraping ----------------------
+
+    def _parse_lesson_row(self, row):
+        a_tag = row.select_one("td a[href*='/7-training/nzcf-170c/']")
+        if not a_tag:
+            return None
+
+        text = a_tag.get_text(strip=True).replace("–", "-")
+        href = self._full_url(a_tag.get("href"))
+
+        m = re.match(r"([A-Z]{2,4})[-\s]?(\d+(?:\.\d+)?)\s*(?:[-–]\s*)?(.+)", text)
+        if not m:
+            return None
+
+        module, lesson_num, lesson_title = m.groups()
+        year = f"Year {lesson_num.split('.')[0]}"
+
+        periods_td = row.select_one("td[style*='text-align:right']")
+        try:
+            periods = int(re.search(r"(\d+)", periods_td.get_text(strip=True)).group(1))
+        except Exception:
+            periods = None
+
+        return {
+            "module": module,
+            "num": lesson_num,
+            "title": lesson_title,
+            "href": href,
+            "year": year,
+            "periods": periods,
+        }
+
+    def _extract_lessons(self, main_html: str, session: requests.Session) -> dict:
         soup = BeautifulSoup(main_html, "html.parser")
         lessons = self._get_existing_data()
 
         for row in soup.select("tr"):
-            a_tag = row.select_one("td a[href*='/7-training/nzcf-170c/']")
-            if not a_tag:
+            info = self._parse_lesson_row(row)
+            if not info:
                 continue
 
-            href = self._full_url(a_tag.get("href"))
-            text = a_tag.get_text(strip=True).replace("–", "-")
+            key = info["num"]
+            year, module = info["year"], info["module"]
 
-            m = re.match(r"([A-Z]{3})[-\s]?(\d+\.\d+)\s*(?:[-–]\s*)?(.+)", text)
-            if not m:
-                continue
-            module, lesson_num, lesson_title = m.groups()
-            year = f"Year {lesson_num.split('.')[0]}"
-
-            # Skip if already in saved data
-            if (
-                year in lessons
-                and module in lessons[year]
-                and f"{lesson_num} {lesson_title}" in lessons[year][module]
-            ):
+            if year in lessons and module in lessons[year] and key in lessons[year][module]:
                 continue
 
-            periods_td = row.select_one("td[style*='text-align:right']")
-            try:
-                periods = int(re.search(r"(\d+)", periods_td.get_text(strip=True)).group(1))
-            except:
-                periods = None
-
-            # Delay before request
+            # Fetch subpage
             time.sleep(self.DELAY)
-            sub_html = session.get(href, headers=self.HEADERS, timeout=self.TIMEOUT).text
-
-            # Re-login if session expired
-            if "wp-login.php" in sub_html:
-                st.warning("Session expired or rate-limited — re-logging in...")
-                session = self._login(username, password)
-                time.sleep(self.DELAY)
-                sub_html = session.get(href, headers=self.HEADERS, timeout=self.TIMEOUT).text
+            try:
+                sub_resp = session.get(info["href"], headers=self.HEADERS, timeout=self.TIMEOUT)
+                sub_resp.raise_for_status()
+                sub_html = sub_resp.text
+            except Exception as e:
+                self._log(f"Failed to fetch {info['href']}: {e}", "warning")
+                continue
 
             sub_soup = BeautifulSoup(sub_html, "html.parser")
             pdf_link = None
             for link in sub_soup.select("a[href$='.pdf']"):
-                if "instructor_guides" in link.get("href"):
-                    pdf_link = self._full_url(link.get("href"))
+                candidate = link.get("href")
+                if candidate:
+                    pdf_link = self._full_url(candidate)
                     break
 
             if not pdf_link:
-                st.warning(f"Skipped {module} {lesson_num} — no instructor guide found")
+                self._log(f"Skipped {module} {key} — no instructor guide", "warning")
                 continue
 
-            lessons.setdefault(year, {}).setdefault(module, {})[
-                f"{lesson_num} {lesson_title}"
-            ] = {
+            lessons.setdefault(year, {}).setdefault(module, {})[key] = {
+                "title": info["title"],
                 "url": pdf_link,
-                "periods": periods
+                "periods": info["periods"],
             }
-            self._save_json(lessons)  # Progressive save
-            print(f"Saved {lesson_num} {lesson_title}")
+            self._save_json(lessons)
+            self._log(f"Saved {module} {key} {info['title']}", "info")
 
         return lessons
 
-    def install(self) -> dict:
-        """Logs in, scrapes data with rate-limit handling, saves JSON progressively, and returns the dict."""
-        username = st.secrets["cadetnet"]["USERNAME"]
-        password = st.secrets["cadetnet"]["PASSWORD"]
+    # ---------------------- Public ----------------------
 
-        main_html, session = self._login_and_fetch_html(username, password, self.TARGET_URL)
-        lessons_data = self._extract_lessons(main_html, session, username, password)
-        return lessons_data
+    def install(self) -> dict:
+        main_html, session = self._fetch_from_worker()
+        return self._extract_lessons(main_html, session)

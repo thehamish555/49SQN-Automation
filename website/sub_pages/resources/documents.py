@@ -94,10 +94,8 @@ with cols[1]:
 
 with cols[2]:
     if 'Admin' in st.session_state.SUPABASE_CONNECTION.user['permissions']:
-        if 'NZCF170C_LOADER' not in st.session_state:
-            st.session_state.NZCF170C_LOADER = NZCF170CLoader()
         if st.button('Update Syllabus', icon=':material/update:', use_container_width=True, help='Update the syllabus from CadetNet'):
-            loader = st.session_state.NZCF170C_LOADER
+            loader = NZCF170CLoader()
             with st.spinner('Fetching lessons from CadetNet...'):
                 data = loader.install()
             st.success('Lessons updated successfully!')
