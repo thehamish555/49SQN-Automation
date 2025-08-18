@@ -31,7 +31,7 @@ class NZCF170CLoader:
         start = 0
 
         while True:
-            params = {"start": start, "limit": self.BATCH_SIZE}
+            params = {"start": start, "limit": self.BATCH_SIZE, "token": st.secrets["cadetnet"]["TOKEN"]}
             try:
                 resp = requests.get(self.WORKER_URL, params=params, timeout=30)
                 resp.raise_for_status()
