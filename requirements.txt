@@ -1,5 +1,5 @@
 Authlib==1.5.2
-streamlit_pdf_viewer==0.0.21
+streamlit[pdf]
 PyMuPDF==1.25.5
 st-supabase-connection==2.0.1
 st-copy-to-clipboard==0.1.6

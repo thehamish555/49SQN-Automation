@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit_pdf_viewer as pdf_viewer
 import pymupdf
 import io
 import requests
@@ -55,7 +54,7 @@ try:
     def view_large_pdf(file_data, file_name):
         st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
         st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
-        pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
+        st.pdf(file_data, height=750)
 except AttributeError:
     pass
 
@@ -149,7 +148,7 @@ with cols[1]:
     with tabs[1]:
         if 'manage_lesson_plans' in st.session_state.SUPABASE_CONNECTION.user['permissions_expanded']:
             with st.form(key='submit_lesson_plan', enter_to_submit=False):
-                uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type=['pdf'], help='Select a lesson plan to upload')
+                uploaded_pdf = st.file_uploader('Upload a Lesson Plan', type='pdf', help='Select a lesson plan to upload')
                 pdf_name = st.selectbox('Lesson Plan For:', st.session_state.SUPABASE_CONNECTION.syllabus, help='Select a name for the lesson plan', accept_new_options=True)
                 if st.form_submit_button('Upload Lesson Plan', help='Upload the lesson plan to the database'):
                     if not uploaded_pdf:

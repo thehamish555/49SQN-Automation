@@ -4,7 +4,6 @@ import requests
 import io
 import datetime
 from st_copy_to_clipboard import st_copy_to_clipboard
-import streamlit_pdf_viewer as pdf_viewer
 import pymupdf
 
 
@@ -37,11 +36,11 @@ if st.session_state.SUPABASE_CONNECTION.user:
             try:
                 st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
                 st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
-                pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
+                st.pdf(file_data, height=750)
             except AttributeError:
                 st.write(f'Viewing: *{file_name['path'].removesuffix('.pdf')}*')
                 st.download_button('Download PDF', data=file_data, file_name=file_name['path'], mime='application/octet-stream', icon=':material/download:')
-                pdf_viewer.pdf_viewer(file_data.getvalue(), width=1000, render_text=True)
+                st.pdf(file_data.getvalue(), height=750)
 
     except AttributeError:
         pass

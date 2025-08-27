@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit_pdf_viewer as pdf_viewer
 import json
 import requests
 import io
@@ -33,7 +32,7 @@ try:
         file_data = get_data(file_name)
         st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
         st.download_button('Download PDF', data=file_data, file_name=file_name+'.pdf', mime='application/octet-stream', icon=':material/download:')
-        pdf_viewer.pdf_viewer(file_data, width=1000, render_text=True)
+        st.pdf(file_data, height=750)
 except AttributeError:
     pass
 
