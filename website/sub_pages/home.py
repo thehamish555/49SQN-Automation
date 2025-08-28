@@ -35,7 +35,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
         def view_large_pdf(file_data, file_name):
             try:
                 st.write(f'Viewing: *{file_name.removesuffix('.pdf')}*')
-                st.download_button('Download PDF', data=file_data, file_name=file_name, mime='application/octet-stream', icon=':material/download:')
+                st.download_button('Download PDF', data=file_data, file_name=file_name+'.pdf', mime='application/octet-stream', icon=':material/download:')
                 st.pdf(file_data, height=750)
             except AttributeError:
                 st.write(f'Viewing: *{file_name['path'].removesuffix('.pdf')}*')

@@ -49,9 +49,11 @@ class NZCF170CLoader:
                 for module, lessons_dict in modules.items():
                     lessons[year].setdefault(module, {})
                     for lesson_num, data in lessons_dict.items():
-                        if lesson_num in lessons[year][module]:
-                            continue
                         data['title'] = data['title'].replace('&#8211;', '-').lstrip('- ')
+                        data['title'] = data['title'].replace('/', ' or ').replace('&#038;', 'and').replace('&#8217;', "'")
+                        if lesson_num in lessons[year][module]:
+                            if lessons[year][module][lesson_num]['title'] == data['title']:
+                                continue
                         lessons[year][module][lesson_num] = data
                         st.info(f"[SAVED] {year} {module} {lesson_num} - {data['title']}")
 
