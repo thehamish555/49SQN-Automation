@@ -103,7 +103,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
                 if st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
-                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     view_large_pdf(get_data(file), file)
             else:
                 st.write(text_.lstrip('-'))
@@ -113,7 +113,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
                 if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other') and not text_.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
-                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                        file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     files.append(file)
             merged_files = pymupdf.open()
             for file in files:
@@ -152,7 +152,7 @@ if st.session_state.SUPABASE_CONNECTION.user:
                         if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
                             file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             if file is None:
-                                file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip().startswith(f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
+                                file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             view_large_pdf(get_data(file), file)
                     else:
                         st.write(lesson.lstrip('-'))
