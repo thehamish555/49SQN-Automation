@@ -98,9 +98,9 @@ if st.session_state.SUPABASE_CONNECTION.user:
                         if text[-1] != 'No Periods Specified':
                             text.append('No Periods Specified')
                     num += 3
-        for text_ in text:
+        for index, text_ in enumerate(text):
             if text_.startswith('-') and not text_.split('**')[2].split('-')[0].strip().startswith('Other') and not text_.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
-                if st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
+                if st.button(text_.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide', key=str(index)):
                     file = next((f for f in st.session_state.files if text_.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                     if file is None:
                         file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if text_.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)

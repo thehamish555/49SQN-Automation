@@ -19,7 +19,7 @@ else:
 
 # Set the page configuration
 # - version: The current app version
-page_config = PageConfig(version='V1.5.8')
+page_config = PageConfig(version='V1.5.9')
 
 # Load the cloud database
 if 'SUPABASE_CONNECTION' not in st.session_state:
