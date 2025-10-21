@@ -1,7 +1,7 @@
 Authlib==1.5.2
 streamlit[pdf]
 PyMuPDF==1.25.5
-st-supabase-connection==2.0.1
+st-supabase-connection==2.1.2
 st-copy-to-clipboard==0.1.6
 beautifulsoup4==4.13.4
 selenium==4.35.0
