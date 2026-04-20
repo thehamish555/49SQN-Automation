@@ -170,9 +170,9 @@ if st.session_state.SUPABASE_CONNECTION.user:
             if lessons:
                 st.write(f'#### {week}')
                 for lesson in lessons:
+                    key_counter += 1
                     if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other') and not lesson.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
                         if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide', key=str(key_counter)+'_upcoming'):
-                            key_counter += 1
                             file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             if file is None:
                                 file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
