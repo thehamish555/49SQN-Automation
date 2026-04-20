@@ -165,12 +165,14 @@ if st.session_state.SUPABASE_CONNECTION.user:
                                 if df[column][num+2] == st.session_state.SUPABASE_CONNECTION.user['name']:
                                     user_lessons[df[column][0]].append(f'- **Period {i + 1}:** {df[column][num]} - {df[column][num + 1]} with {year}')
                             num += 3
+        key_counter = 0
         for week, lessons in user_lessons.items():
             if lessons:
                 st.write(f'#### {week}')
                 for lesson in lessons:
                     if lesson.startswith('-') and not lesson.split('**')[2].split('-')[0].strip().startswith('Other') and not lesson.split('**')[2].split('-')[0].strip().startswith('Not Specified'):
-                        if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide'):
+                        if st.button(lesson.lstrip('-'), type='tertiary', help='View Lesson Plan/Guide', key=str(key_counter)):
+                            key_counter += 1
                             file = next((f for f in st.session_state.files if lesson.split('**')[2].split('-')[0].strip().startswith(f['path'].removesuffix('.pdf').removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
                             if file is None:
                                 file = next((f for f in st.session_state.SUPABASE_CONNECTION.syllabus if lesson.split('**')[2].split('-')[0].strip() == (f.removeprefix('Year ').removeprefix('1').removeprefix('2').removeprefix('3').removeprefix('4').split('-')[0].strip())), None)
